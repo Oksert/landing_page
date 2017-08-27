@@ -3,10 +3,10 @@
 		//Navigation
 		menu: '#menu',
 		lockAnchors: false,
-		anchors:['firstPage', 'secondPage'],
-		navigation: false,
+		// anchors:['firstPage', 'secondPage'],
+		navigation: true,
 		navigationPosition: 'right',
-		navigationTooltips: ['firstSlide', 'secondSlide'],
+		// navigationTooltips: ['firstSlide', 'secondSlide'],
 		showActiveTooltip: false,
 		slidesNavigation: false,
 		slidesNavPosition: 'bottom',
