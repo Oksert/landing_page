@@ -47,7 +47,7 @@
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#0FACE0', '#FFFFFF','#0FACE0'],
+		sectionsColor : ['#FFFFFF', '#FFFFFF','#FFFFFF'],
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
