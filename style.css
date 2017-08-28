@@ -8,17 +8,29 @@
 ul {
     text-decoration: none; 
     list-style: none;
-    text-align: left;
+    /* text-align: left; */
 }
 .content-disc:before {
   content: '';
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
+  vertical-align: middle; 
+}
+.float-left ul {
+    text-align: right;
+}
+.float-right ul {
+    text-align: left;
 }
 .content-disc {
-    float: right;
+    /* float: right; */
     width: 20%;
     vertical-align: middle;
     display: inline-block;
+}
+.float-right {
+    float:right;
+} 
+.float-left {
+    float: left;
 }
