@@ -5,6 +5,17 @@
     display: table;
     /* vertical-align: middle; */
 }
+.menu ul {
+    margin-left: 0px;
+    padding-left: 0px;
+    
+}
+.menu li {
+    float: right;
+}
+#header {
+    background-color: lightblue;
+}
 ul {
     text-decoration: none; 
     list-style: none;
@@ -46,8 +57,17 @@ h2,
 strong {
   color: #333;
 }
-img {
+.section-center img {
     box-sizing: border-box;
     margin: 0px 10px 0px 10px;
     width: 60%;
+}
+.logo {
+    font-family: 'Kalam', cursive;
+    font-size: 40px;
+    color:#446772;
+    margin-left: -8px;
+}
+.header-top {
+    padding:1% 0% 0% 5%;
 }
