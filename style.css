@@ -17,16 +17,17 @@ ul {
   vertical-align: middle; 
 }
 .float-left ul {
-    text-align: right;
+    text-align: center;
 }
 .float-right ul {
-    text-align: left;
+    text-align: center;
 }
 .content-disc {
     /* float: right; */
-    width: 20%;
-    vertical-align: middle;
-    display: inline-block;
+    width: 35%;
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    text-align: center
 }
 .float-right {
     float:right;
@@ -34,6 +35,13 @@ ul {
 .float-left {
     float: left;
 }
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+}
 img {
-    width: 50%;
+    box-sizing: border-box;
+    margin: 0px 10px 0px 10px;
+    width: 60%;
 }
