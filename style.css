@@ -34,3 +34,6 @@ ul {
 .float-left {
     float: left;
 }
+img {
+    width: 50%;
+}
