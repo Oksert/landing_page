@@ -2,7 +2,8 @@
     margin: auto;
     text-align: center;
     width: 80%;
-    display: table;
+    display: flex;
+    justify-content: center;
     /* vertical-align: middle; */
 }
 .menu ul {
@@ -21,12 +22,6 @@ ul {
     list-style: none;
     /* text-align: left; */
 }
-.content-disc:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle; 
-}
 .float-left ul {
     text-align: center;
 }
@@ -36,9 +31,8 @@ ul {
 .content-disc {
     /* float: right; */
     width: 35%;
-    /* vertical-align: middle; */
-    /* display: inline-block; */
-    text-align: center
+    text-align: center;
+    align-self: center;
 }
 .float-right {
     float:right;
@@ -61,6 +55,7 @@ strong {
     box-sizing: border-box;
     margin: 0px 10px 0px 10px;
     width: 60%;
+    height: 60%;
 }
 .logo {
     font-family: 'Kalam', cursive;
@@ -71,3 +66,30 @@ strong {
 .header-top {
     padding:1% 0% 0% 5%;
 }
+#head {
+    position: fixed;
+    z-index: 9;
+    background:white;
+    padding:10px 0px 0px 80px;
+    width: 100%;
+
+}
+.btn {
+    align-self: center;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-family: helvetica;
+    color: #ffffff;
+    font-size: 15px;
+    border:none;
+    background: #0671b8;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 20px 6% 0px 0px;
+  }
+  
+  .btn:hover {
+    background: #1987cc;
+    text-decoration: none;
+  }
