@@ -1,7 +1,7 @@
 .section-center {
     margin: auto;
     text-align: center;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     /* vertical-align: middle; */
@@ -26,13 +26,14 @@ ul {
     text-align: center;
 }
 .float-right ul {
-    text-align: center;
+    text-align: left;
 }
 .content-disc {
     /* float: right; */
     width: 35%;
     text-align: center;
     align-self: center;
+    font-size: 20px;
 }
 .float-right {
     float:right;
@@ -54,11 +55,12 @@ strong {
 .section-center img {
     box-sizing: border-box;
     margin: 0px 10px 0px 10px;
-    width: 60%;
+    width: 55%;
     height: 60%;
 }
 .logo {
-    font-family: 'Kalam', cursive;
+    font-family: 'Nobile', cursive;
+    font-weight: bold;
     font-size: 40px;
     color:#446772;
     margin-left: -8px;
@@ -109,4 +111,7 @@ strong {
     height: 45px;
     width: 213px;
     margin: 10px 20px
+}
+.content-disc li {
+    padding-bottom: 10px;
 }
