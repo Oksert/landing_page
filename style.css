@@ -68,7 +68,7 @@ strong {
 .header-top {
     padding:1% 0% 0% 5%;
 }
-#head {
+#head, #foot {
     position: fixed;
     z-index: 9;
     background:white;
