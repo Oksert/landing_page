@@ -72,7 +72,7 @@ strong {
     position: fixed;
     z-index: 9;
     background:white;
-    padding:10px 0px 0px 80px;
+    /* padding:10px 0px 0px 80px; */
     width: 100%;
 
 }
