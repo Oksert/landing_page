@@ -21,7 +21,7 @@ strong {
     background:white;
     /* padding:10px 0px 0px 80px; */
     width: 100%;
-    display: block;
+    display: flex;
     align-items: center;
 }
 .btn {
@@ -47,10 +47,14 @@ strong {
   .header-mail{
      display: none; 
 }
+.float-right {
+    margin-left: auto;
+
+}
 .content-disc li {
     padding-bottom: 10px;
 }
-span .logo {
+.logo {
     font-family: 'Nobile', cursive;
     font-weight: bold;
     color:#446772;
@@ -61,8 +65,7 @@ span .logo {
 }
 .login-icon {
     width: 30px;
-    float: right;
-    margin-left: auto;
+   align-self: flex-end;
     margin-right: 3%;
 }
 .modalDialog {
@@ -78,7 +81,7 @@ span .logo {
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
-	pointer-events: none;
+    pointer-events: none;
 }
 .modalDialog:target {
 	opacity:1;
@@ -92,6 +95,9 @@ span .logo {
 	border-radius: 10px;
     background: #fff;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column
 }
 .modal-mail{
     box-sizing: border-box;
@@ -109,4 +115,19 @@ span .logo {
     height: 45px;
     width: 213px;
     margin: 10px 20px
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
 }
