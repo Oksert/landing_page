@@ -60,13 +60,18 @@ strong {
     color:#446772;
     font-size: 1em;
 }
+.logo-image {
+    margin-left: 2%;
+}
 #login {
     display: none;
 }
-.login-icon {
+.login-image {
     width: 30px;
-   align-self: flex-end;
-    margin-right: 3%;
+}
+.login-icon {
+    margin-left: auto;
+    margin-right: 8%;
 }
 .modalDialog {
     position: fixed;
