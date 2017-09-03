@@ -36,8 +36,19 @@
         <span class="float-left">
                 <img src="img\logo.jpg"/ ><span class="logo">dea Platform</span>
         </span>
-        <button class="btn btn-custom float-right">Войти</button>
-        <input type="email" placeholder="Введите email" class="float-right"/>
+        <button id="login" class="btn btn-custom float-right">Войти</button>
+         <a href="#openModal" class="float-right"> 
+            <img class='float-right login-icon' src="img\login.png"/>
+         </a>   
+        <div id='openModal' class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2 class="modal-header">Воплощай идеи вместе с командой!</h2>
+                <h4 class="modal-disc">Управление проектами, задачами и знаниями</h4>
+                <input type="email" class='modal-mail' placeholder="Введите email"/>
+            </div>
+        </div>
+        <input type="email" placeholder="Введите email" class="header-mail"/>
     </div>
     <div id="fullpage">
         <div class="section">

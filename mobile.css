@@ -21,7 +21,8 @@ strong {
     background:white;
     /* padding:10px 0px 0px 80px; */
     width: 100%;
-
+    display: block;
+    align-items: center;
 }
 .btn {
     align-self: center;
@@ -43,7 +44,56 @@ strong {
     background: #1987cc;
     text-decoration: none;
   }
- input[type="email"]{
+  .header-mail{
+     display: none; 
+}
+.content-disc li {
+    padding-bottom: 10px;
+}
+span .logo {
+    font-family: 'Nobile', cursive;
+    font-weight: bold;
+    color:#446772;
+    font-size: 1em;
+}
+#login {
+    display: none;
+}
+.login-icon {
+    width: 30px;
+    float: right;
+    margin-left: auto;
+    margin-right: 3%;
+}
+.modalDialog {
+    position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 70%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+.modal-mail{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -58,15 +108,5 @@ strong {
     font: 16px Arial, Helvetica, sans-serif;
     height: 45px;
     width: 213px;
-    margin: 10px 20px;
-    float:right;
-}
-.content-disc li {
-    padding-bottom: 10px;
-}
-span .logo {
-    font-family: 'Nobile', cursive;
-    font-weight: bold;
-    color:#446772;
-    font-size: 1em;
+    margin: 10px 20px
 }
