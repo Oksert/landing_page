@@ -131,3 +131,14 @@ strong {
 :-ms-input-placeholder {  
    text-align: center; 
 }
+.section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.content-disc {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
