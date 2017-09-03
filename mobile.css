@@ -15,6 +15,9 @@ strong {
     width: 55%;
     height: 60%;
 }
+#fp-nav {
+    display:none;
+}
 #head, #foot {
     position: fixed;
     z-index: 9;
