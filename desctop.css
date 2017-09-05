@@ -14,6 +14,9 @@
 .menu li {
     float: right;
 }
+.only-mobile {
+    display: none;
+}
 #header {
     background-color: lightblue;
 }
@@ -58,7 +61,10 @@ strong {
     width: 55%;
     height: 60%;
 }
-.logo {
+div.logo {
+    margin-left: 30px;
+}
+.logo span {
     font-family: 'Nobile', cursive;
     font-weight: bold;
     font-size: 40px;
@@ -74,6 +80,9 @@ strong {
     background:white;
     /* padding:10px 0px 0px 80px; */
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
 }
 .btn {
@@ -88,7 +97,8 @@ strong {
     background: #0671b8;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    margin: 20px 6% 0px 0px;
+    margin-right: 10px;
+    /* margin: 20px 6% 0px 0px; */
   }
   
   .btn:hover {
@@ -114,4 +124,8 @@ strong {
 }
 .content-disc li {
     padding-bottom: 10px;
+}
+.sign-in {
+    display: flex;
+    flex-direction: row-reverse;
 }
