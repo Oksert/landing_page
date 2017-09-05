@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/jquery.fullPage.css" />
     <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="vendor/jquery.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
     <script src="vendor/jquery.easings.min.js"></script>
@@ -34,8 +35,13 @@
     </header> -->
     <div id="head">
         <div class="logo">
-            <img src="img\logo.jpg"/ class="logo-image"><span>dea Platform</span>
+            <span>Run</span><img src="img\logo.jpg"/ class="logo-image"><span>dea.online</span>
         </div>
+        <ul id="menu">
+            <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Календари</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">Дашборд</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">База знаний</a></li>
+        </ul>
         <div class='sign-in'>
             <button id="login" class="btn btn-custom float-right">Войти</button> 
             <input type="email" placeholder="Введите email"/>
@@ -52,6 +58,7 @@
             </div>
         </div>
     </div>
+    
     <div id="fullpage">
         <div class="section">
             <div class='section-center'>

@@ -2,8 +2,7 @@
     $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
-		lockAnchors: false,
-		// anchors:['firstPage', 'secondPage'],
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 		navigation: true,
 		navigationPosition: 'right',
 		// navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -51,9 +50,9 @@
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth: 0,
+		responsiveWidth: 1100,
 		responsiveHeight: 0,
-		responsiveSlides: false,
+		responsiveSlides: true,
 		parallax: true,
 		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
