@@ -3,13 +3,17 @@
     text-align: center;
     width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    
     /* vertical-align: middle; */
 }
 .menu ul {
     margin-left: 0px;
     padding-left: 0px;
     
+}
+.fullpage:nth-child(even) .section-center {
+    flex-direction: row-reverse;
 }
 .menu li {
     float: right;
@@ -44,6 +48,9 @@ ul {
 .float-left {
     float: left;
 }
+div.reverse {
+    flex-direction: row-reverse;
+}
 body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
@@ -60,6 +67,8 @@ strong {
     margin: 0px 10px 0px 10px;
     width: 55%;
     height: 60%;
+    box-shadow: 0 0 65px rgba(0,0,0,0.5);
+    border-radius: 5px;
 }
 div.logo {
     margin-left: 30px;
