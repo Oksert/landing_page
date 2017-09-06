@@ -42,12 +42,6 @@ ul {
     align-self: center;
     font-size: 20px;
 }
-.float-right {
-    float:right;
-} 
-.float-left {
-    float: left;
-}
 div.reverse {
     flex-direction: row-reverse;
 }
@@ -71,7 +65,7 @@ strong {
     border-radius: 5px;
 }
 div.logo {
-    margin-left: 30px;
+    margin-left: 7%;
 }
 .logo span {
     font-family: 'Nobile', cursive;
@@ -137,6 +131,7 @@ div.logo {
 .sign-in {
     display: flex;
     flex-direction: row-reverse;
+    margin-right: 7%;
 }
 #menu li {
 	display:inline-block;
