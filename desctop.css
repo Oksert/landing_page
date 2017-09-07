@@ -1,7 +1,7 @@
 .section-center {
     margin: auto;
     text-align: center;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     
@@ -65,7 +65,7 @@ strong {
     border-radius: 5px;
 }
 div.logo {
-    margin-left: 8%;
+    margin-left: 10%;
     display: flex;
     padding: 5px 0px 5px 0px;
 }
@@ -134,7 +134,7 @@ div.logo {
 .sign-in {
     display: flex;
     flex-direction: row-reverse;
-    margin-right: 8%;
+    margin-right: 10%;
 }
 #menu li {
 	display:inline-block;
