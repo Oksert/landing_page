@@ -50,7 +50,7 @@
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth: 1100,
+		responsiveWidth: 500,
 		responsiveHeight: 0,
 		responsiveSlides: true,
 		parallax: true,
