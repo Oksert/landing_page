@@ -109,6 +109,7 @@ div.logo {
     -moz-border-radius: 0;
     border-radius: 0px;
     font-family: Arial;
+    font-size: 16px;
     color: #ffffff;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
@@ -206,7 +207,7 @@ div.logo {
     width:40%;
     transition: box-shadow .3s;
     text-align: center;
-    background-color:rgb(241, 241, 241);
+    background-color:#f9f9f9;
     padding: 20px;
     /* box-shadow: 0 0 65px rgba(105, 104, 104, 0.50); */
     border-radius: 0px;

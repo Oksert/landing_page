@@ -109,6 +109,7 @@ div.logo {
     -moz-border-radius: 0;
     border-radius: 0px;
     font-family: Arial;
+    font-size: 20px;
     color: #ffffff;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
@@ -135,7 +136,7 @@ div.logo {
     border-bottom: 1px solid #ddd;
     background: transparent;
     margin-bottom: 10px;
-    font: 16px Arial, Helvetica, sans-serif;
+    font: 20px Arial, Helvetica, sans-serif;
     height: 45px;
     width: 213px;
     margin: 10% 0px 0px 0px;
