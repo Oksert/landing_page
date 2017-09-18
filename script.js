@@ -2,7 +2,7 @@
     $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		anchors: ['welcome','workflow','analytics','schedule','join', 'faq'],
 		navigation: true,
 		navigationPosition: 'right',
 		// navigationTooltips: ['firstSlide', 'secondSlide'],

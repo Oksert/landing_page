@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1">
     <title>Runidea</title>
-    <link rel="stylesheet" type="text/css" media="(min-width:1350px)"  href="desctop.css" />
+    <link rel="stylesheet" type="text/css" media="(min-width:1350px)"  href="desctop.scss" />
     <link rel="stylesheet" type="text/css" media="(min-width:800px) and (max-width:1350px)"  href="medium.css" />
     <link rel="stylesheet" type="text/css" media="(max-width:800px)" href="mobile.css" />
 
@@ -35,74 +35,150 @@
         </div>
     </header> -->
     <div id="head">
+        <div id='head-content'>
         <div class="logo">
-            <span>Run</span><img src="img\logo.jpg"/ class="logo-image"><span>dea.online</span>
-        </div>
-        <ul id="menu">
-            <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Календари</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondPage">Дашборд</a></li>
-            <li data-menuanchor="3rdPage"><a href="#3rdPage">База знаний</a></li>
-        </ul>
-        <div class='sign-in'>
-            <button id="login" class="btn btn-custom float-right">Войти</button> 
-            <input type="email" placeholder="Введите email"/>
-            <!-- <img src='img\sign.jpg'/ style='width:30px; height:30px'> -->
-        </div>
-        <a href="#openModal" class="login-icon only-mobile"> 
-            <img class='login-image' src="img\login.png"/>
-        </a>   
-        <div id='openModal' class="modalDialog only-mobile">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-                <h2 class="modal-header">Воплощай идеи вместе с командой!</h2>
-                <h4 class="modal-disc">Управление проектами, задачами и знаниями</h4>
-                <input type="email" class='modal-mail' placeholder="Введите email"/>
+                <span>Run</span><img src="img\logo.jpg"/ class="logo-image"><span>dea.online</span>
+            </div>
+            
+            <ul id="menu">
+                <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li>
+                <li data-menuanchor="join"><a href="#join">Скачать</a></li>
+                <li><a href="#3rdPage">База знаний</a></li>
+                <li><a href="./ref/index.html">Документация</a></li>
+            </ul>
+            <!-- <div class='sign-in'>
+                <button id="login" class="btn btn-custom float-right">Войти</button> 
+                <input type="email" placeholder="Введите email"/>
+                
+            </div> -->
+            <a href="#openModal" class="login-icon only-mobile"> 
+                <img class='login-image' src="img\login.png"/>
+            </a>   
+            <div id='openModal' class="modalDialog only-mobile">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2 class="modal-header">Воплощай идеи вместе с командой!</h2>
+                    <h4 class="modal-disc">Управление проектами, задачами и знаниями</h4>
+                    <input type="email" class='modal-mail' placeholder="Введите email"/>
+                </div>
             </div>
         </div>
+        
     </div>
     
     <div id="fullpage">
         <div class="section">
             <div class='section-center'>
-                <img src="img/browser1.png"/>
+                <div class="column">
+                        <img src="img/browser1.png"/>
+                </div>
+                
                 <div class="content-disc float-right">
-                    <h2>Запланируй реализацию идей</h2>
-                    <ul>
-                        <li>Создайте проект и разбейте его на задачи</li>
-                        <li>Определите сроки и исполнителей задач при помощи календаря команды</li>
-                        <li>Используйте функцию "Автоматическое планирование" для планирования задач с оптимальной загрузкой команды</li>
-                    </ul>
+                    <h1>Платформа для реализации Ваших идей!</h1>
+                    Idea Platform - конструктор для быстрого создания масштабируемых веб-приложений
+                    <input type="email" class='modal-mail' placeholder="Введите email"/>
+                    <button class='btn'>Получить доступ </button>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class='section-center reverse'>
-                <img src="img/browser2.png"/>
-                <div class="content-disc float-left">
-                    <h2>Следи за ходом работ</h2>
-                    <ul>
-                        <li>Вся информация о ходе проектов и задач на одном дашборде</li>
-                        <li>Анализируйте выполнение задач при помощи встроенных отчетов, а если нужно, то создавайте свои</li>
-                        <li>Лента новостей позволит быстро узнать, что произошло за последнее время</li>
-                    </ul>
+                <div class="column">
+                    <img src="img/workflow.png"/>
+                </div>
+                <div class="content-disc float-right">
+                    <h1>Система автоматизации бизнес-процессов (BPMS)</h1>
+                    К любому объекту системы можно привязать жизненный цикл, который включает в себя возможные состояния объекта, переходы от одного состояния к другому и указать какой человек или событие могут осуществить переход. <br>
+                    Инструмент позволяет настроить согласование любой сложности, связывать между собой жизненный циклы объектов, отправлять оповещения по почте и смс и, даже, управлять жизненным циклом объекта из внешней системы через REST-сервисы 
                 </div>
             </div>
         </div>
         <div class="section">
-            <div class='section-center'>
-                <img src="img/browser3.png"/>
-                <div class="content-disc float-right">
-                    <h2>Экономь время и деньги!</h2>
-                    <ul>
-                        <li>Комментируйте задачи для быстрых коммуникаций и сохранения истории обсуждений</li>
-                        <li>Гибкий поиск по объектам сервиса и документам даст доступ к нужной информации</li>
-                        <li>База знаний - источник лучших практик, который уменьшит риск потери </li>
-                    </ul>
+                <div class='section-center'>
+                    <div class="column">
+                        <img src="img/analytic.png"/>
+                    </div>
+                    
+                    <div class="content-disc float-right">
+                        <h1>Инструмент бизнес-аналитики</h1>
+                        Проанализировать данные системы можно "на лету", указав нужный состав полей, фильтры, сортировки, группировки и вывод агрегатных значений. <br> 
+                        Для создания комплексных аналитических отчетов также можно использовать  внешние данные и отобразить результат в виде различных представлений. <br>
+                        Отчеты одной тематики можно объединить в дашборды, создавая таким образом удобные рабочие места. <br>
+                        Полнотекстовый поиск позволяет искать сразу по всем объектам системы и по содержанию вложенных документов
+                    </div>
                 </div>
+            </div>
+        <div class="section">
+            <div class='section-center reverse'>
+                    <div class="column">
+                            <img src="img/browser3.png"/>
+                        </div>
+                
+                <div class="content-disc float-right">
+                    <h2>Инструмент интерактивного планирования</h2>
+                    Для создания инструментов интерактивного планирования текущие объекты системы можно отображать в виде календаря, расписания (scheduler) или диаграммы Ганта, менять сроки, длительность, исполнителей, связи между объектами, а также создавать новые объекты прямо из инструментов планироваия.
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class='section-center '>
+                <div id='access-page' class='column column-big'>
+                    <h1>Как получить доступ?</h1>
+                    <div class="row-disp">
+                        <div class='info-box column flex-column'>
+                            <h3>
+                                Получить доступ онлайн (облако)
+                            </h3> 
+                            Создайте свое пространство в сервисе Ideaplatform.online, где вам будут доступны все инструменты настройки и тестовые примеры. Вы можете бесплатно пригласить в пространство до 5 пользователей.
+                            <div>
+                                <button class="btn info-btn">Создать пространство</button>
+                            </div>
+                        </div>
+                        <div class='info-box column flex-column'>
+                            <div>
+                                <h3>
+                                    Развернуть систему "у себя"
+                                </h3> 
+                                Скачайте дистрибутив и по инструкции установите систему у себя. Минимальные требования к железу: 1 CPU, 2 Gb RAM и 5 Gb HDD.
+                                Без установки лицензий в системе смогут работать 5 пользователей.
+                            </div>    
+                            
+                            <div>
+                                <button class="btn info-btn">Скачать дистрибутив</button>
+                            </div>
+                                    
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="section">
+            <div class='section-center '>
+                <div class="column-big" id='learnhow'>
+                    <h1>
+                        Как научиться работать?
+                    </h1>
+                    <div class='row-disp'>
+                        <div class="content-disc column">
+                            <ul>
+                                <li>Начните изучение платформы  с изучения тестового примера по настройке веб-приложения для управления проектами, где шаг за шагом разобраны основые инструменты настройки.</li>
+                                <li>Для подробного изучения работы каждого инструмента настройки обратитесь к разделу Документация.</li>
+                                <li>Напишите нам здесь или оставьте запрос в службу поддержки прямо через интерфейс системы, если вы нигде не нашли ответ на свой вопрос</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <img src="./img/team.png" alt="">
+                            <button class="btn info-btn">Задать вопрос</button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
     <div id="foot">
+        <h1>sdskcdlskl</h1>
         <img src='img/fb.png'/>
         <img src='img/twitter.png'/>
         <img src='img/in.png'/>
