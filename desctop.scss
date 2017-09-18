@@ -27,6 +27,7 @@
 ul {
     text-decoration: none; 
     list-style: none;
+    padding-left: 0px;
     /* text-align: left; */
 }
 .float-left  {
@@ -37,9 +38,10 @@ ul {
 }
 .content-disc {
     /* float: right; */
-    width: 35%;
+    width: 50%;
     align-self: center;
     font-size: 20px;
+    text-align: left;
 }
 div.reverse {
     flex-direction: row-reverse;
@@ -184,6 +186,9 @@ div.logo {
 }
 .column-big {
     width: 100%;
+}
+.сolumn-small {
+    width: 40%;
 }
 .column-flex {
     display: flex;
