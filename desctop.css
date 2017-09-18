@@ -4,7 +4,7 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
     /* vertical-align: middle; */
 }
 .menu ul {
@@ -204,13 +204,17 @@ div.logo {
 .info-box {
     width:40%;
     font-size: 25px;
+    transition: box-shadow .3s;
     text-align: center;
     background-color:rgb(241, 241, 241);
     padding: 20px;
-    border-radius: 23px;
-    box-shadow: 0 0 65px rgba(105, 104, 104, 0.50);
+    /* box-shadow: 0 0 65px rgba(105, 104, 104, 0.50); */
+    border-radius: 0px;
    
 }
+.info-box:hover {
+    box-shadow: 0 0 65px rgba(105, 104, 104, 0.50);
+  }
 .info-box h1 {
     font-size: 4em
 }
