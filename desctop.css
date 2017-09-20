@@ -39,9 +39,10 @@ ul {
 .content-disc {
     /* float: right; */
     width: 50%;
-    align-self: center;
+    align-self: end;
     /* font-size: 20px; */
     text-align: left;
+    margin-top: -2%;
 }
 div.reverse {
     flex-direction: row-reverse;
@@ -57,6 +58,8 @@ h1,
 h2,
 strong {
   color: #555;
+  font-size: 2.7em;
+  line-height: 1.3em;
 }
 .section-center img {
     box-sizing: border-box;
@@ -225,4 +228,7 @@ div.logo {
 #access-page h1, #learnhow h1 {
     margin-bottom:6%;
     /* font-size: 3.5em; */
+}
+.flex-center {
+    justify-content: center;
 }

@@ -1,67 +1,108 @@
-#pricing {
+
+#price-page {
+    // .tab-slider--tabs {
+    //     display: block;
+    //     float: left;
+    //     margin: 0;
+    //     padding: 0;
+    //     list-style: none;
+    //     position: relative;
+    //     border-radius: 5px;
+    //     overflow: hidden;
+    //     background: #EFEAEA;
+    //     height: 35px;
+    //     -webkit-user-select: none;
+    //        -moz-user-select: none;
+    //         -ms-user-select: none;
+    //             user-select: none;
+    //   }
+     
+      
+    // .tab-slider--trigger {
+    //     font-size: 12px;
+    //     line-height: 1;
+    //     font-weight: bold;
+    //     color: #345F90;
+    //     text-transform: uppercase;
+    //     text-align: center;
+    //     padding: 11px 20px;
+    //     position: relative;
+    //     // z-index: 2;
+    //     cursor: pointer;
+    //     display: inline-block;
+    //     -webkit-transition: color 250ms ease-in-out;
+    //     transition: color 250ms ease-in-out;
+    //     -webkit-user-select: none;
+    //         -moz-user-select: none;
+    //         -ms-user-select: none;
+    //             user-select: none;
+    //     }
+    //     .tab-slider--trigger.active {
+    //         color: #fff;
+    //         background-color: #DE5428 ;
+    //     }
     
-       .tab-slider--nav {
-        width: 100%;
-        float: left;
-        margin-bottom: 20px;
-      }
-      
-      .tab-slider--tabs {
-        display: block;
-        float: left;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        position: relative;
-        border-radius: 35px;
-        overflow: hidden;
-        background: #fff;
-        height: 35px;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-      }
-    //   .tab-slider--tabs:after {
-    //     content: "";
-    //     width: 50%;
-    //     background: #345F90;
-    //     height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     -webkit-transition: all 250ms ease-in-out;
-    //     transition: all 250ms ease-in-out;
-    //     border-radius: 35px;
-    //   }
-    //   .tab-slider--tabs.slide:after {
-    //     left: 50%;
-    //   }
-      
-      .tab-slider--trigger {
-        font-size: 12px;
-        line-height: 1;
-        font-weight: bold;
-        color: #345F90;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 11px 20px;
-        position: relative;
-        z-index: 2;
-        cursor: pointer;
-        display: inline-block;
-        -webkit-transition: color 250ms ease-in-out;
-        transition: color 250ms ease-in-out;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-      }
-      .tab-slider--trigger.active {
-        color: #fff;
-      }
-      
-      .tab-slider--body {
-        margin-bottom: 20px;
-      }
+    // .tab-slider--body {
+    //     display: flex;
+    //     .price-tab {
+    //         margin-top: 3%;
+    //         background-color: lightgray;
+    //         padding: 3%;
+    //     }
+    // }
+    // h1 {
+    //     margin-top: -16%;
+    // }
+    // .center-tab {
+    //     margin: 0px 20px;
+    // }
+    .trigger {
+        border:none;
+        background: #de5021;
+        background-image: -webkit-linear-gradient(top, #de5021, #e06743);
+        background-image: -moz-linear-gradient(top, #de5021, #e06743);
+        background-image: -ms-linear-gradient(top, #de5021, #e06743);
+        background-image: -o-linear-gradient(top, #de5021, #e06743);
+        background-image: linear-gradient(to bottom, #de5021, #e06743);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0px;
+        font-family: Arial;
+        font-size: 20px;
+        color: #ffffff;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+    }
+    .trigger-container {
+        padding: 10px 0px 10px 0px;
+        background-image: linear-gradient(to bottom, #de5021, #e06743);
+    }
+    
+    .trigger-not-active {
+        background: #f0eaea;
+        color: #446772;
+    }
+    .tab {
+        display: flex;
+        justify-content: space-between;
+        width:60%;
+    }
+    .tab-container {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5%;
+       
+    }
+    .price-plan {
+        border: 1px solid;
+        padding: 10px;
+        border-radius: 5px;
+        width: 25%;
+        height: 100%;
+    }
+    .hide {
+        display: none;
+    }
+
 }

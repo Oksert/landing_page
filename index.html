@@ -47,6 +47,7 @@
             <ul id="menu">
                 <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li>
                 <li data-menuanchor="join"><a href="#join">Скачать</a></li>
+                <li data-menuanchor="price"><a href="#price">Купить</a></li>
                 <li><a href="./ref/index.html">Документация</a></li>
             </ul>
             <!-- <div class='sign-in'>
@@ -185,41 +186,83 @@
         </div>
         <div class="section">
             <div class='section-center '>
-                <div id='access-page' class='column column-big'>
+                <div id='price-page' class="column-big">
                     <h1>Сколько стоит?</h1>
-                    <div class="row-disp" id='pricing'>
-                        <div class="container">
-                            <div class="tab-slider--nav">
-                                <ul class="tab-slider--tabs">
-                                    <li class="tab-slider--trigger active" rel="tab1">Tab 1</li>
-                                    <li class="tab-slider--trigger" rel="tab2">Tab 2</li>
-                                </ul>
+                    <span class='trigger-container'>
+                        
+                        <span class="trigger" rel='tab1'>Облако</span>
+                        <span class="trigger trigger-not-active" rel='tab2'>У себя</span>
+                    </span>
+                    <div class="tab-container">
+                        <div id="tab1" class='tab'>
+                            <div class="price-plan"> 
+                                <h3> Менее 5 человек</h3>
+                                <h4> Бесплатно</h4>
                             </div>
-                            <div class="tab-slider--container">
-                                <div id="tab1" class="tab-slider--body">
-                                    <h2>First Tab</h2>
-                                    <p>Toggle switch style tab navigation. Currently only works with two tabs.</p>
-                                    <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
-                                </div>
-                                <div id="tab2" class="tab-slider--body">
-                                    <h2>Second Tab</h2>
-                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                                </div>
+                            <div class="price-plan">
+                                <h3>Более 5 человек</h3>
+                                <h4>300 руб./месяц за пользователя</h4>
+                                
                             </div>
-                        </div> 
+                            <div class="price-plan">
+                                <h3>Более 100 человек</h3>
+                                <h4> Цена по запросу </h4>
+                           </div>
+                        </div>
+                        <div id='tab2' class='tab hide'>
+                                <div class="price-plan"> 
+                                        <h3> Менее 5 человек</h3>
+                                        <h4> Бесплатно</h4>
+                                    </div>
+                                    <div class="price-plan">
+                                        <h3>Более 5 человек</h3>
+                                        <h4>6000 руб. за пользователя</h4>
+                                        
+                                    </div>
+                                    <div class="price-plan">
+                                        <h3>Более 100 человек</h3>
+                                        <h4> Цена по запросу </h4>
+                                   </div>
+                        </div>
+                        
                     </div>
+                    <button class="btn">Купить лицензию</button>
+                    
+                    
+                       <!-- <div class="tab-slider--nav">
+                            <ul class="tab-slider--tabs">
+                                <li class="tab-slider--trigger active" rel="tab1">Облако</li>
+                                <li class="tab-slider--trigger" rel="tab2">Выделенный сервер</li>
+                            </ul>
+                        </div>
+                        <div class="tab-slider--container">
+                            <div id="tab1" class="tab-slider--body">
+                                <div>
+                                    <div class="price-tab">
+                                        <h2>До 5 пользователей</h2>
+                                     </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab-slider--body">
+                                <div class="price-tab"> 
+                                    <h2>До 5 пользователей</h2>
+                                </div>
+                            </div>
+                        </div>
+                         -->
+                    
                 </div>
                 
             </div>
         </div>
     </div>
-    <div id="foot">
+    <!-- <div id="foot">
         <h1>sdskcdlskl</h1>
         <img src='img/fb.png'/>
         <img src='img/twitter.png'/>
         <img src='img/in.png'/>
     </div>
-    
+     -->
     
 </body>
 
