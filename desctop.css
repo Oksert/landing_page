@@ -205,7 +205,7 @@ div.logo {
 }
 .row-disp {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .info-box {
     width:40%;
