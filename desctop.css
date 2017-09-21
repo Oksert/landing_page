@@ -118,7 +118,10 @@ div.logo {
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
-  
+  .btn-block {
+      display: block;
+      margin-top: 20px;
+  }
   .btn:hover {
     background: #ed6b47;
     background-image: -webkit-linear-gradient(top, #ed6b47, #ff7d59);
@@ -142,7 +145,6 @@ div.logo {
     margin-bottom: 10px;
     font: 20px Arial, Helvetica, sans-serif;
     height: 45px;
-    width: 213px;
     margin: 10% 0px 0px 0px;
 }
 .content-disc li {
