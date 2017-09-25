@@ -104,3 +104,36 @@
 	// 	$(this).addClass("active");
 	//   });
 });
+$(window).load(function(){ 
+
+	var vid = document.createElement(`video`)
+	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
+	vid.controls=true
+	// vid.preload='none'
+	// setTimeout(function (){
+	// 	vid.load()
+	// },4000)
+	
+	vid.onloadeddata = function() {
+		document.getElementById('welcome-section').innerHTML=''
+		document.getElementById('welcome-section').appendChild(vid)
+	
+		
+	};
+	var req = new XMLHttpRequest();
+	req.open('GET', '/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4', true);
+	req.responseType = 'blob';
+	
+	req.onload = function() {
+	   if (this.status === 200) {
+		  var videoBlob = this.response;
+		  var vidUrl = URL.createObjectURL(videoBlob); // IE10+
+		  vid.src = vidUrl;
+	   }
+	}
+	req.onerror = function() {
+	   // Error
+	}
+	
+	req.send();
+ })
