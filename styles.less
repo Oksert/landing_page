@@ -118,7 +118,7 @@
     top: 0%;
     opacity: 0;
     /* background: white; */
-    transition: all ease-in-out;
+    transition: opacity ;
     transition-duration: 0.2s;
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@
         padding: 30px;
         opacity: 1;
         background: rgba(255, 255, 255, 1);
-        width:40%;
+        width:30%;
         input[type=text],  input[type=email],select {
             width: 100%;
             padding: 12px 20px;
@@ -138,6 +138,25 @@
             // border-radius: 4px;
             box-sizing: border-box;
         }
+        .radio-wrap {
+            input:checked + label {
+                color:#de5021;
+                text-decoration: underline;
+                text-decoration-style: dashed;
+            }
+            input {
+                display: none;
+            }
+            padding: 12px 0px;
+            margin: 8px 0;
+            label:last-of-type {
+                margin-left: 10px;
+            }
+        }
+        input[type=submit] {
+            margin-top:20px;
+        }
+
         
         // input[type=submit] {
         //     // width: 100%;
