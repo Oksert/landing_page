@@ -123,6 +123,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .modal-header {
+        font-weight: inherit;
+        margin-top: 0px;
+        border-bottom: 1px solid #de562a;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
     .modal-content {
         padding: 30px;
         opacity: 1;
@@ -139,10 +146,13 @@
             box-sizing: border-box;
         }
         .radio-wrap {
+            label {
+                cursor: pointer;
+            }
             input:checked + label {
                 color:#de5021;
-                text-decoration: underline;
-                text-decoration-style: dashed;
+                // text-decoration: underline;
+                // text-decoration-style: dashed;
             }
             input {
                 display: none;
@@ -153,7 +163,7 @@
                 margin-left: 10px;
             }
         }
-        input[type=submit] {
+        input:last-of-type {
             margin-top:20px;
         }
 

@@ -151,3 +151,10 @@ $(window).load(function(){
 		$('.modalBox-active').removeClass('modalBox-active')
 	}
 }
+function onSubmit (event) {
+	document.getElementById('modalBox').checkValidity()
+	// event.preventDefault();
+	// event.stopPropagation()
+	// console.log(JSON.stringify($('form').serializeArray()))
+	// // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
+}
