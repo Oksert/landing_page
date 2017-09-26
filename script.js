@@ -137,3 +137,17 @@ $(window).load(function(){
 	
 	req.send();
  })
+ function openModal(event) {
+	 if (event) {
+		$('#modalBox').addClass('modalBox-active')
+		event.preventDefault();
+		event.cancelBubble = true;
+		event.stopPropagation()
+	 }
+
+ }
+ window.onclick = function(event) {
+    if (event.target == document.getElementById('modalBox')) {
+		$('.modalBox-active').removeClass('modalBox-active')
+	}
+}

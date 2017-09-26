@@ -28,6 +28,28 @@
 </head>
 
 <body>
+        <div id='modalBox' class="modalBox">
+            <div class="modal-content">
+                    <form action="/action_page.php">
+                        <label for="fname">ФИО*</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Введите ФИО" required>
+                    
+                        <label for="lname">Телефон</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Введите номер телефона">
+                        <label for="lname">Организация</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Введите название Вашей организации">
+                        <label for="lname">Email*</label>
+                        <input type="email" id="lname" name="lastname" placeholder="Введите адрес эл.почты" required>
+                    
+                       
+                      
+                        <input type="submit" value="Подтвердить" class="btn">
+                      </form>
+            </div>
+               
+        </div>  
+       
+        
     <!-- <header>
         <div class="header-top clearfix">
             <img src="img\logo.jpg"/ ><span class="logo">dea Platform</span>
@@ -60,7 +82,8 @@
             </div> -->
             <a href="#openModal" class="login-icon only-mobile"> 
                 <img class='login-image' src="img\login.png"/>
-            </a>   
+            </a> 
+           
             <div id='openModal' class="modalDialog only-mobile">
                 <div>
                     <a href="#close" title="Close" class="close">X</a>
@@ -159,7 +182,7 @@
                                         Скачайте дистрибутив и по инструкции установите систему у себя. Минимальные требования к железу: 1 CPU, 2 Gb RAM и 5 Gb HDD.
                                         Без установки лицензий в системе смогут работать 5 пользователей.
                                         <div>
-                                            <button class="btn info-btn">Скачать дистрибутив</button>
+                                            <button class="btn info-btn" onclick="openModal(event)">Скачать дистрибутив</button>
                                         </div>
                                 </div>
                             </div>
@@ -203,7 +226,7 @@
                     </span>
                     <div class="tab-container">
                         <div id="tab1" class='tab'>
-                            <div class="price-plan"> 
+                            <!-- <div class="price-plan"> 
                                 <div class='price-header'>
                                     <h3> Менее 5 человек</h3>
                                 </div>
@@ -232,7 +255,32 @@
                                     <h4>Цена по запросу</h4>
                                 </div>
                                 
-                           </div>
+                           </div> -->
+                           <table>
+                                   <tr>
+                                        <th>
+                                            < 5 пользователей
+                                        </th>
+                                        <th>
+                                            от 5 до 100 пользователей
+                                        </th>
+                                        <th>
+                                            > 100 пользователей
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           Бесплатно
+                                        </td>
+                                        <td>
+                                            300 &#8381
+                                        </td>
+                                        <td>
+                                           По запросу
+                                        </td>
+                                    </tr>
+                             
+                            </table>
                         </div>
                         <div id='tab2' class='tab hide'>
                             <div class="price-plan"> 
