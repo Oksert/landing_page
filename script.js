@@ -121,7 +121,7 @@ $(window).load(function(){
 		
 	};
 	var req = new XMLHttpRequest();
-	req.open('GET', '/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4', true);
+	req.open('GET', '/video/demo.mp4', true);
 	req.responseType = 'blob';
 	
 	req.onload = function() {

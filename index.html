@@ -35,6 +35,9 @@
                        
                         <label for="fname">ФИО*</label>
                         <input type="text" id="fname" name="firstname" placeholder="Введите ФИО" required>
+
+                        <label for="mail">Email*</label>
+                        <input type="email" id="mail" name="mail" placeholder="Введите адрес эл.почты" required>
                     
                         <label for="tel">Телефон</label>
                         <input type="text" id="tel" name="tel" placeholder="Введите номер телефона">
@@ -42,15 +45,13 @@
                         <label for="org">Организация</label>
                         <input type="text" id="org" name="org" placeholder="Введите название Вашей организации">
                         
-                        <label for="mail">Email*</label>
-                        <input type="email" id="mail" name="mail" placeholder="Введите адрес эл.почты" required>
+                        
                         
                         <div class='radio-wrap'>
-                                <label for="">Получить:</label>
-                                <input type="radio" id="cloud" name="cloud" checked>
-                                <label for="cloud">Доступ к облаку</label>
-                                <input type="radio" id="dist" name="cloud">
-                                <label for="dist">Дистрибутив</label>
+                                <input type="checkbox" id="cloud" name="cloud" checked>
+                                <label for="cloud">Создать пространство в облаке</label>
+                                <input type="checkbox" id="dist" name="cloud">
+                                <label for="dist">Получить дистрибутив</label>
                                 
                             </div>
                         <input type="submit" value="Подтвердить" class="btn">

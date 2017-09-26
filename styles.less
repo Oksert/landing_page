@@ -152,7 +152,12 @@
             input:checked + label {
                 color:#de5021;
                 // text-decoration: underline;
-                // text-decoration-style: dashed;
+                // text-decoration-style: dotted;
+            }
+            input:not(:checked) + label {
+                // color:#de5021;
+                text-decoration: underline;
+                text-decoration-style: dotted;
             }
             input {
                 display: none;
