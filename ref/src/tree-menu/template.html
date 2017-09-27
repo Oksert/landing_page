@@ -1,0 +1,27 @@
+<div id="header">
+        <div class="header-name">
+            <a href="./../index.html"><h1>IdeaPlatform</h1></a>
+            
+        </div>
+        <div class="article-name">
+            <h3>{{$ctrl.name}}</h3>
+        </div>
+        
+ </div>
+ <div class='content'>
+    <div class="tree custom-scroll">
+        <ul sf-treepeat="node in children of $ctrl.treeData" class='ltr-direction'>
+                
+                <span>
+                        <a href="./data/article_{{node.km_articleid}}.html" ng-click='$ctrl.clickArticle(node.displayname)'target="iframe1">{{node.displayname}}</a>
+                </span >
+                <ul>
+                    <li sf-treecurse>This should be removed</li>
+                </ul>
+                
+        </ul>
+    </div>
+    <div class='article-content'>
+            <iframe name="iframe1" class="custom-scroll"></iframe>
+        </div>
+</div>
