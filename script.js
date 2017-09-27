@@ -1,3 +1,4 @@
+ import './styles/style.scss'
  $(document).ready(function() {
 	$('form').submit(function(event) {
 		
@@ -118,7 +119,7 @@
 });
 $(window).load(function(){ 
 
-	var vid = document.createElement(`video`)
+	var vid = document.createElement('video')
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
 	vid.controls=true
 	// vid.preload='none'
