@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="vendor/less.min.js" type="text/javascript"></script>
     <script src="vendor/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
     <script src="vendor/jquery.easings.min.js"></script>
 
@@ -31,7 +32,7 @@
         <div id='modalBox' class="modalBox">
             <div class="modal-content">
                     <div class="modal-header">Введите Ваши данные</div>
-                    <form method="post">
+                    <form>
                        
                         <label for="fname">ФИО*</label>
                         <input type="text" id="fname" name="firstname" placeholder="Введите ФИО" required>
@@ -40,7 +41,7 @@
                         <input type="email" id="mail" name="mail" placeholder="Введите адрес эл.почты" required>
                     
                         <label for="tel">Телефон</label>
-                        <input type="text" id="tel" name="tel" placeholder="Введите номер телефона">
+                        <input type="tel" name="phone" id="phone" class="form-control bfh-phone" data-format="+7 (ddd) ddd-dd-dd" value="" pattern="(\+[\d\ \(\)\-]{16})"  placeholder="Введите номер телефона">
                         
                         <label for="org">Организация</label>
                         <input type="text" id="org" name="org" placeholder="Введите название Вашей организации">
@@ -48,30 +49,22 @@
                         
                         
                         <div class='radio-wrap'>
-                                <input type="checkbox" id="cloud" name="cloud" checked>
-                                <label for="cloud">Создать пространство в облаке</label>
-                                <input type="checkbox" id="dist" name="cloud">
-                                <label for="dist">Получить дистрибутив</label>
-                                
+                                <div>
+                                    <input type="checkbox" id="cloud" name="cloud" checked>
+                                    <label for="cloud">Создать пространство в облаке</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="dist" name="cloud">
+                                    <label for="dist">Получить дистрибутив</label>
+                                </div>
                             </div>
-                        <input type="submit" value="Подтвердить" class="btn">
+                        <button type="submit" value="Подтвердить" class="btn">Подтвердить</button>
                         
                       </form>
             </div>
                
         </div>  
        
-        
-    <!-- <header>
-        <div class="header-top clearfix">
-            <img src="img\logo.jpg"/ ><span class="logo">dea Platform</span>
-            <a class="l-right toggle-menu" href="#">
-            <i></i>
-            <i></i>
-            <i></i>
-            </a>
-        </div>
-    </header> -->
     <div id="head">
         <div id='head-content'>
             <div class="logo">

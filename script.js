@@ -1,4 +1,29 @@
  $(document).ready(function() {
+	$('form').submit(function(event) {
+		
+				// get the form data
+				// there are many ways to get this data using jQuery (you can use the class or id also)
+				var formData = JSON.stringify($('form').serializeArray())
+		
+				// process the form
+				$.ajax({
+					type        : 'get', // define the type of HTTP verb we want to use (POST for our form)
+					url         : 'process.php', // the url where we want to POST
+					data        : formData, // our data object
+					dataType    : 'json', // what type of data do we expect back from the server
+					encode          : true,
+					error: function(jqXHR, textStatus, errorThrown) {
+						$('#modalBox').removeClass('modalBox-active')
+						alert(textStatus, errorThrown);
+					},
+					success: function(data, textStatus, jqXHR) {
+						
+					}
+				})
+					
+			event.preventDefault();
+	});
+		
     $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
@@ -89,20 +114,7 @@
 		console.log('#'+activeTab)
 		$('#'+activeTab).fadeIn('slow')
 	})
-	// $(".tab-slider--body").hide();
-	// $(".tab-slider--body:first").show();
-	// $(".tab-slider--nav li").click(function() {
-	// 	$(".tab-slider--body").hide();
-	// 	var activeTab = $(this).attr("rel");
-	// 	$("#"+activeTab).show();
-	// 	  if($(this).attr("rel") == "tab2"){
-	// 		  $('.tab-slider--tabs').addClass('slide');
-	// 	  }else{
-	// 		  $('.tab-slider--tabs').removeClass('slide');
-	// 	  }
-	// 	$(".tab-slider--nav li").removeClass("active");
-	// 	$(this).addClass("active");
-	//   });
+	
 });
 $(window).load(function(){ 
 
@@ -121,7 +133,7 @@ $(window).load(function(){
 		
 	};
 	var req = new XMLHttpRequest();
-	req.open('GET', '/video/demo.mp4', true);
+	req.open('GET', '/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4', true);
 	req.responseType = 'blob';
 	
 	req.onload = function() {
@@ -156,5 +168,7 @@ function onSubmit (event) {
 	// event.preventDefault();
 	// event.stopPropagation()
 	// console.log(JSON.stringify($('form').serializeArray()))
-	// // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
+	// $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
 }
+
+	
