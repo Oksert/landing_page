@@ -1,0 +1,11 @@
+<div>Вся настройка выполняется путем редактирования файла configuration.xml</div><blockquote style=""><h2 id="3c623ed09dd0b0d181d182d180d0bed0b9d0bad0b020d0bfd0bed0b4d0bad0bbd18ed187d0b5d0bdd0b8d18f20d0ba20736d747020d181d0b5d180d0b2d0b5d180d1833c2f623e"><strong>Настройка подключения к SMTP серверу</strong></h2><pre>&lt;outbound-socket-binding name="<strong>mail-smtp</strong>"&gt;
+<span>&nbsp;&nbsp; &nbsp;</span>&lt;remote-destination <strong>host</strong>="smtp.gmail.com" <strong>port</strong>="465"/&gt;
+&lt;/outbound-socket-binding&gt;</pre><div>в поле host нужно указать hostName почтового сервера, в поле port для отправки почты.</div><h2 id="3c623ed09dd0b0d181d182d180d0bed0b9d0bad0b020d0b0d0bad0bad0b0d183d0bdd182d0b03c2f623e"><strong>Настройка аккаунта</strong></h2><pre>&lt;subsystem xmlns="<strong>urn:jboss:domain:mail:1.0</strong>"&gt;
+<span>&nbsp;&nbsp; &nbsp;</span>&lt;mail-session jndi-name="java:jboss/mail/Default"&gt;
+<span>&nbsp;&nbsp; &nbsp;<span>&nbsp;&nbsp; &nbsp;</span></span>&lt;smtp-server <strong>ssl</strong>="true" outbound-socket-binding-ref="mail-smtp"&gt;
+<span>&nbsp;&nbsp; &nbsp;<span>&nbsp;&nbsp; &nbsp;<span>&nbsp;&nbsp; &nbsp;</span></span></span>&lt;login <strong>name</strong>="lilly.kuvshinova@gmail.com" <strong>password</strong>="Zaq!2wsx"/&gt;
+<span>&nbsp;&nbsp; &nbsp;<span>&nbsp;&nbsp; &nbsp;</span></span>&lt;/smtp-server&gt;
+<span>&nbsp;&nbsp; &nbsp;</span>&lt;/mail-session&gt;
+&lt;/subsystem&gt;
+<p><span style=""><span style="font-size:13px;line-height:22px;white-space:normal;">В разделе smtp-server нужно указать используется ли SSL при подключении к почтовому серверу</span></span></p></pre></blockquote><blockquote style=""><div>В разделе login нужно указать адрес и пароль электронной почты с которой будет производиться отправка писем.</div><div><br /></div><div>Дополнительно:</div><div>Более подробно о настройке JBoss в части подключения к почте можно почитать здесь:&nbsp;<a href="http://www.mastertheboss.com/jboss-server/jboss-configuration/jboss-mail-service-configuration">JBoss mail service configuration</a>
+</div></blockquote><div><br /></div><div><br /></div>
