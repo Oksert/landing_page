@@ -16,6 +16,10 @@ function menuCtrl () {
         $ctrl.treeData = {
             children:treeData
         }
+        window.onhashchange = function() { 
+            var intial_article = window.location.href.split('?')[1]
+            $('iframe').attr('src',`./data/article_${intial_article}.html`); 
+       }
         var intial_article = window.location.href.split('?')[1]
         $('iframe').attr('src',`./data/article_${intial_article}.html`); 
         var count = 0;
