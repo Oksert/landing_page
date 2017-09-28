@@ -1,4 +1,5 @@
  import './styles/style.scss'
+ import './desctop.css'
  $(document).ready(function() {
 	$('form').submit(function(event) {
 		
@@ -24,7 +25,29 @@
 					
 			event.preventDefault();
 	});
-		
+	$('.btn').click(openModal)
+	function openModal(event) {
+		if (event) {
+		   $('#modalBox').addClass('modalBox-active')
+		   event.preventDefault();
+		   event.cancelBubble = true;
+		   event.stopPropagation()
+		}
+   
+	}
+	window.onclick = function(event) {
+	   if (event.target == document.getElementById('modalBox')) {
+		   $('.modalBox-active').removeClass('modalBox-active')
+	   }
+   }
+   function onSubmit (event) {
+	   document.getElementById('modalBox').checkValidity()
+	   // event.preventDefault();
+	   // event.stopPropagation()
+	   // console.log(JSON.stringify($('form').serializeArray()))
+	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
+   }
+	   
     $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
@@ -150,26 +173,5 @@ $(window).load(function(){
 	
 	req.send();
  })
- function openModal(event) {
-	 if (event) {
-		$('#modalBox').addClass('modalBox-active')
-		event.preventDefault();
-		event.cancelBubble = true;
-		event.stopPropagation()
-	 }
-
- }
- window.onclick = function(event) {
-    if (event.target == document.getElementById('modalBox')) {
-		$('.modalBox-active').removeClass('modalBox-active')
-	}
-}
-function onSubmit (event) {
-	document.getElementById('modalBox').checkValidity()
-	// event.preventDefault();
-	// event.stopPropagation()
-	// console.log(JSON.stringify($('form').serializeArray()))
-	// $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
-}
 
 	

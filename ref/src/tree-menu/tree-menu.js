@@ -45,11 +45,11 @@ function menuCtrl () {
         $ctrl.clickArticle= (name)=> {
             $ctrl.name = name
         }
-        $('.tree').mouseover(function() {
-            $(this).css('overflow-y','scroll')
-        })
-        $('.tree').mouseout(function() {
-            $(this).css('overflow-y','hidden')
-        })
+        // $('.tree').mouseover(function() {
+        //     $(this).css('overflow-y','scroll')
+        // })
+        // $('.tree').mouseout(function() {
+        //     $(this).css('overflow-y','hidden')
+        // })
     }
 }
