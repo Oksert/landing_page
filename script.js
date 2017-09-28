@@ -1,5 +1,8 @@
- import './styles/style.scss'
- import './desctop.css'
+//  import './styles/style.scss'
+ import './styles/desctop.scss'
+ import './styles/medium.scss'
+ import './styles/small.scss'
+ import './styles/mobile.scss'
  $(document).ready(function() {
 	$('form').submit(function(event) {
 		
@@ -127,7 +130,7 @@
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth: 500,
+		responsiveWidth: 0,
 		responsiveHeight: 0,
 		responsiveSlides: true,
 		parallax: true,
