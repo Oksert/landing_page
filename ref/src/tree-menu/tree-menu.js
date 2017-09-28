@@ -48,12 +48,12 @@ function menuCtrl () {
             $('iframe').height(windowHeight -  headerHeight-20)
             $('.tree').height(windowHeight -  headerHeight-20)
         })
-        $ctrl.clickArticle= (name, km_articleid)=> {
+        $ctrl.clickArticle= (event, name, km_articleid)=> {
             $ctrl.name = name
             console.log( window.location.href)
             window.location.href = window.location.href.split('?')[0] +'?'+km_articleid
-            
-
+            event.stopPropagation()
+            event.pereventDefault()
         }
         // $('.tree').mouseover(function() {
         //     $(this).css('overflow-y','scroll')
