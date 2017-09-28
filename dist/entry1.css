@@ -104,6 +104,11 @@
   display: flex;
   justify-content: center;
   align-items: center; }
+  .modalBox textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 15px; }
   .modalBox .modal-header {
     font-weight: inherit;
     margin-top: 0px;
@@ -115,7 +120,7 @@
     opacity: 1;
     background: white;
     width: 30%; }
-    .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select {
+    .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select, .modalBox .modal-content textarea {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -180,8 +185,6 @@
         color: #999; }
       .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
         color: #aaa; }
-    .modalBox .modal-content input:last-of-type {
-      margin-top: 20px; }
 
 .modalBox-active {
   opacity: 1;
@@ -430,3 +433,5 @@ input[type="email"] {
 
 .flex-center {
   justify-content: center; }
+
+/*# sourceMappingURL=entry1.css.map*/

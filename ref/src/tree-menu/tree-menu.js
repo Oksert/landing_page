@@ -16,6 +16,8 @@ function menuCtrl () {
         $ctrl.treeData = {
             children:treeData
         }
+        var intial_article = window.location.href.split('?')[1]
+        $('iframe').attr('src',`./data/article_${intial_article}.html`); 
         var count = 0;
         $(function () {
             $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
@@ -42,8 +44,12 @@ function menuCtrl () {
             $('iframe').height(windowHeight -  headerHeight-20)
             $('.tree').height(windowHeight -  headerHeight-20)
         })
-        $ctrl.clickArticle= (name)=> {
+        $ctrl.clickArticle= (name, km_articleid)=> {
             $ctrl.name = name
+            console.log( window.location.href)
+            window.location.href = window.location.href.split('?')[0] +'?'+km_articleid
+            
+
         }
         // $('.tree').mouseover(function() {
         //     $(this).css('overflow-y','scroll')

@@ -25,13 +25,41 @@
 					
 			event.preventDefault();
 	});
-	$('.btn').click(openModal)
-	function openModal(event) {
-		if (event) {
-		   $('#modalBox').addClass('modalBox-active')
-		   event.preventDefault();
-		   event.cancelBubble = true;
-		   event.stopPropagation()
+	$('.btn-dist').click(openModal(event,'dist'))
+	$('.btn-cloud').click(openModal(event,'cloud'))
+	$('.btn-feedback').click(openModal(event,'feedback'))
+	function openModal(event, mode) {
+		
+		return function () {
+			$('#modalBox #dist').prop('checked', false);
+			$('#modalBox #cloud').prop('checked', false);
+			$('#modalBox #quest').hide();
+			$('.radio-wrap').hide()
+			
+			switch(mode) {
+				case 'dist':
+					$('#modalBox #dist').prop('checked', true);
+					$('.radio-wrap').show()
+					break;
+
+				case 'cloud':
+					$('#modalBox #cloud').prop('checked', true);
+					$('.radio-wrap').show()
+					break;
+
+				case 'feedback':
+					$('#modalBox #quest').show(); 
+					break;
+				default:
+					break;
+
+			}
+			if (event) {
+			$('#modalBox').addClass('modalBox-active')
+			event.preventDefault();
+			event.cancelBubble = true;
+			event.stopPropagation()
+			}
 		}
    
 	}

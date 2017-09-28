@@ -49,15 +49,20 @@
                         
                         
                         <div class='radio-wrap'>
-                                <div>
-                                    <input type="checkbox" id="cloud" name="cloud">
-                                    <label for="cloud">Создать пространство в облаке</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="dist" name="cloud">
-                                    <label for="dist">Получить дистрибутив</label>
-                                </div>
+                            <div>
+                                <input type="checkbox" id="cloud" name="cloud">
+                                <label for="cloud">Создать пространство в облаке</label>
                             </div>
+                            <div>
+                                <input type="checkbox" id="dist" name="cloud">
+                                <label for="dist">Получить дистрибутив</label>
+                            </div>
+                        </div>
+                        <div id='quest'>
+                            <label for="">Ваш вопрос</label>
+                            <textarea rows=10> </textarea>
+                        </div>
+                        
                         <button type="submit" value="Подтвердить" class="btn">Подтвердить</button>
                         
                       </form>
@@ -173,7 +178,7 @@
                             <div class='price-content'>
                                     Создайте свое пространство в сервисе Ideaplatform.online, где вам будут доступны все инструменты настройки и тестовые примеры. Вы можете бесплатно пригласить в пространство до 5 пользователей.
                                     <div>
-                                        <button class="btn info-btn">Создать пространство</button>
+                                        <button class="btn info-btn btn-cloud">Создать пространство</button>
                                     </div>
                             </div>
                         </div>
@@ -187,7 +192,7 @@
                                         Скачайте дистрибутив и по инструкции установите систему у себя. Минимальные требования к железу: 1 CPU, 2 Gb RAM и 5 Gb HDD.
                                         Без установки лицензий в системе смогут работать 5 пользователей.
                                         <div>
-                                            <button class="btn info-btn" onclick="openModal(event)">Скачать дистрибутив</button>
+                                            <button class="btn info-btn btn-dist">Скачать дистрибутив</button>
                                         </div>
                                 </div>
                             </div>
@@ -209,7 +214,7 @@
                                 <li>Для подробного изучения работы каждого инструмента настройки обратитесь к разделу Документация.</li>
                                 <li>Напишите нам здесь или оставьте запрос в службу поддержки прямо через интерфейс системы, если вы нигде не нашли ответ на свой вопрос</li>
                             </ul>
-                            <button class="btn info-btn">Задать вопрос</button>
+                            <button class="btn info-btn btn-feedback">Задать вопрос</button>
                         </div>
                         <div class="column">
                             <img src="./img/team.png" alt="">

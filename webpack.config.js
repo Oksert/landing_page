@@ -14,6 +14,7 @@ module.exports = {
       'node_modules'
     ]
   },
+  devtool: 'source-map',
    module: {
     rules: [
         {
@@ -54,7 +55,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    // new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+        sourceMap:true
+    })
   ]
 };
 // module.exports = {
