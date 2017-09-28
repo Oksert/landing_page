@@ -13,7 +13,7 @@
         <ul sf-treepeat="node in children of $ctrl.treeData" class='ltr-direction'>
                 
                 <span>
-                        <a href="./data/article_{{node.km_articleid}}.html" ng-click='$ctrl.clickArticle(node.displayname,node.km_articleid)'target="iframe1">{{node.displayname}}</a>
+                        <a href="./data/article_{{node.km_articleid}}.html" ng-click='$ctrl.clickArticle(event,node.displayname,node.km_articleid)'target="iframe1">{{node.displayname}}</a>
                 </span >
                 <ul>
                     <li sf-treecurse>This should be removed</li>
