@@ -541,12 +541,17 @@
             justify-content: center;
             align-items: center;
             ul {
+                box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
                 padding: 10%;
-                background: #de734f;
+                background: white;
                 border-radius: 6px;
+                border: 1px solid
             }
             li {
                 text-align: center;
+                a:active, a:hover, a:focus {
+                    color: orange;
+                }
             }
 
         }

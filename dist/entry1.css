@@ -1563,11 +1563,15 @@
     justify-content: center;
     align-items: center; }
     .menu-modal-content ul {
+      box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
       padding: 10%;
-      background: #de734f;
-      border-radius: 6px; }
+      background: white;
+      border-radius: 6px;
+      border: 1px solid; }
     .menu-modal-content li {
-      text-align: center; } }
+      text-align: center; }
+      .menu-modal-content li a:active, .menu-modal-content li a:hover, .menu-modal-content li a:focus {
+        color: orange; } }
 .active {
   display: block !important; }
 
