@@ -38,29 +38,29 @@
                         <input type="text" id="fname" name="firstname" placeholder="Введите ФИО" required>
 
                         <label for="mail">Email*</label>
-                        <input type="email" id="mail" name="mail" placeholder="Введите адрес эл.почты" required>
+                        <input type="email" id="mail" name="emailaddress" placeholder="Введите адрес эл.почты" required>
                     
                         <label for="tel">Телефон</label>
-                        <input type="tel" name="phone" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value="" pattern="(\+[\d\ \(\)\-]{16})"  placeholder="Введите номер телефона">
+                        <input type="tel" name="phonenumber" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value="" pattern="(\+[\d\ \(\)\-]{16})"  placeholder="Введите номер телефона">
                         
                         <label for="org">Организация</label>
-                        <input type="text" id="org" name="org" placeholder="Введите название Вашей организации">
+                        <input type="text" id="org" name="companyname" placeholder="Введите название Вашей организации">
                         
                         
                         
                         <div class='radio-wrap'>
                             <div>
-                                <input type="checkbox" id="cloud" name="cloud">
-                                <label for="cloud">Создать пространство в облаке</label>
+                                <input type="checkbox" id="cloud" name="isonpremiserequested">
+                                <label for="isonpremiserequested">Создать пространство в облаке</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="dist" name="cloud">
-                                <label for="dist">Получить дистрибутив</label>
+                                <input type="checkbox" id="dist" name="isworkspacerequested">
+                                <label for="isworkspacerequested">Получить дистрибутив</label>
                             </div>
                         </div>
                         <div id='quest'>
                             <label for="">Ваш вопрос</label>
-                            <textarea rows=10> </textarea>
+                            <textarea name="comments" rows=10> </textarea>
                         </div>
                         
                         <button type="submit" value="Подтвердить" class="btn">Подтвердить</button>
@@ -118,11 +118,11 @@
                 <div class="content-disc float-right">
                     <h1>Платформа для реализации Ваших идей!</h1>
                     <span> Idea Platform - конструктор для быстрого создания масштабируемых веб-приложений</span>
-                    <div>
-                            <input type="email" class='modal-mail' placeholder="Введите email"/>
+                    <form>
+                            <input type="email" class='modal-mail' name="emailaddress" placeholder="Введите email"/>
                             <button class='btn btn-block'>Получить доступ </button>
                             
-                    </div>
+                    </form>
                     
                 </div>
             </div>

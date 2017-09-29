@@ -9,19 +9,21 @@ export default {
     template: templateUrl,
     controller: menuCtrl
 }
-function menuCtrl () {
+menuCtrl.$inject = ['$location']
+function menuCtrl ($location) {
     var $ctrl = this
 
     $ctrl.$onInit = () => {
         $ctrl.treeData = {
             children:treeData
         }
-        window.onhashchange = function() { 
-            var intial_article = window.location.href.split('?')[1]
-            $('iframe').attr('src',`./data/article_${intial_article}.html`); 
-       }
-        var intial_article = window.location.href.split('?')[1]
-        $('iframe').attr('src',`./data/article_${intial_article}.html`); 
+        let changeUrl = true;
+    //     window.onhashchange = function() { 
+    //         var intial_article = window.location.href.split('?')[1]
+    //         $('iframe').attr('src',`./data/article_${intial_article}.html`); 
+    //    }
+       var intial_article = window.location.href.split('?')[1]
+       $('iframe').attr('src',`./data/article_${intial_article || 1}.html`);
         var count = 0;
         $(function () {
             $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
@@ -50,10 +52,12 @@ function menuCtrl () {
         })
         $ctrl.clickArticle= (event, name, km_articleid)=> {
             $ctrl.name = name
-            console.log( window.location.href)
-            window.location.href = window.location.href.split('?')[0] +'?'+km_articleid
-            event.stopPropagation()
-            event.pereventDefault()
+            changeUrl = false;
+            setTimeout( ()=> {
+                window.history.replaceState({name:'new'},null,window.location.href.split('?')[0] +'?'+km_articleid);
+            },0)
+            // window.location.href = window.location.href.split('?')[0] +'?'+km_articleid
+            
         }
         // $('.tree').mouseover(function() {
         //     $(this).css('overflow-y','scroll')
