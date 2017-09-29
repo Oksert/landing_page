@@ -1,8 +1,8 @@
-//  import './styles/style.scss'
  import './styles/desctop.scss'
  import './styles/medium.scss'
  import './styles/small.scss'
  import './styles/mobile.scss'
+ import './styles/common.scss'
  $(document).ready(function() {
 	$('form').submit(function(event) {
 		
@@ -31,6 +31,24 @@
 	$('.btn-dist').click(openModal(event,'dist'))
 	$('.btn-cloud').click(openModal(event,'cloud'))
 	$('.btn-feedback').click(openModal(event,'feedback'))
+	$('#openMenu').click(openMenu)
+	$('#menu-modal').click(function(){
+		$('#menu-modal').fadeOut()
+	})
+	function openMenu () {
+		$('#menu-modal').removeClass('inactive')
+		if ($('#menu-modal').css('display') != 'none') {
+			$('#menu-modal').fadeOut()
+			return
+		}
+		// if ($('#menu .active')) {
+		// 	// $('#menu').removeClass('active')
+		// 	// $('#menu').addClass('inactive')
+		// 	return
+		// }
+		// $('#menu').addClass('active')
+		$('#menu-modal').fadeIn()
+	}
 	function openModal(event, mode) {
 		
 		return function () {

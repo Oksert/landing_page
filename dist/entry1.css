@@ -1150,7 +1150,7 @@
   .content-head {
     display: none; } }
 @charset "UTF-8";
-@media (min-width: 450px) and (max-width: 700px) {
+@media (max-width: 450px) {
   .trigger {
     border: none;
     background: #de5021;
@@ -1170,7 +1170,7 @@
     cursor: pointer; }
   .trigger-container {
     border: 1px solid #ddd6d6;
-    padding: 12px 0px 10px 0px;
+    padding: 11px 0px 10px 0px;
     background-image: linear-gradient(to bottom, #de5021, #e06743); }
   .trigger-not-active {
     background: #f8f8f8;
@@ -1332,18 +1332,17 @@
   .section-center {
     margin: auto;
     text-align: center;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
     /* vertical-align: middle; */ }
   .menu ul {
     margin-left: 0px;
     padding-left: 0px; }
   /* .fullpage:nth-child(even) .section-center {
-        flex-direction: row-reverse;
-    } */
+            flex-direction: row-reverse;
+        } */
   .menu li {
     float: right; }
   .only-mobile {
@@ -1361,23 +1360,19 @@
     text-align: left; }
   .content-disc {
     /* float: right; */
-    width: 100%;
+    width: 50%;
     align-self: end;
     /* font-size: 20px; */
     text-align: left;
-    text-align: center; }
+    margin-top: -2%; }
   div.reverse {
-    flex-direction: column; }
-  .content-head {
-    order: -1;
-    width: 100%;
-    text-align: center; }
+    flex-direction: row-reverse; }
   body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     padding: 4em 1em;
     color: #555;
-    font-size: 16px; }
+    font-size: 14px; }
   h1,
   h2,
   strong {
@@ -1386,6 +1381,7 @@
     line-height: 1.3em; }
   .section-center img {
     box-sizing: border-box;
+    margin: 0px 10px 0px 10px;
     width: 90%;
     box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
     border-radius: 5px; }
@@ -1419,6 +1415,8 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+    #head img {
+      width: 20%; }
   #head-content {
     display: flex;
     width: 80%;
@@ -1435,7 +1433,7 @@
     -moz-border-radius: 0;
     border-radius: 0px;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 15px;
     color: #ffffff;
     cursor: pointer;
     padding: 10px 20px 10px 20px;
@@ -1490,16 +1488,16 @@
   #menu li a:hover, a:hover, a:focus {
     color: #DE4F20; }
   /* #menu li.active {
-        box-shadow: 0px 4px 14px #8db0c6;
-    }
-    #menu li a,
-    #menu li.active a{
-        padding: 9px 18px;
-        display:block;
-    } */
+            box-shadow: 0px 4px 14px #8db0c6;
+        }
+        #menu li a,
+        #menu li.active a{
+            padding: 9px 18px;
+            display:block;
+        } */
   /* #menu li.active a{
-        color: #fff;
-    } */
+            color: #fff;
+        } */
   .column {
     width: 65%; }
   .column-big {
@@ -1529,14 +1527,51 @@
     /* font-size: 4em */ }
   .info-btn {
     margin-top: 30px; }
+  #learnhow .btn {
+    margin: 0px; }
   #access-page h1, #learnhow h1 {
     margin-bottom: 6%;
     /* font-size: 3.5em; */ }
   .flex-center {
     justify-content: center; }
-  .content-disc h1 {
+  .content-head {
     display: none; }
-  .content-head h1 {
-    display: block; } }
+  #menu {
+    display: none;
+    position: fixed;
+    font-size: 30px;
+    background: white;
+    color: white;
+    width: 60%;
+    border: 1px solid black; }
+    #menu li {
+      display: block; }
+  .logo img {
+    display: none; }
+  #menu-modal {
+    display: none;
+    z-index: 20;
+    height: 300px;
+    position: fixed;
+    font-size: 30px;
+    background: rgba(115, 115, 115, 0.5);
+    width: 100%;
+    height: 100%; }
+  .menu-modal-content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center; }
+    .menu-modal-content ul {
+      padding: 10%;
+      background: #de734f;
+      border-radius: 6px; }
+    .menu-modal-content li {
+      text-align: center; } }
+.active {
+  display: block !important; }
+
+.inactive {
+  display: none !important; }
 
 /*# sourceMappingURL=entry1.css.map*/
