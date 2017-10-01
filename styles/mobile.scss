@@ -1,5 +1,7 @@
-@media (max-width: 450px) {
- 
+@media (max-width: 650px) {
+    #openMenu {
+        display: block;
+    }
 
     .trigger {
         border:none;
@@ -32,7 +34,7 @@
       .tab {
         display: flex;
         justify-content: space-between;
-        width:60%;
+        width:90%;
       }
       .tab-container {
         margin-top: 5%;
@@ -42,7 +44,7 @@
         
       }
       .content-wide {
-        width: 40% !important;
+        width: 90% !important;
         .price-content {
             padding: 5%;
         }
@@ -141,7 +143,7 @@
             padding: 30px;
             opacity: 1;
             background: rgba(255, 255, 255, 1);
-            width:30%;
+            width:80%;
             input[type=text],  input[type=email],input[type=tel],select,textarea {
                 width: 100%;
                 padding: 12px 20px;
@@ -254,9 +256,16 @@
             text-align: center;
             width: 80%;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             /* vertical-align: middle; */
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
         .menu ul {
             margin-left: 0px;
@@ -289,15 +298,16 @@
         }
         .content-disc {
             /* float: right; */
-            width: 50%;
+            width: 100%;
             align-self: end;
             /* font-size: 20px; */
-            text-align: left;
+            text-align: center;
             margin-top: -2%;
+            h1 {
+                display: none;
+            }
         }
-        div.reverse {
-            flex-direction: row-reverse;
-        }
+        
         body {
             font-family: "Helvetica", "Arial", sans-serif;
             line-height: 1.5;
@@ -309,7 +319,7 @@
         h2,
         strong {
         color: #555;
-        font-size: 2em;
+        font-size: 1.5em;
         line-height: 1.3em;
         }
         .section-center img {
@@ -464,7 +474,7 @@
             box-shadow: none;
         }
         .сolumn-small {
-            width: 40%;
+            width: 100%;
         }
         .column-flex {
             display: flex;
@@ -474,6 +484,7 @@
         .row-disp {
             display: flex;
             justify-content: space-around;
+            flex-direction: column;
         }
         .info-box {
             width:40%;
@@ -507,7 +518,10 @@
             justify-content: center;
         }
         .content-head {
-            display: none;
+            h1 {
+                display: block;
+            }
+            order: -1;
         }
         #menu {
             display: none;
@@ -550,10 +564,14 @@
             li {
                 text-align: center;
                 a:active, a:hover, a:focus {
-                    color: orange;
+                    color: #DE4F20 ;
                 }
             }
 
         }
+        .only-desctop {
+            display: none;
+        }
+    
 
 }

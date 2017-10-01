@@ -1,8 +1,9 @@
- import './styles/desctop.scss'
- import './styles/medium.scss'
- import './styles/small.scss'
- import './styles/mobile.scss'
- import './styles/common.scss'
+import './styles/common.scss'
+import './styles/desctop.scss'
+import './styles/medium.scss'
+import './styles/small.scss'
+import './styles/mobile.scss'
+ 
  $(document).ready(function() {
 	$('form').submit(function(event) {
 		
