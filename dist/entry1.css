@@ -1189,7 +1189,7 @@
     justify-content: space-around;
     margin-bottom: 5%; }
   .content-wide {
-    width: 100% !important; }
+    width: 90% !important; }
     .content-wide .price-content {
       padding: 5%; }
   #price-page td, #price-page th {
@@ -1337,7 +1337,7 @@
   .section-center {
     margin: auto;
     text-align: center;
-    width: 80%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1531,7 +1531,8 @@
   .row-disp {
     display: flex;
     justify-content: space-around;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .info-box {
     width: 40%;
     transition: box-shadow .3s;
