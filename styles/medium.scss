@@ -67,42 +67,6 @@
         box-shadow: 0 0 2rem rgba(0,0,0,.1);
     }
 }
-.price-plan {
-    border: 1px solid #446772;
-    // padding: 10px;
-    border-radius: 5px;
-    width: 32%;
-    height: 100%;
-    background-color: #f8f8f8;
-    .price-header {
-        h3 {
-            background-color: #446772;
-            margin: 0px;
-            padding: 10px 0px;
-            color: white;
-            font-weight: normal;
-        }
-        h1 {
-            margin-bottom: 0px;
-            color:#446772;
-        }
-        p {
-            margin-top: 0px;
-            color: #446772;
-        }
-        sup {
-            font-size: 60%;
-        }
-
-    }
-    .price-content {
-        h1 {
-            color: #446772;
-            margin-bottom: 0px;
-        }
-        color: #85999f !important;
-    }
-}
 
 .hide {
     display: none;

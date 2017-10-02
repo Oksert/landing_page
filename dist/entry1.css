@@ -14,6 +14,33 @@
 .address {
   margin-top: 5%;
   font-weight: bold; }
+
+.price-plan {
+  border: 1px solid #446772;
+  border-radius: 5px;
+  width: 32%;
+  height: 100%;
+  background-color: #f8f8f8; }
+  .price-plan .price-header h3 {
+    background-color: #446772;
+    margin: 0px;
+    padding: 10px 0px;
+    color: white;
+    font-weight: normal; }
+  .price-plan .price-header h1 {
+    margin-bottom: 0px;
+    color: #446772; }
+  .price-plan .price-header p {
+    margin-top: 0px;
+    color: #446772; }
+  .price-plan .price-header sup {
+    font-size: 60%; }
+  .price-plan .price-content {
+    color: #85999f !important; }
+    .price-plan .price-content h1 {
+      color: #446772;
+      margin-bottom: 0px;
+      font-size: 2em; }
 @charset "UTF-8";
 @media (min-width: 1620px) {
   .trigger {
@@ -67,31 +94,6 @@
     border-collapse: collapse;
     font-size: 30px;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
-  .price-plan {
-    border: 1px solid #446772;
-    border-radius: 5px;
-    width: 32%;
-    height: 100%;
-    background-color: #f8f8f8; }
-    .price-plan .price-header h3 {
-      background-color: #446772;
-      margin: 0px;
-      padding: 10px 0px;
-      color: white;
-      font-weight: normal; }
-    .price-plan .price-header h1 {
-      margin-bottom: 0px;
-      color: #446772; }
-    .price-plan .price-header p {
-      margin-top: 0px;
-      color: #446772; }
-    .price-plan .price-header sup {
-      font-size: 60%; }
-    .price-plan .price-content {
-      color: #85999f !important; }
-      .price-plan .price-content h1 {
-        color: #446772;
-        margin-bottom: 0px; }
   .hide {
     display: none; }
   .modalBox {
@@ -450,31 +452,6 @@
     border-collapse: collapse;
     font-size: 30px;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
-  .price-plan {
-    border: 1px solid #446772;
-    border-radius: 5px;
-    width: 32%;
-    height: 100%;
-    background-color: #f8f8f8; }
-    .price-plan .price-header h3 {
-      background-color: #446772;
-      margin: 0px;
-      padding: 10px 0px;
-      color: white;
-      font-weight: normal; }
-    .price-plan .price-header h1 {
-      margin-bottom: 0px;
-      color: #446772; }
-    .price-plan .price-header p {
-      margin-top: 0px;
-      color: #446772; }
-    .price-plan .price-header sup {
-      font-size: 60%; }
-    .price-plan .price-content {
-      color: #85999f !important; }
-      .price-plan .price-content h1 {
-        color: #446772;
-        margin-bottom: 0px; }
   .hide {
     display: none; }
   .modalBox {
@@ -833,31 +810,6 @@
     border-collapse: collapse;
     font-size: 15px;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
-  .price-plan {
-    border: 1px solid #446772;
-    border-radius: 5px;
-    width: 32%;
-    height: 100%;
-    background-color: #f8f8f8; }
-    .price-plan .price-header h3 {
-      background-color: #446772;
-      margin: 0px;
-      padding: 10px 0px;
-      color: white;
-      font-weight: normal; }
-    .price-plan .price-header h1 {
-      margin-bottom: 0px;
-      color: #446772; }
-    .price-plan .price-header p {
-      margin-top: 0px;
-      color: #446772; }
-    .price-plan .price-header sup {
-      font-size: 60%; }
-    .price-plan .price-content {
-      color: #85999f !important; }
-      .price-plan .price-content h1 {
-        color: #446772;
-        margin-bottom: 0px; }
   .hide {
     display: none; }
   .modalBox {
