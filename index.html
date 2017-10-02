@@ -31,7 +31,10 @@
 <body>
     <div id='modalBox' class="modalBox">
         <div class="modal-content">
-                <div class="modal-header">Введите Ваши данные</div>
+                <div class="modal-header">Введите Ваши данные   
+                    <span id="ok-icon"><img src="img/ok.png" alt=""> <div>Данные отправлены на почту</div> </span>
+                    <span id="error-icon"><img src="img/error.png" alt=""> <div>Ошибка. Повторите попытку</div> </span>
+                </div>
                 <form>
                     
                     <label for="fname">ФИО*</label>
@@ -94,6 +97,7 @@
                 <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li> -->
                 <li data-menuanchor="join"><a href="#join">Скачать</a></li>
                 <li data-menuanchor="price"><a href="#price">Купить</a></li>
+                <li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
                 <li><a href="./ref/index.html">Документация</a></li>
             </ul>
             <!-- <div class='sign-in'>
@@ -128,12 +132,11 @@
                 </div>
                 <div class="content-disc float-right">
                     <h1>Платформа для реализации Ваших идей!</h1>
-                    <span> Idea Platform - конструктор для быстрого создания масштабируемых веб-приложений</span>
-                    <form>
-                            <input type="email" class='modal-mail' name="emailaddress" placeholder="Введите email"/>
-                            <button class='btn btn-block'>Получить доступ </button>
-                            
-                    </form>
+                    <span class="subheader"> Idea Platform - конструктор для быстрого создания масштабируемых веб-приложений</span>
+                    <div>
+                            <input type="email" class='modal-mail' name="emailaddress" id='mail1' placeholder="Введите email"/>
+                            <button class='btn btn-block btn-access'>Получить доступ </button>
+                    </div>
                     
                 </div>
             </div>
@@ -154,22 +157,22 @@
             </div>
         </div>
         <div class="section">
-                <div class='section-center'>
-                    <div class="column">
-                        <img src="img/analytic.png"/>
-                    </div>
-                    <div class="content-disc float-right content-head">
-                            <h1>Инструмент бизнес-аналитики</h1>
-                    </div>
-                    <div class="content-disc float-right">
+            <div class='section-center'>
+                <div class="column">
+                    <img src="img/analytic.png"/>
+                </div>
+                <div class="content-disc float-right content-head">
                         <h1>Инструмент бизнес-аналитики</h1>
-                        Проанализировать данные системы можно "на лету", указав нужный состав полей, фильтры, сортировки, группировки и вывод агрегатных значений. <br> 
-                        Для создания комплексных аналитических отчетов также можно использовать  внешние данные и отобразить результат в виде различных представлений. <br>
-                        Отчеты одной тематики можно объединить в дашборды, создавая таким образом удобные рабочие места. <br>
-                        Полнотекстовый поиск позволяет искать сразу по всем объектам системы и по содержанию вложенных документов
-                    </div>
+                </div>
+                <div class="content-disc float-right">
+                    <h1>Инструмент бизнес-аналитики</h1>
+                    Проанализировать данные системы можно "на лету", указав нужный состав полей, фильтры, сортировки, группировки и вывод агрегатных значений. <br> 
+                    Для создания комплексных аналитических отчетов также можно использовать  внешние данные и отобразить результат в виде различных представлений. <br>
+                    Отчеты одной тематики можно объединить в дашборды, создавая таким образом удобные рабочие места. <br>
+                    Полнотекстовый поиск позволяет искать сразу по всем объектам системы и по содержанию вложенных документов
                 </div>
             </div>
+        </div>
         <div class="section">
             <div class='section-center reverse'>
                 <div class="column">
@@ -348,6 +351,29 @@
                         
                     </div>
                     <button class="btn">Купить лицензию</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="section">
+            <div class='section-center reverse'>
+                <div class="column">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6d998edaca1ebcb707ffbf42a8b6375da5d84ef2c7339eadae0a23313576928f&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="content-disc float-right content-head">
+                        <h1>Напишите нам!</h1>
+                </div>
+                <div class="content-disc float-right">
+                    <h1>Напишите нам!</h1>
+                    <span class='subheader'>Благодарим за интерес к нашим услугам. <br> Заполните форму, отправьте сообщение, и мы свяжемся с вами в ближайшее время.</span>
+                    <div class="address">
+                        Адрес: Москва, ул. Бауманская д.6, офис 320 <br>
+                        Email: info@ideaplatform.ru
+                    </div>
+                    
+                    <div>
+                        <button class="btn info-btn btn-feedback">Написать</button>
+                    </div>
                 </div>
                 
             </div>

@@ -1,5 +1,19 @@
 #menu-modal, #openMenu {
   display: none; }
+
+#ok-icon, #error-icon {
+  font-size: 70%;
+  color: #b9dfbd;
+  display: none; }
+  #ok-icon img, #error-icon img {
+    height: 30px; }
+
+.subheader {
+  font-size: 130%; }
+
+.address {
+  margin-top: 5%;
+  font-weight: bold; }
 @charset "UTF-8";
 @media (min-width: 1620px) {
   .trigger {

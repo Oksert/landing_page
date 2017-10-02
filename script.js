@@ -19,8 +19,14 @@ import './styles/mobile.scss'
 					dataType    : 'json', // what type of data do we expect back from the server
 					encode          : true,
 					error: function(jqXHR, textStatus, errorThrown) {
-						$('#modalBox').removeClass('modalBox-active')
-						alert(textStatus, errorThrown);
+						$('#ok-icon').fadeIn()
+
+						setTimeout(function(){
+							// $('#modalBox').removeClass('modalBox-active')
+							$('#ok-icon').hide()
+						},3000)
+						
+						// alert(textStatus, errorThrown);
 					},
 					success: function(data, textStatus, jqXHR) {
 						
@@ -32,6 +38,7 @@ import './styles/mobile.scss'
 	$('.btn-dist').click(openModal(event,'dist'))
 	$('.btn-cloud').click(openModal(event,'cloud'))
 	$('.btn-feedback').click(openModal(event,'feedback'))
+	$('.btn-access').click(openModal(event,'access'))
 	$('#openMenu').click(openMenu)
 	$('#menu-modal').click(function(){
 		$('#menu-modal').fadeOut()
@@ -57,6 +64,7 @@ import './styles/mobile.scss'
 			$('#modalBox #cloud').prop('checked', false);
 			$('#modalBox #quest').hide();
 			$('.radio-wrap').hide()
+			$('#modalBox #mail').val('')
 			
 			switch(mode) {
 				case 'dist':
@@ -71,6 +79,9 @@ import './styles/mobile.scss'
 
 				case 'feedback':
 					$('#modalBox #quest').show(); 
+					break;
+				case 'access':
+					$('#modalBox #mail').val($('.section input[name="emailaddress"]').val())
 					break;
 				default:
 					break;
@@ -97,10 +108,10 @@ import './styles/mobile.scss'
 	   // console.log(JSON.stringify($('form').serializeArray()))
 	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
    }
-	$(window).width() > 550 && $('#fullpage').fullpage({
+	$('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
-		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price'],
+		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price','contact'],
 		navigation: true,
 		navigationPosition: 'right',
 		// navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -148,7 +159,7 @@ import './styles/mobile.scss'
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth:500 ,
+		responsiveWidth:0 ,
 		responsiveHeight: 0,
 		responsiveSlides: true,
 		parallax: true,
