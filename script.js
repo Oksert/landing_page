@@ -14,7 +14,7 @@ import './styles/mobile.scss'
 				// process the form
 				$.ajax({
 					type        : 'get', // define the type of HTTP verb we want to use (POST for our form)
-					url         : './json/customerregistration', // the url where we want to POST
+					url         : 'https://runidea.online/json/customerregistration', // the url where we want to POST
 					data        : formData, // our data object
 					dataType    : 'json', // what type of data do we expect back from the server
 					encode          : true,
@@ -97,8 +97,7 @@ import './styles/mobile.scss'
 	   // console.log(JSON.stringify($('form').serializeArray()))
 	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
    }
-	   
-    $('#fullpage').fullpage({
+	$(window).width() > 550 && $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price'],
@@ -149,7 +148,7 @@ import './styles/mobile.scss'
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth: 0,
+		responsiveWidth:500 ,
 		responsiveHeight: 0,
 		responsiveSlides: true,
 		parallax: true,
