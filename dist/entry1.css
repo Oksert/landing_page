@@ -597,7 +597,7 @@
     line-height: 1.5;
     padding: 4em 1em;
     color: #555;
-    font-size: 18px; }
+    font-size: 20px; }
   h1,
   h2,
   strong {
@@ -778,7 +778,7 @@
     cursor: pointer; }
   .trigger-container {
     border: 1px solid #ddd6d6;
-    padding: 11px 0px 10px 0px;
+    padding: 9px 0px 9px 0px;
     background-image: linear-gradient(to bottom, #de5021, #e06743); }
   .trigger-not-active {
     background: #f8f8f8;
@@ -955,7 +955,7 @@
     line-height: 1.5;
     padding: 4em 1em;
     color: #555;
-    font-size: 14px; }
+    font-size: 17px; }
   h1,
   h2,
   strong {
