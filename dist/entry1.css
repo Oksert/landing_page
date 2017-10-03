@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #menu-modal, #openMenu {
   display: none; }
 
@@ -14,6 +15,9 @@
 .address {
   margin-top: 5%;
   font-weight: bold; }
+
+#price-page button:last-of-type {
+  display: none; }
 
 .price-plan {
   border: 1px solid #446772;
@@ -41,6 +45,108 @@
       color: #446772;
       margin-bottom: 0px;
       font-size: 2em; }
+
+.modalBox {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  /* margin: 40px; */
+  box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
+  top: 0%;
+  opacity: 0;
+  /* background: white; */
+  transition: opacity;
+  transition-duration: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modalBox textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 15px; }
+  .modalBox .modal-header {
+    font-weight: inherit;
+    margin-top: 0px;
+    border-bottom: 1px solid #de562a;
+    margin-bottom: 20px;
+    font-size: 30px; }
+  .modalBox .modal-content {
+    padding: 30px;
+    opacity: 1;
+    background: white;
+    width: 30%; }
+    .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content input[type=number], .modalBox .modal-content select, .modalBox .modal-content textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      box-sizing: border-box; }
+    .modalBox .modal-content .radio-wrap {
+      /* checkbox aspect */
+      /* checked mark aspect */
+      /* checked mark aspect changes */
+      /* disabled checkbox */
+      /* hover style just for information */
+      padding: 12px 0px;
+      margin: 8px 0; }
+      .modalBox .modal-content .radio-wrap label {
+        cursor: pointer; }
+      .modalBox .modal-content .radio-wrap input:checked + label {
+        color: #de5021; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked),
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:checked {
+        position: absolute;
+        left: -9999px; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label,
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 1.95em;
+        cursor: pointer; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:before,
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1em;
+        height: 1em;
+        border: 2px solid #ccc;
+        background: #fff;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after,
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
+        content: '\2714';
+        position: absolute;
+        top: .1em;
+        left: .3em;
+        font-size: 1em;
+        line-height: 0.8;
+        color: #de5021;
+        transition: all .2s; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0); }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1); }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:not(:checked) + label:before,
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:before {
+        box-shadow: none;
+        border-color: #bbb;
+        background-color: #ddd; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:after {
+        color: #999; }
+      .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
+        color: #aaa; }
+
+.modalBox-active {
+  opacity: 1;
+  z-index: 10; }
 @charset "UTF-8";
 @media (min-width: 1620px) {
   .trigger {
@@ -96,106 +202,6 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
   .hide {
     display: none; }
-  .modalBox {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    position: fixed;
-    z-index: 0;
-    /* margin: 40px; */
-    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
-    top: 0%;
-    opacity: 0;
-    /* background: white; */
-    transition: opacity;
-    transition-duration: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .modalBox textarea {
-      width: 100%;
-      height: 100%;
-      resize: none;
-      font-size: 15px; }
-    .modalBox .modal-header {
-      font-weight: inherit;
-      margin-top: 0px;
-      border-bottom: 1px solid #de562a;
-      margin-bottom: 20px;
-      font-size: 30px; }
-    .modalBox .modal-content {
-      padding: 30px;
-      opacity: 1;
-      background: white;
-      width: 30%; }
-      .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select, .modalBox .modal-content textarea {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        font-size: 15px;
-        box-sizing: border-box; }
-      .modalBox .modal-content .radio-wrap {
-        /* checkbox aspect */
-        /* checked mark aspect */
-        /* checked mark aspect changes */
-        /* disabled checkbox */
-        /* hover style just for information */
-        padding: 12px 0px;
-        margin: 8px 0; }
-        .modalBox .modal-content .radio-wrap label {
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap input:checked + label {
-          color: #de5021; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked),
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked {
-          position: absolute;
-          left: -9999px; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label {
-          position: relative;
-          padding-left: 1.95em;
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 1em;
-          height: 1em;
-          border: 2px solid #ccc;
-          background: #fff;
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          content: '\2714';
-          position: absolute;
-          top: .1em;
-          left: .3em;
-          font-size: 1em;
-          line-height: 0.8;
-          color: #de5021;
-          transition: all .2s; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after {
-          opacity: 0;
-          transform: scale(0); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          opacity: 1;
-          transform: scale(1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:before {
-          box-shadow: none;
-          border-color: #bbb;
-          background-color: #ddd; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:after {
-          color: #999; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
-          color: #aaa; }
-  .modalBox-active {
-    opacity: 1;
-    z-index: 10; }
   .section-center {
     margin: auto;
     text-align: center;
@@ -420,7 +426,7 @@
     cursor: pointer; }
   .trigger-container {
     border: 1px solid #ddd6d6;
-    padding: 12px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
     background-image: linear-gradient(to bottom, #de5021, #e06743); }
   .trigger-not-active {
     background: #f8f8f8;
@@ -454,106 +460,6 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
   .hide {
     display: none; }
-  .modalBox {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    position: fixed;
-    z-index: 0;
-    /* margin: 40px; */
-    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
-    top: 0%;
-    opacity: 0;
-    /* background: white; */
-    transition: opacity;
-    transition-duration: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .modalBox textarea {
-      width: 100%;
-      height: 100%;
-      resize: none;
-      font-size: 15px; }
-    .modalBox .modal-header {
-      font-weight: inherit;
-      margin-top: 0px;
-      border-bottom: 1px solid #de562a;
-      margin-bottom: 20px;
-      font-size: 30px; }
-    .modalBox .modal-content {
-      padding: 30px;
-      opacity: 1;
-      background: white;
-      width: 30%; }
-      .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select, .modalBox .modal-content textarea {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        font-size: 15px;
-        box-sizing: border-box; }
-      .modalBox .modal-content .radio-wrap {
-        /* checkbox aspect */
-        /* checked mark aspect */
-        /* checked mark aspect changes */
-        /* disabled checkbox */
-        /* hover style just for information */
-        padding: 12px 0px;
-        margin: 8px 0; }
-        .modalBox .modal-content .radio-wrap label {
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap input:checked + label {
-          color: #de5021; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked),
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked {
-          position: absolute;
-          left: -9999px; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label {
-          position: relative;
-          padding-left: 1.95em;
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 1em;
-          height: 1em;
-          border: 2px solid #ccc;
-          background: #fff;
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          content: '\2714';
-          position: absolute;
-          top: .1em;
-          left: .3em;
-          font-size: 1em;
-          line-height: 0.8;
-          color: #de5021;
-          transition: all .2s; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after {
-          opacity: 0;
-          transform: scale(0); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          opacity: 1;
-          transform: scale(1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:before {
-          box-shadow: none;
-          border-color: #bbb;
-          background-color: #ddd; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:after {
-          color: #999; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
-          color: #aaa; }
-  .modalBox-active {
-    opacity: 1;
-    z-index: 10; }
   .section-center {
     margin: auto;
     text-align: center;
@@ -812,106 +718,6 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); }
   .hide {
     display: none; }
-  .modalBox {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    position: fixed;
-    z-index: 0;
-    /* margin: 40px; */
-    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
-    top: 0%;
-    opacity: 0;
-    /* background: white; */
-    transition: opacity;
-    transition-duration: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .modalBox textarea {
-      width: 100%;
-      height: 100%;
-      resize: none;
-      font-size: 15px; }
-    .modalBox .modal-header {
-      font-weight: inherit;
-      margin-top: 0px;
-      border-bottom: 1px solid #de562a;
-      margin-bottom: 20px;
-      font-size: 30px; }
-    .modalBox .modal-content {
-      padding: 30px;
-      opacity: 1;
-      background: white;
-      width: 30%; }
-      .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select, .modalBox .modal-content textarea {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        font-size: 15px;
-        box-sizing: border-box; }
-      .modalBox .modal-content .radio-wrap {
-        /* checkbox aspect */
-        /* checked mark aspect */
-        /* checked mark aspect changes */
-        /* disabled checkbox */
-        /* hover style just for information */
-        padding: 12px 0px;
-        margin: 8px 0; }
-        .modalBox .modal-content .radio-wrap label {
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap input:checked + label {
-          color: #de5021; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked),
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked {
-          position: absolute;
-          left: -9999px; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label {
-          position: relative;
-          padding-left: 1.95em;
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 1em;
-          height: 1em;
-          border: 2px solid #ccc;
-          background: #fff;
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          content: '\2714';
-          position: absolute;
-          top: .1em;
-          left: .3em;
-          font-size: 1em;
-          line-height: 0.8;
-          color: #de5021;
-          transition: all .2s; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after {
-          opacity: 0;
-          transform: scale(0); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          opacity: 1;
-          transform: scale(1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:before {
-          box-shadow: none;
-          border-color: #bbb;
-          background-color: #ddd; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:after {
-          color: #999; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
-          color: #aaa; }
-  .modalBox-active {
-    opacity: 1;
-    z-index: 10; }
   .section-center {
     margin: auto;
     text-align: center;
@@ -1200,106 +1006,6 @@
         margin-bottom: 0px; }
   .hide {
     display: none; }
-  .modalBox {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    position: fixed;
-    z-index: 0;
-    /* margin: 40px; */
-    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
-    top: 0%;
-    opacity: 0;
-    /* background: white; */
-    transition: opacity;
-    transition-duration: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .modalBox textarea {
-      width: 100%;
-      height: 100%;
-      resize: none;
-      font-size: 15px; }
-    .modalBox .modal-header {
-      font-weight: inherit;
-      margin-top: 0px;
-      border-bottom: 1px solid #de562a;
-      margin-bottom: 20px;
-      font-size: 30px; }
-    .modalBox .modal-content {
-      padding: 30px;
-      opacity: 1;
-      background: white;
-      width: 80%; }
-      .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content select, .modalBox .modal-content textarea {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        font-size: 15px;
-        box-sizing: border-box; }
-      .modalBox .modal-content .radio-wrap {
-        /* checkbox aspect */
-        /* checked mark aspect */
-        /* checked mark aspect changes */
-        /* disabled checkbox */
-        /* hover style just for information */
-        padding: 12px 0px;
-        margin: 8px 0; }
-        .modalBox .modal-content .radio-wrap label {
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap input:checked + label {
-          color: #de5021; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked),
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked {
-          position: absolute;
-          left: -9999px; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label {
-          position: relative;
-          padding-left: 1.95em;
-          cursor: pointer; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 1em;
-          height: 1em;
-          border: 2px solid #ccc;
-          background: #fff;
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          content: '\2714';
-          position: absolute;
-          top: .1em;
-          left: .3em;
-          font-size: 1em;
-          line-height: 0.8;
-          color: #de5021;
-          transition: all .2s; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:not(:checked) + label:after {
-          opacity: 0;
-          transform: scale(0); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:checked + label:after {
-          opacity: 1;
-          transform: scale(1); }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:not(:checked) + label:before,
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:before {
-          box-shadow: none;
-          border-color: #bbb;
-          background-color: #ddd; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled:checked + label:after {
-          color: #999; }
-        .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
-          color: #aaa; }
-  .modalBox-active {
-    opacity: 1;
-    z-index: 10; }
   .section-center {
     margin: auto;
     text-align: center;

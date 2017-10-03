@@ -39,6 +39,7 @@ import './styles/mobile.scss'
 	$('.btn-cloud').click(openModal(event,'cloud'))
 	$('.btn-feedback').click(openModal(event,'feedback'))
 	$('.btn-access').click(openModal(event,'access'))
+	$('.btn-license').click(openModal(event,'license'))
 	$('#openMenu').click(openMenu)
 	$('#menu-modal').click(function(){
 		$('#menu-modal').fadeOut()
@@ -65,7 +66,7 @@ import './styles/mobile.scss'
 			$('#modalBox #quest').hide();
 			$('.radio-wrap').hide()
 			$('#modalBox #mail').val('')
-			
+			$('input[name=quantity], label[for=quantity]').hide()
 			switch(mode) {
 				case 'dist':
 					$('#modalBox #dist').prop('checked', true);
@@ -83,6 +84,8 @@ import './styles/mobile.scss'
 				case 'access':
 					$('#modalBox #mail').val($('.section input[name="emailaddress"]').val())
 					break;
+				case 'license':
+					$('input[name=quantity], label[for=quantity]').show()
 				default:
 					break;
 
@@ -195,8 +198,12 @@ import './styles/mobile.scss'
 
 		var activeTab = $(this).attr("rel");
 		$('.tab-container>div').removeClass('hide').hide()
-		console.log('#'+activeTab)
 		$('#'+activeTab).fadeIn('slow')
+		$('#price-page button').hide();
+		$('#price-page button[rel='+activeTab+']').show()
+		// $('#price-page button').each (function(btn) {
+		// 	$('#price-page button')[0]==activeTab?$('#price-page button')[0].show():$('#price-page button')[0].hide()
+		// })
 	})
 	
 });

@@ -1,11 +1,20 @@
 <div id="header">
-        <div class="header-name">
-            <a href="./../index.html"><h1>IdeaPlatform</h1></a>
-            
-        </div>
-        <div class="article-name">
-            <h3>{{$ctrl.name}}</h3>
-        </div>
+    <div id='head-content'>
+        <div class="logo">
+                <a href="../../index.html">
+                    <img src="..\img\logoIP.png"/ class="logo-image">
+                </a>
+                
+         </div>
+        <ul id="menu">
+                <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li> -->
+                <li data-menuanchor="join"><a href="../../index.html#join">Скачать</a></li>
+                <li data-menuanchor="price"><a href="../../index.html#price">Купить</a></li>
+                <li data-menuanchor="contact"><a href="../../index.html#contact">Контакты</a></li>
+        </ul>
+       
+           
+     </div>
         
  </div>
  <div class='content'>
@@ -22,6 +31,7 @@
         </ul>
     </div>
     <div class='article-content'>
+            <h3 id='article-name'>{{$ctrl.name}}</h3>
             <iframe name="iframe1" class="custom-scroll"></iframe>
         </div>
 </div>

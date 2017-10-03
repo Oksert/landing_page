@@ -49,7 +49,8 @@
                     <label for="org">Организация</label>
                     <input type="text" id="org" name="companyname" placeholder="Введите название Вашей организации">
                     
-                    
+                    <label for="quantity">Количество лицензий</label>
+                    <input type="number" name="quantity" min="1" max="1000">
                     
                     <div class='radio-wrap'>
                         <div>
@@ -257,6 +258,7 @@
                         <span class="trigger" rel='tab1'>Облако</span>
                         <span class="trigger trigger-not-active" rel='tab2'>У себя</span>
                     </span>
+                    <div>
                     <div class="tab-container">
                         <div id="tab1" class='tab'>
                             <div class="price-plan"> 
@@ -350,7 +352,9 @@
                         </div>
                         
                     </div>
-                    <button class="btn">Купить лицензию</button>
+                    <button class="btn btn-cloud" rel='tab1'>Создать пространство</button>
+                    <button class="btn btn-license" rel='tab2'>Купить лицензию</button>
+                    </div>
                 </div>
                 
             </div>

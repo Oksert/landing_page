@@ -47,10 +47,11 @@ function menuCtrl ($location) {
         var $window = $(window).on('resize', function(){
             windowHeight = $(window).height()
             headerHeight = $('#header').height()
-            $('iframe').height(windowHeight -  headerHeight-20)
+            $('iframe').height(windowHeight -  headerHeight-70)
             $('.tree').height(windowHeight -  headerHeight-20)
         })
         $ctrl.clickArticle= (event, name, km_articleid)=> {
+            $(window).trigger('resize')
             $ctrl.name = name
             changeUrl = false;
             setTimeout( ()=> {
