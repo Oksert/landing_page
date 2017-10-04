@@ -111,7 +111,8 @@ import './styles/mobile.scss'
 	   // console.log(JSON.stringify($('form').serializeArray()))
 	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
    }
-	$('#fullpage').fullpage({
+   console.log($('window').width)
+	$(window).width()>500 && $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price','contact'],
