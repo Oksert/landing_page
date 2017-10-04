@@ -1,4 +1,4 @@
-@media (min-width:700px) and (max-width: 1450px) {
+@media (min-width:1250px) and (max-width: 1450px) {
     
 
 .trigger {
@@ -21,7 +21,7 @@
 }
 .trigger-container {
   border: 1px solid #ddd6d6;
-  padding: 9px 0px 9px 0px;
+  padding: 10px 0px 10px 0px;
   background-image: linear-gradient(to bottom, #de5021, #e06743);
 }
 
@@ -71,15 +71,6 @@
   display: none;
 }
 
-  .section-center {
-      margin: auto;
-      text-align: center;
-      width: 80%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      /* vertical-align: middle; */
-  }
   .menu ul {
       margin-left: 0px;
       padding-left: 0px;
@@ -109,14 +100,6 @@
   .float-right {
       text-align: left;
   }
-  .content-disc {
-      /* float: right; */
-      width: 50%;
-      align-self: end;
-      /* font-size: 20px; */
-      text-align: left;
-      margin-top: -2%;
-  }
   div.reverse {
       flex-direction: row-reverse;
   }
@@ -125,7 +108,7 @@
       line-height: 1.5;
       padding: 4em 1em;
       color: #555;
-      font-size: 17px;
+      font-size: 15px;
   }
   h1,
   h2,
@@ -273,23 +256,7 @@
   /* #menu li.active a{
       color: #fff;
   } */
-  .column {
-      width:65%;
-  }
-  .column-big {
-      width: 100%;
-  }
-  .column-big img {
-      box-shadow: none;
-  }
-  .сolumn-small {
-      width: 40%;
-  }
-  .column-flex {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
+ 
   .row-disp {
       display: flex;
       justify-content: space-around;

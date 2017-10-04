@@ -61,6 +61,8 @@ import './styles/mobile.scss'
 	function openModal(event, mode) {
 		
 		return function () {
+			
+			$('#modalBox').show()
 			$('#modalBox #dist').prop('checked', false);
 			$('#modalBox #cloud').prop('checked', false);
 			$('#modalBox #quest').hide();
@@ -82,6 +84,7 @@ import './styles/mobile.scss'
 					$('#modalBox #quest').show(); 
 					break;
 				case 'access':
+					$('.radio-wrap').show()
 					$('#modalBox #mail').val($('.section input[name="emailaddress"]').val())
 					break;
 				case 'license':
@@ -102,6 +105,7 @@ import './styles/mobile.scss'
 	window.onclick = function(event) {
 	   if (event.target == document.getElementById('modalBox')) {
 		   $('.modalBox-active').removeClass('modalBox-active')
+		   
 	   }
    }
    function onSubmit (event) {
@@ -111,7 +115,7 @@ import './styles/mobile.scss'
 	   // console.log(JSON.stringify($('form').serializeArray()))
 	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
    }
-	    $('#fullpage').fullpage({
+	    $(window).width()>500 && $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price','contact'],
@@ -219,8 +223,8 @@ $(window).load(function(){
 	// },4000)
 	
 	vid.onloadeddata = function() {
-		document.getElementById('welcome-section').innerHTML=''
-		document.getElementById('welcome-section').appendChild(vid)
+		// document.getElementById('welcome-section').innerHTML=''
+		// document.getElementById('welcome-section').appendChild(vid)
 	
 		
 	};

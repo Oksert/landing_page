@@ -1,4 +1,4 @@
-@media (max-width: 650px) {
+@media (max-width: 1250px) {
     #openMenu {
         display: block;
     }
@@ -283,22 +283,24 @@
         background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
         text-decoration: none;
     }
-    input[type="email"]{
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        text-align: center;
-        display: block; 
-        width: 100%;
-        padding: 7px;
-        border: none;
-        border-bottom: 1px solid #ddd;
-        background: transparent;
-        margin-bottom: 10px;
-        font: 20px Arial, Helvetica, sans-serif;
-        height: 45px;
-        margin: 10% 0px 0px 0px;
+    .section {
+        input[type="email"]{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            outline: none;
+            text-align: center;
+            display: block; 
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            margin-bottom: 10px;
+            font: 20px Arial, Helvetica, sans-serif;
+            height: 45px;
+            margin: 10% 0px 0px 0px;
+        } 
     }
     
     .content-disc li {
@@ -425,8 +427,23 @@
         display: none;
     }
     .modalBox {
+        display: none;
+        .modal-header {
+            font-size:20px;
+        }
         .modal-content {
-            width: 90%;
+            margin: auto;
+            width: 75%;
+            padding: 20px;
+            input[type=text],  input[type=email],input[type=tel],input[type=number],select,textarea {
+                width: 100%;
+                padding: 8px 20px;
+                /* margin: 8px 0; */
+                display: inline-block;
+                border: 1px solid #ccc;
+                font-size: 12px;
+                box-sizing: border-box;
+            }
         }
     }
     #menu-modal{
