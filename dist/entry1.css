@@ -963,7 +963,7 @@
   .content-wide {
     width: 90% !important; }
     .content-wide .price-content {
-      padding: 5%; }
+      padding: 1%; }
   #price-page td, #price-page th {
     border: 1px solid #ebebeb;
     padding: 25px 10px;
@@ -1003,7 +1003,8 @@
       color: #85999f !important; }
       .price-plan .price-content h1 {
         color: #446772;
-        margin-bottom: 0px; }
+        margin-bottom: 0px;
+        font-size: 1.2em; }
   .hide {
     display: none; }
   .section-center {
@@ -1015,6 +1016,8 @@
     justify-content: space-between;
     align-items: center;
     /* vertical-align: middle; */ }
+    .section-center iframe {
+      height: 40%; }
     .section-center form {
       display: flex;
       flex-direction: column;
@@ -1024,8 +1027,8 @@
     margin-left: 0px;
     padding-left: 0px; }
   /* .fullpage:nth-child(even) .section-center {
-            flex-direction: row-reverse;
-        } */
+        flex-direction: row-reverse;
+    } */
   .menu li {
     float: right; }
   .only-mobile {
@@ -1178,16 +1181,16 @@
   #menu li a:hover, a:hover, a:focus {
     color: #DE4F20; }
   /* #menu li.active {
-            box-shadow: 0px 4px 14px #8db0c6;
-        }
-        #menu li a,
-        #menu li.active a{
-            padding: 9px 18px;
-            display:block;
-        } */
+        box-shadow: 0px 4px 14px #8db0c6;
+    }
+    #menu li a,
+    #menu li.active a{
+        padding: 9px 18px;
+        display:block;
+    } */
   /* #menu li.active a{
-            color: #fff;
-        } */
+        color: #fff;
+    } */
   .column {
     width: 65%; }
   .column-big {
@@ -1222,8 +1225,11 @@
   #learnhow .btn {
     margin: 0px; }
   #access-page h1, #learnhow h1 {
-    margin-bottom: 6%;
+    margin-bottom: 0px;
+    margin-bottom: 2%;
     /* font-size: 3.5em; */ }
+  #access-page button {
+    margin-top: 10px; }
   .flex-center {
     justify-content: center; }
   .content-head {
@@ -1242,6 +1248,8 @@
       display: block; }
   .logo img {
     display: none; }
+  .modalBox .modal-content {
+    width: 90%; }
   #menu-modal {
     display: none;
     z-index: 20;

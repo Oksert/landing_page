@@ -111,12 +111,11 @@ import './styles/mobile.scss'
 	   // console.log(JSON.stringify($('form').serializeArray()))
 	   // $(event.target).closest('.modalBox-active').removeClass('modalBox-active')
    }
-   console.log($('window').width)
-	$(window).width()>500 && $('#fullpage').fullpage({
+	    $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price','contact'],
-		navigation: true,
+		navigation: $(window).width() > 500,
 		navigationPosition: 'right',
 		// navigationTooltips: ['firstSlide', 'secondSlide'],
 		showActiveTooltip: false,
@@ -129,7 +128,7 @@ import './styles/mobile.scss'
 		autoScrolling: true,
 		fitToSection: true,
 		fitToSectionDelay: 1000,
-		scrollBar: true,
+		scrollBar: $(window).width() > 500,
 		easing: 'easeInOutCubic',
 		easingcss3: 'ease',
 		loopBottom: false,
@@ -163,7 +162,7 @@ import './styles/mobile.scss'
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsiveWidth:0 ,
+		responsiveWidth:0,
 		responsiveHeight: 0,
 		responsiveSlides: true,
 		parallax: true,
@@ -184,6 +183,7 @@ import './styles/mobile.scss'
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
+
 	// $(".tab-slider--nav li").click(function() {
 	// 	$('.tab-slider--trigger').removeClass('active')
 	// 	$(this).addClass('active')
@@ -225,7 +225,7 @@ $(window).load(function(){
 		
 	};
 	var req = new XMLHttpRequest();
-	req.open('GET', '/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4', true);
+	req.open('GET', './video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4', true);
 	req.responseType = 'blob';
 	
 	req.onload = function() {
