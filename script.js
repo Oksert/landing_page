@@ -1,10 +1,11 @@
 import './styles/common.scss'
 import './styles/desctop.scss'
-import './styles/medium.scss'
-import './styles/small.scss'
-import './styles/mobile.scss'
+// import './styles/medium.scss'
+// import './styles/small.scss'
+// import './styles/mobile.scss'
  
  $(document).ready(function() {
+	
 	$('form').submit(function(event) {
 		
 				// get the form data
@@ -213,7 +214,13 @@ import './styles/mobile.scss'
 	
 });
 $(window).load(function(){ 
-
+	$('body').flowtype({
+		minimum   : 300,
+		maximum   : 2000,
+		minFont   : 8,
+		maxFont   : 20,
+		fontRatio : 100
+	 });
 	var vid = document.createElement('video')
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
 	vid.controls=true

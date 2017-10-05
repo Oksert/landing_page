@@ -1,4 +1,4 @@
-@media (min-width: 1630px) {
+@media (min-width: 1000px) {
     
 
 .trigger {
@@ -13,7 +13,6 @@
     -moz-border-radius: 0;
     border-radius: 0px;
     font-family: Arial;
-    font-size: 20px;
     color: #ffffff;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
@@ -63,7 +62,6 @@
     table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 30px;
         box-shadow: 0 0 2rem rgba(0,0,0,.1);
     }
 }
@@ -135,7 +133,6 @@
     .logo span {
         font-family: 'Nobile', cursive;
         font-weight: bold;
-        font-size: 40px;
         /* color:#446772; */
         margin-left: -8px;
     }
@@ -160,7 +157,6 @@
         /* padding:10px 0px 0px 80px; */
         width: 100%;
         display: flex;
-        font-size: 16px;
         align-items: center;
         justify-content: center;
         box-shadow: 0 1px 1px rgba(0,0,0,.15)
@@ -183,7 +179,7 @@
         -moz-border-radius: 0;
         border-radius: 0px;
         font-family: Arial;
-        font-size: 20px;
+        font-size: 1.1em;
         color: #ffffff;
         cursor: pointer;
         padding: 10px 20px 10px 20px;
@@ -279,14 +275,14 @@
         box-shadow: 0 0 65px rgba(105, 104, 104, 0.50);
     }
     .info-box h1 {
-        /* font-size: 4em */
+       
     }
     .info-btn {
         margin-top: 30px;
     }
     #access-page h1, #learnhow h1 {
         margin-bottom:6%;
-        /* font-size: 3.5em; */
+       
     }
     .flex-center {
         justify-content: center;
