@@ -11,6 +11,11 @@
 #welcome-section img, #learnhow img {
     box-shadow: none;
 }
+#welcome-section {
+    h1 {
+        margin-top: 0px;
+    }
+}
 .column {
     height: 100%;
     width:65%;
@@ -50,7 +55,7 @@
     display: none;
 }
 .subheader {
-    font-size: 110%;
+    font-size: 128%;
 }
 .address {
     margin-top: 5%;
@@ -91,11 +96,9 @@
     }
     .price-content {
         h1 {
-            color: #446772;
             margin-bottom: 0px;
             font-size: 150%;
         }
-        color: #85999f !important;
     }
 }
 .modalBox {

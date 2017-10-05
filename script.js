@@ -2,7 +2,7 @@ import './styles/common.scss'
 import './styles/desctop.scss'
 // import './styles/medium.scss'
 // import './styles/small.scss'
-// import './styles/mobile.scss'
+import './styles/mobile.scss'
  
  $(document).ready(function() {
 	
@@ -119,7 +119,7 @@ import './styles/desctop.scss'
 	    $(window).width()>500 && $('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
-		anchors: ['welcome','workflow','analytics','schedule','join', 'faq', 'price','contact'],
+		anchors: ['welcome','user','workflow','analytics','schedule','join', 'faq', 'price','contact'],
 		navigation: $(window).width() > 500,
 		navigationPosition: 'right',
 		// navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -218,8 +218,8 @@ $(window).load(function(){
 		minimum   : 300,
 		maximum   : 2000,
 		minFont   : 8,
-		maxFont   : 20,
-		fontRatio : 100
+		maxFont   : 22,
+		fontRatio : 97
 	 });
 	var vid = document.createElement('video')
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
