@@ -364,4 +364,19 @@
         
       
     }
+    
+}
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    border-top: 1px solid #de5021;
+    position: relative;
+    top: 14%;
+    padding: 18px 0px 0px 0px;
+    margin: auto;
+    
+}
+.aggrement {
+    font-size: 70%;
 }
