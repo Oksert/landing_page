@@ -274,15 +274,19 @@
 .footer-info {
   display: flex;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   border-top: 1px solid #de5021;
   position: relative;
   top: 14%;
   padding: 18px 0px 0px 0px;
   margin: auto; }
+  .footer-info .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; }
 
 .aggrement {
-  font-size: 70%; }
+  font-size: 90%; }
 @media (min-width: 1000px) {
   .trigger {
     border: none;
