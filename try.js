@@ -1,1 +1,0 @@
-console.log(('/#/reference_view?viewId=609&rowId=24').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'?'))
