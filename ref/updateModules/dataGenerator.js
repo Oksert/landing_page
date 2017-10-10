@@ -59,7 +59,7 @@ module.exports = class dataGenerator {
                 </div>
                 `
                
-                htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'/landing_page/ref/index.html?/?')
+                htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'/landing_page/ref/index.html?')
                 fs.writeFile(filepath,htmlContent,{ flag: 'wx' }, function(err) {
                     if(err) {
                         return console.log(err);
