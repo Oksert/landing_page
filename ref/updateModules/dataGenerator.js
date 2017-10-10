@@ -1,6 +1,7 @@
 
 const del = require('del');
 var fs = require('fs');
+const cheerio = require('cheerio');
 module.exports = class dataGenerator {
     constructor (serverData) {
         this.serverData = serverData
@@ -59,8 +60,17 @@ module.exports = class dataGenerator {
                 </div>
                 `
                
-                htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'/ref/index.html?')
-                fs.writeFile(filepath,htmlContent,{ flag: 'wx' }, function(err) {
+                // htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'./article_23.html')
+                const $ = cheerio.load(htmlContent, { decodeEntities: false})
+                $('a').each((idx,elem)=>{
+                    var href = $(elem).attr('href')
+                    if (href.indexOf('rowId') > 0) {
+                       var article_id = href.split('=')[href.split('=').length - 1]
+                       $(elem).attr('href','./article_' + article_id + '.html')
+                    }
+                    // console.log($(elem).attr('href'))
+                })
+                fs.writeFile(filepath,$.html(),{ flag: 'wx' }, function(err) {
                     if(err) {
                         return console.log(err);
                     }

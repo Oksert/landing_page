@@ -1,12 +1,16 @@
 body{
-  background-color: '#222930';
-  line-height: 1.5;
-  font-family: "Helvetica", "Arial", sans-serif;
-  // padding: 4em 1em;
-  color: #555;
+  div:not(.article-content) {
+    background-color: '#222930';
+    line-height: 1.5;
+    font-family: "Helvetica", "Arial", sans-serif;
+    // padding: 4em 1em;
+    color: #555;
+  }
+  
   
  
 }
+div:not(.article-content) {
 .selected {
   border-color:red;
   
@@ -173,6 +177,7 @@ ul {
 }
 sub {
   font-size: 40%
+}
 }
 // #head{
 //   

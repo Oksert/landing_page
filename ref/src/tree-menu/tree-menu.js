@@ -24,6 +24,9 @@ function menuCtrl ($location) {
     //    }
        var intial_article = window.location.href.split('?')[1]
        $('iframe').attr('src',`./data/article_${intial_article || 1}.html`);
+       $.get(`./data/article_${intial_article || 1}.html`, (data)=> {
+            $('#art').html(data);
+        })
         var count = 0;
         $(function () {
             $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
@@ -54,6 +57,9 @@ function menuCtrl ($location) {
             $(window).trigger('resize')
             $ctrl.name = name
             changeUrl = false;
+            $.get(`./data/article_${km_articleid}.html`, (data)=> {
+                $('#art').html(data);
+            })
             setTimeout( ()=> {
                 window.history.replaceState({name:'new'},null,window.location.href.split('?')[0] +'?'+km_articleid);
             },0)

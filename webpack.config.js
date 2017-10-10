@@ -15,7 +15,7 @@ module.exports = {
       'node_modules'
     ]
   },
-//   devtool: !isProd ? 'source-map' : '',
+  devtool: 'source-map',
    module: {
     rules: [
         {
