@@ -17,10 +17,14 @@
 
 #welcome-section .video-control {
   display: none;
-  width: 20%;
+  width: 10%;
   position: absolute;
-  top: 25%;
-  left: 40%; }
+  top: 32%;
+  left: 44%;
+  opacity: 0.8; }
+
+#welcome-section .video-control-play {
+  display: block; }
 
 .column {
   height: 100%;

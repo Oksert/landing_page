@@ -226,7 +226,8 @@ $(window).load(function(){
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
 	// vid.controls=true;
 	vid.preload='none'
-	vid.autoplay=true
+	vid.autoplay=false
+	vid.poster='./img/img1.jpg'
 	// setTimeout(function (){
 	// 	vid.load()
 	// },4000)
