@@ -3,6 +3,7 @@ import './styles/desctop.scss'
 // import './styles/medium.scss'
 // import './styles/small.scss'
 import './styles/mobile.scss'
+import setControls from './video-control-custom'
  
  $(document).ready(function() {
 	
@@ -223,7 +224,7 @@ $(window).load(function(){
 	 });
 	var vid = document.createElement('video')
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
-	vid.controls=true;
+	// vid.controls=true;
 	vid.preload='none'
 	vid.autoplay=true
 	// setTimeout(function (){
@@ -241,6 +242,15 @@ $(window).load(function(){
 	
 		
 	};
+	let vidContainer =  {
+		parentSection: '#welcome-container',
+		allControls: '.video-control',
+		pauseControl: '.video-control-pause',
+		playControl: '.video-control-play',
+		video:vid
+
+	}
+	setControls.customizeVideo(vidContainer)
 	var req = new XMLHttpRequest();
 	req.open('GET', './video/demo.mp4', true);
 	req.responseType = 'blob';

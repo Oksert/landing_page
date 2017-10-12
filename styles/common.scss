@@ -15,6 +15,13 @@
     h1 {
         margin-top: 0px;
     }
+    .video-control {
+        display: none;
+        width:20%;
+        position: absolute;
+        top:25%;
+        left: 40%;
+    }
 }
 .column {
     height: 100%;

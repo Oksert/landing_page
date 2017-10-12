@@ -65,6 +65,38 @@
 /************************************************************************/
 /******/ ({
 
+/***/ 110:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    customizeVideo: customizeVideo
+});
+function customizeVideo(vidContainerObj) {
+    let { parentSection, allControls, pauseControl, playControl, video } = vidContainerObj;
+    $(parentSection).mouseenter(() => {
+        video.paused ? $(playControl).fadeIn() : $(pauseControl).fadeIn();
+    }).mouseleave(() => {
+        $(allControls).fadeOut();
+    });
+    setPause(pauseControl, video);
+    setPlay(playControl, video);
+}
+function setPause(pauseControl, video) {
+    $(pauseControl).click(() => {
+        video.pause();
+        $(pauseControl).fadeOut();
+    });
+}
+function setPlay(playControl, video) {
+    $(playControl).click(() => {
+        video.play();
+        $(playControl).fadeOut();
+    });
+}
+
+/***/ }),
+
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -76,10 +108,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_desctop_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_desctop_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_mobile_scss__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_mobile_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_mobile_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__video_control_custom__ = __webpack_require__(110);
 
 
 // import './styles/medium.scss'
 // import './styles/small.scss'
+
 
 
 $(document).ready(function () {
@@ -296,7 +330,7 @@ $(window).load(function () {
 	});
 	var vid = document.createElement('video');
 	// vid.src='/video/Скриптонит - Не забирай меня с пати (Ft Надя).mp4'
-	vid.controls = true;
+	// vid.controls=true;
 	vid.preload = 'none';
 	vid.autoplay = true;
 	// setTimeout(function (){
@@ -312,6 +346,15 @@ $(window).load(function () {
 		document.getElementById('welcome-video').innerHTML = '';
 		document.getElementById('welcome-video').appendChild(vid);
 	};
+	let vidContainer = {
+		parentSection: '#welcome-container',
+		allControls: '.video-control',
+		pauseControl: '.video-control-pause',
+		playControl: '.video-control-play',
+		video: vid
+
+	};
+	__WEBPACK_IMPORTED_MODULE_3__video_control_custom__["a" /* default */].customizeVideo(vidContainer);
 	var req = new XMLHttpRequest();
 	req.open('GET', './video/demo.mp4', true);
 	req.responseType = 'blob';
