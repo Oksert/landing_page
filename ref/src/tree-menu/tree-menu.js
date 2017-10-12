@@ -29,15 +29,17 @@ function menuCtrl ($location) {
         })
         var count = 0;
         $(function () {
-            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-            $('.tree li.parent_li > span').on('click', function (e) {
+            $('.tree li:has(ul:has(li))').addClass('parent_li').addClass('collapse-l')//.find(' > ul').find(' > li').attr('title', 'Collapse this branch');
+            $('.tree li.parent_li > span, li.parent_li:before').on('click', function (e) {
                 var children = $(this).parent('li.parent_li').find(' > ul > li');
                 if (children.is(':visible')) {
                     children.hide('fast');
-                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                    $(this).closest('.collapse-l').removeClass('collapse-l').addClass('expand-l');
+                     // $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
                 } else {
                     children.show('fast');
-                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                    $(this).closest('.expand-l').addClass('collapse-l').removeClass('expand-l');
+                    // $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
                 }
                 e.stopPropagation();
             });
@@ -45,12 +47,12 @@ function menuCtrl ($location) {
         });
         var windowHeight = $(window).height()
         var headerHeight = $('#header').height()
-        $('iframe').height(windowHeight - headerHeight-20)
+        $('#art').height(windowHeight - headerHeight-20)
         $('.tree').height(windowHeight -  headerHeight-20)
         var $window = $(window).on('resize', function(){
             windowHeight = $(window).height()
             headerHeight = $('#header').height()
-            $('iframe').height(windowHeight -  headerHeight-70)
+            $('#art').height(windowHeight -  headerHeight-70)
             $('.tree').height(windowHeight -  headerHeight-20)
         })
         $ctrl.clickArticle= (event, name, km_articleid)=> {

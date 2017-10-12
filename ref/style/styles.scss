@@ -26,6 +26,16 @@ div:not(.article-content) {
   overflow-y: scroll;
   border-radius: 0px;
   direction: rtl;
+  li {
+    list-style: none;
+  }
+  
+  li.expand-l:before{
+    content: "+"
+  }
+  li.collapse-l:before{
+    content: "-"
+  }
   
 }
 .ltr-direction {
@@ -117,7 +127,10 @@ tree-menu {
   margin-left: 2%;
   margin-top:5px;
   border-left: 1px solid #A9A7A7;
-  text-align: center;
+  // text-align: center;
+  #article-name {
+    text-align: center
+  }
 }
 iframe {
   
@@ -178,6 +191,10 @@ ul {
 sub {
   font-size: 40%
 }
+}
+#art {
+  overflow: auto;
+  margin-left: 20px;
 }
 // #head{
 //   

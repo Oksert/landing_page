@@ -17,11 +17,13 @@
     "ng-cache-loader": "0.0.23"
   },
   "devDependencies": {
+    "angular-bootstrap-grid-tree": "^0.4.0",
     "angular-tree-repeat": "0.0.1",
     "angular-ui-router": "^1.0.3",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
+    "bootstrap": "^3.3.7",
     "css-loader": "^0.28.7",
     "del": "^3.0.0",
     "eslint-loader": "^1.6.1",

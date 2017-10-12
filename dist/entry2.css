@@ -16,6 +16,12 @@ div:not(.article-content) .tree {
   overflow-y: scroll;
   border-radius: 0px;
   direction: rtl; }
+  div:not(.article-content) .tree li {
+    list-style: none; }
+  div:not(.article-content) .tree li.expand-l:before {
+    content: "+"; }
+  div:not(.article-content) .tree li.collapse-l:before {
+    content: "-"; }
 
 div:not(.article-content) .ltr-direction {
   direction: ltr !important; }
@@ -84,8 +90,9 @@ div:not(.article-content) .article-content {
   width: 90%;
   margin-left: 2%;
   margin-top: 5px;
-  border-left: 1px solid #A9A7A7;
-  text-align: center; }
+  border-left: 1px solid #A9A7A7; }
+  div:not(.article-content) .article-content #article-name {
+    text-align: center; }
 
 div:not(.article-content) iframe {
   width: 99%;
@@ -133,5 +140,9 @@ div:not(.article-content) .article-name {
 
 div:not(.article-content) sub {
   font-size: 40%; }
+
+#art {
+  overflow: auto;
+  margin-left: 20px; }
 
 /*# sourceMappingURL=entry2.css.map*/

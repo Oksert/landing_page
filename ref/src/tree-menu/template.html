@@ -20,7 +20,7 @@
  </div>
  <div class='content'>
     <div class="tree custom-scroll">
-        <ul sf-treepeat="node in children of $ctrl.treeData" class='ltr-direction'>
+         <ul sf-treepeat="node in children of $ctrl.treeData " class='ltr-direction'>
                 
                 <span>
                         <a  ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)' >{{node.displayname}}</a>
@@ -30,6 +30,7 @@
                 </ul>
                 
         </ul>
+        <!-- <tree-grid tree-data='$ctrl.treeData'></tree-grid> -->
     </div>
     <div class='article-content'>
             <h3 id='article-name'>{{$ctrl.name}}</h3>

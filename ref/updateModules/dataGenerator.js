@@ -66,9 +66,8 @@ module.exports = class dataGenerator {
                     var href = $(elem).attr('href')
                     if (href.indexOf('rowId') > 0) {
                        var article_id = href.split('=')[href.split('=').length - 1]
-                       $(elem).attr('href','./article_' + article_id + '.html')
+                       $(elem).attr('href','/ref/index.html?' + article_id)
                     }
-                    // console.log($(elem).attr('href'))
                 })
                 fs.writeFile(filepath,$.html(),{ flag: 'wx' }, function(err) {
                     if(err) {
