@@ -232,6 +232,9 @@ $(window).load(function(){
 	vid.addEventListener('click',function(){
 		this.paused?this.play():this.pause()
 	},false);
+	vid.onended = () => {
+		vid.currentTime=0;
+	}
 	vid.onloadeddata = function() {
 		document.getElementById('welcome-video').innerHTML=''
 		document.getElementById('welcome-video').appendChild(vid)
