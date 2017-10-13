@@ -2,6 +2,8 @@ var webpack = require('webpack');
 const isProd = process.argv.includes('--prod')
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
   entry: {entry1: 'script.js', entry2: 'ref/app.js'},
@@ -15,7 +17,7 @@ module.exports = {
       'node_modules'
     ]
   },
-  devtool: 'source-map',
+//   devtool: 'source-map',
    module: {
     rules: [
         {
@@ -56,61 +58,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJSPlugin({
         sourceMap:true
     })
   ]
 };
-// module.exports = {
-//     entry: './app.js',
-//     output: {
-//         path: '.',
-//         filename: 'bundle.js'
-//     },
-//     watch:true,
-//     devtool: 'source-map',
-//     plugins: [
-//         new webpack.optimize.UglifyJsPlugin()
-//     ],
-//     module: {
-       
-//         preLoaders: [
-//             {
-//                 test: /\.jsx?$/,
-//                 loader: 'eslint-loader',
-//                 exclude: /node_modules/
-//             }
-//         ],
-//         loaders: [{
-//                 test: /\.html$/,
-//                 loader: 'ng-cache?prefix=[dir]/[dir]'
-//             },
-            
-//             {
-
-//                 test: /\.js?$/,
-//                 exclude: /(node_modules|bower_components)/,
-//                 loader: 'babel'
-//             },
-//             {
-//                 test: /\.scss$/,
-//                 loader: 'sass'
-//             },
-//             {
-//                 //IMAGE LOADER
-//                 test: /\.(jpe?g|png|gif|svg)$/i,
-//                 loader:'file-loader'
-//             },
-            
-//             {
-//                 test: /\.json$/,
-//                 loader: 'json-loader'
-//             }
-              
-//         ]
-//     },
-//     eslint: {
-//         failOnWarning: false,
-//         failOnError: true
-//     },
-// }

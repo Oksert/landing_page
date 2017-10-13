@@ -2,41 +2,47 @@
 <div id="header">
     <div id='head-content'>
         <div class="logo">
-                <a href="../index.html">
-                    <img src="..\img\logoIP.png"/ class="logo-image">
-                </a>
-                
-         </div>
+            <a href="../index.html">
+                <img src="..\img\logoIP.png" / class="logo-image">
+            </a>
+
+        </div>
         <ul id="menu">
-                <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li> -->
-                <li data-menuanchor="join"><a href="../index.html#join">Скачать</a></li>
-                <li data-menuanchor="price"><a href="../index.html#price">Купить</a></li>
-                <li data-menuanchor="contact"><a href="../index.html#contact">Контакты</a></li>
+            <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li> -->
+            <li data-menuanchor="join">
+                <a href="../index.html#join">Скачать</a>
+            </li>
+            <li data-menuanchor="price">
+                <a href="../index.html#price">Купить</a>
+            </li>
+            <li data-menuanchor="contact">
+                <a href="../index.html#contact">Контакты</a>
+            </li>
         </ul>
-       
-           
-     </div>
-        
- </div>
- <div class='content'>
+
+
+    </div>
+
+</div>
+<div class='content'>
     <div class="tree custom-scroll">
-         <ul sf-treepeat="node in children of $ctrl.treeData " class='ltr-direction'>
-                
-                <span>
-                        <a  ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)' >{{node.displayname}}</a>
-                </span >
-                <ul>
-                    <li sf-treecurse>This should be removed</li>
-                </ul>
-                
+        <ul sf-treepeat="node in children of $ctrl.treeData " class='ltr-direction'>
+
+            <span>
+                <a ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)'>{{node.displayname}}</a>
+            </span>
+            <ul>
+                <li sf-treecurse>This should be removed</li>
+            </ul>
+
         </ul>
         <!-- <tree-grid tree-data='$ctrl.treeData'></tree-grid> -->
     </div>
     <div class='article-content'>
-            <h3 id='article-name'>{{$ctrl.name}}</h3>
-            <div id="art">
-                
-            </div>
-            <!-- <iframe name="iframe1" class="custom-scroll"></iframe> -->
+        <h3 id='article-name'>{{$ctrl.name}}</h3>
+        <div id="art">
+
         </div>
+        <!-- <iframe name="iframe1" class="custom-scroll"></iframe> -->
+    </div>
 </div>
