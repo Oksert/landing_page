@@ -21,7 +21,8 @@
   position: absolute;
   top: 32%;
   left: 44%;
-  opacity: 0.8; }
+  opacity: 0.8;
+  border-radius: 50%; }
 
 #welcome-section .video-control-play {
   display: block; }
