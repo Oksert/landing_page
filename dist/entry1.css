@@ -298,7 +298,11 @@
     width: 80%; }
 
 .aggrement {
-  font-size: 90%; }
+  font-size: 90%;
+  margin-top: 2%; }
+  .aggrement a {
+    color: #de562a !important;
+    text-decoration: underline !important; }
 @media (min-width: 1000px) {
   .trigger {
     border: none;

@@ -39,6 +39,7 @@ $(document).ready(function () {
 
 		event.preventDefault();
 	});
+	let event={}
 	$('.btn-dist').click(openModal(event, 'dist'))
 	$('.btn-cloud').click(openModal(event, 'cloud'))
 	$('.btn-feedback').click(openModal(event, 'feedback'))
@@ -49,65 +50,6 @@ $(document).ready(function () {
 		$('#menu-modal').fadeOut()
 	})
 
-	function openMenu() {
-		$('#menu-modal').removeClass('inactive')
-		if ($('#menu-modal').css('display') != 'none') {
-			$('#menu-modal').fadeOut()
-			return
-		}
-		// if ($('#menu .active')) {
-		// 	// $('#menu').removeClass('active')
-		// 	// $('#menu').addClass('inactive')
-		// 	return
-		// }
-		// $('#menu').addClass('active')
-		$('#menu-modal').fadeIn()
-	}
-
-	function openModal(event, mode) {
-
-		return function () {
-
-			$('#modalBox').show()
-			$('#modalBox #dist').prop('checked', false);
-			$('#modalBox #cloud').prop('checked', false);
-			$('#modalBox #quest').hide();
-			$('.radio-wrap').hide()
-			$('#modalBox #mail').val('')
-			$('input[name=quantity], label[for=quantity]').hide()
-			switch (mode) {
-				case 'dist':
-					$('#modalBox #dist').prop('checked', true);
-					$('.radio-wrap').show()
-					break;
-
-				case 'cloud':
-					$('#modalBox #cloud').prop('checked', true);
-					$('.radio-wrap').show()
-					break;
-
-				case 'feedback':
-					$('#modalBox #quest').show();
-					break;
-				case 'access':
-					$('.radio-wrap').show()
-					$('#modalBox #mail').val($('.section input[name="emailaddress"]').val())
-					break;
-				case 'license':
-					$('input[name=quantity], label[for=quantity]').show()
-				default:
-					break;
-
-			}
-			if (event) {
-				$('#modalBox').addClass('modalBox-active')
-				event.preventDefault();
-				event.cancelBubble = true;
-				event.stopPropagation()
-			}
-		}
-
-	}
 	window.onclick = function (event) {
 		if (event.target == document.getElementById('modalBox')) {
 			$('.modalBox-active').removeClass('modalBox-active')
@@ -115,10 +57,7 @@ $(document).ready(function () {
 		}
 	}
 
-	function onSubmit(event) {
-		document.getElementById('modalBox').checkValidity()
-	}
-	$(window).width() > 500 && fullPage('#fullpage')
+	fullPage('#fullpage')
 
 	$('.trigger-container .trigger').click(function () {
 		$('.trigger-container .trigger').addClass('trigger-not-active')
@@ -129,9 +68,6 @@ $(document).ready(function () {
 		$('#' + activeTab).fadeIn('slow')
 		$('#price-page button').hide();
 		$('#price-page button[rel=' + activeTab + ']').show()
-		// $('#price-page button').each (function(btn) {
-		// 	$('#price-page button')[0]==activeTab?$('#price-page button')[0].show():$('#price-page button')[0].hide()
-		// })
 	})
 
 });
@@ -143,7 +79,7 @@ $(window).load(function () {
 		maxFont: 22,
 		fontRatio: 97
 	});
-	var vid = videoLoader('welcome-video', './img/img1.jpg','./video/demo.mp4')
+	var vid = videoLoader('welcome-video', './img/img1.jpg', './video/demo.mp4')
 	setControls.customizeVideo({
 		parentSection: '#welcome-container',
 		allControls: '.video-control',
@@ -169,3 +105,61 @@ $(window).load(function () {
 
 	// req.send();
 })
+
+function openMenu() {
+	$('#menu-modal').removeClass('inactive')
+	if ($('#menu-modal').css('display') != 'none') {
+		$('#menu-modal').fadeOut()
+		return
+	}
+	$('#menu-modal').fadeIn()
+}
+
+function openModal(event, mode) {
+
+	return function () {
+
+		$('#modalBox').show()
+		$('#modalBox #dist').prop('checked', false);
+		$('#modalBox #cloud').prop('checked', false);
+		$('#modalBox #quest').hide();
+		$('.radio-wrap').hide()
+		$('#modalBox #mail').val('')
+		$('input[name=quantity], label[for=quantity]').hide()
+		switch (mode) {
+			case 'dist':
+				$('#modalBox #dist').prop('checked', true);
+				$('.radio-wrap').show()
+				break;
+
+			case 'cloud':
+				$('#modalBox #cloud').prop('checked', true);
+				$('.radio-wrap').show()
+				break;
+
+			case 'feedback':
+				$('#modalBox #quest').show();
+				break;
+			case 'access':
+				$('.radio-wrap').show()
+				$('#modalBox #mail').val($('.section input[name="emailaddress"]').val())
+				break;
+			case 'license':
+				$('input[name=quantity], label[for=quantity]').show()
+			default:
+				break;
+
+		}
+		if (event) {
+			$('#modalBox').addClass('modalBox-active')
+			event.preventDefault();
+			event.cancelBubble = true;
+			event.stopPropagation()
+		}
+	}
+
+}
+
+function onSubmit(event) {
+	document.getElementById('modalBox').checkValidity()
+}
