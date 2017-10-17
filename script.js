@@ -79,7 +79,7 @@ $(window).load(function () {
 		maxFont: 22,
 		fontRatio: 97
 	});
-	var vid = videoLoader('welcome-video', './img/img1.jpg', './video/demo.mp4')
+	var vid = videoLoader('welcome-video', './img/poster.png', './video/demo.mp4')
 	setControls.customizeVideo({
 		parentSection: '#welcome-container',
 		allControls: '.video-control',
