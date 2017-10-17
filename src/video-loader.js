@@ -1,8 +1,8 @@
 export default function videoLoader(parentContainerid, posterImg, videoSrcPath) {
     var vid = document.createElement('video')
-	vid.preload = true
+	vid.preload = false
 	vid.autoplay = false
-	vid.poster = posterImg
+	// vid.poster = posterImg
 	// setTimeout(function (){
 	// 	vid.load()
     // },4000)
