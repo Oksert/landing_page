@@ -27,14 +27,14 @@ div:not(.article-content) {
   border-radius: 0px;
   direction: rtl;
   li {
-    list-style: none;
+    // list-style: none;
   }
   
   li.expand-l:before{
-    content: "+"
+    // content: "\2027"
   }
   li.collapse-l:before{
-    content: "-"
+    // content: "\2022"
   }
   
 }

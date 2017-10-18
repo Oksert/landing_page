@@ -384,7 +384,8 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border-top: 1px solid #de5021;
+    // border-top: 1px solid #de5021;
+    box-shadow: 0 -5px 5px -5px #c0c0c0;
     position: relative;
     top: 14%;
     padding: 18px 0px 0px 0px;

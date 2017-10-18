@@ -16,12 +16,6 @@ div:not(.article-content) .tree {
   overflow-y: scroll;
   border-radius: 0px;
   direction: rtl; }
-  div:not(.article-content) .tree li {
-    list-style: none; }
-  div:not(.article-content) .tree li.expand-l:before {
-    content: "+"; }
-  div:not(.article-content) .tree li.collapse-l:before {
-    content: "-"; }
 
 div:not(.article-content) .ltr-direction {
   direction: ltr !important; }
