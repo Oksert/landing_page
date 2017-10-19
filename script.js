@@ -72,7 +72,7 @@ $(document).ready(function () {
 
 });
 $(window).load(function () {
-	$('body').flowtype({
+	$('window').width() > 500 && $('body').flowtype({
 		minimum: 300,
 		maximum: 2000,
 		minFont: 8,

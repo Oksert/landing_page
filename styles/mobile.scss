@@ -1,8 +1,41 @@
 @media (max-width: 1000px) {
     #openMenu {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
+    .not-mobile {
+        display: none;
+    }
+    
+    #welcome-section {
+        .registration-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width:100%;
+            button {
+                width: 60%
+            }
+            input {
+               width: 90% !important;
+            }
+        }
+        img {
+            margin-top: 7%;
+        }
+        h1 {
+            // margin-top: -45px;
+        }
+        
+    }
+    .user-form {
+        display: flex;
+        justify-content: center;
+        .modal-content {
+            padding: 0px;
+        }
+    }
     .trigger {
         border:none;
         background: #de5021;
@@ -114,12 +147,13 @@
       
      
     .section-center {
+        height: inherit;
         margin: auto;
         text-align: center;
         width: 98%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         iframe {
             height: 40%;
@@ -170,6 +204,7 @@
         margin-top: 5%;
         h1 {
             display: none;
+            // margin-top:-66px;
         }
     }
     
@@ -185,14 +220,14 @@
     h2,
     strong {
     color: #555;
-    font-size: 1.8  em;
+    font-size: 1.5em;
     line-height: 1.3em;
     }
     .section-center img {
         box-sizing: border-box;
-        margin: 0px 10px 0px 10px;
-        width: 90%;
-        box-shadow: 0 0 65px rgba(0,0,0,0.5);
+        // margin: 0px 10px 0px 10px;
+        width: 100%;
+        // box-shadow: 0 0 65px rgba(0,0,0,0.5);
         border-radius: 5px;
     }
     .section {
@@ -215,7 +250,8 @@
         text-decoration: none;
     }
     .logo img {
-        height: 60px;
+        // height: 60px;
+        height: 110%;
     }
     .header-top {
         padding:1% 0% 0% 5%;
@@ -345,7 +381,8 @@
         color: #fff;
     } */
     .column {
-        width:65%;
+        width:88%;
+        height: auto;
     }
     .column-big {
         width: 100%;
@@ -405,6 +442,7 @@
         justify-content: center;
     }
     .content-head {
+        height: auto;
         h1 {
             display: block;
         }
