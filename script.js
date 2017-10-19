@@ -57,7 +57,7 @@ $(document).ready(function () {
 		}
 	}
 
-	fullPage('#fullpage')
+	$('window').width() > 400 && fullPage('#fullpage')
 
 	$('.trigger-container .trigger').click(function () {
 		$('.trigger-container .trigger').addClass('trigger-not-active')
