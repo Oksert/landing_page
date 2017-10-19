@@ -640,7 +640,6 @@
   .section-center {
     height: inherit;
     margin: auto;
-    margin-top: 50%;
     text-align: center;
     width: 98%;
     display: flex;

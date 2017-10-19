@@ -50,7 +50,7 @@ $(fullpageselector).fullpage({
     paddingTop: '3em',
     paddingBottom: '10px',
     fixedElements: '#header, .footer',
-    responsiveWidth:400,
+    responsiveWidth:0,
     responsiveHeight: 0,
     responsiveSlides: true,
     parallax: true,
