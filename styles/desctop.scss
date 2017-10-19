@@ -167,37 +167,7 @@
         width: 80%;
         justify-content: space-between;
     }
-    .btn {
-        border:none;
-        background: #de5021;
-        background-image: -webkit-linear-gradient(top, #de5021, #e06743);
-        background-image: -moz-linear-gradient(top, #de5021, #e06743);
-        background-image: -ms-linear-gradient(top, #de5021, #e06743);
-        background-image: -o-linear-gradient(top, #de5021, #e06743);
-        background-image: linear-gradient(to bottom, #de5021, #e06743);
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0px;
-        font-family: Arial;
-        font-size: 1.1em;
-        color: #ffffff;
-        cursor: pointer;
-        padding: 10px 20px 10px 20px;
-        text-decoration: none;
-    }
-    .btn-block {
-        display: block;
-        margin-top: 20px;
-    }
-    .btn:hover {
-        background: #ed6b47;
-        background-image: -webkit-linear-gradient(top, #ed6b47, #ff7d59);
-        background-image: -moz-linear-gradient(top, #ed6b47, #ff7d59);
-        background-image: -ms-linear-gradient(top, #ed6b47, #ff7d59);
-        background-image: -o-linear-gradient(top, #ed6b47, #ff7d59);
-        background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
-        text-decoration: none;
-    }
+   
     input[type="email"]{
         box-sizing: border-box;
         -webkit-box-sizing: border-box;

@@ -115,6 +115,37 @@
         }
     }
 }
+.btn {
+    border:none;
+    background: #de5021;
+    background-image: -webkit-linear-gradient(top, #de5021, #e06743);
+    background-image: -moz-linear-gradient(top, #de5021, #e06743);
+    background-image: -ms-linear-gradient(top, #de5021, #e06743);
+    background-image: -o-linear-gradient(top, #de5021, #e06743);
+    background-image: linear-gradient(to bottom, #de5021, #e06743);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    font-family: Arial;
+    font-size: 1.1em;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+.btn-block {
+    display: block;
+    margin-top: 20px;
+}
+.btn:hover {
+    background: #ed6b47;
+    background-image: -webkit-linear-gradient(top, #ed6b47, #ff7d59);
+    background-image: -moz-linear-gradient(top, #ed6b47, #ff7d59);
+    background-image: -ms-linear-gradient(top, #ed6b47, #ff7d59);
+    background-image: -o-linear-gradient(top, #ed6b47, #ff7d59);
+    background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
+    text-decoration: none;
+}
 .modalBox {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -131,6 +162,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .aggrement {
+        font-size: 90%;
+        margin-top:2%;
+        a {
+            color:  #de562a !important;
+            text-decoration: underline !important;
+        }
+    }
     textarea {
         width: 100%;
         height: 100%;
@@ -158,6 +197,12 @@
             font-size: 15px;
             // border-radius: 4px;
             box-sizing: border-box;
+            height: inherit;
+            line-height: inherit;
+            color: inherit;
+            box-shadow: inherit;
+            border-radius: inherit;
+            transition: none;
         }
         .radio-wrap {
             label {
@@ -396,12 +441,4 @@
         width: 80%;
     }
     
-}
-.aggrement {
-    font-size: 90%;
-    margin-top:2%;
-    a {
-        color:  #de562a !important;
-        text-decoration: underline !important;
-    }
 }
