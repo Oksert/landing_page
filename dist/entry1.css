@@ -582,7 +582,7 @@
     cursor: pointer; }
   .trigger-container {
     border: 1px solid #ddd6d6;
-    padding: 11px 0px 10px 0px;
+    padding: 13px 0px 10px 0px;
     background-image: linear-gradient(to bottom, #de5021, #e06743); }
   .trigger-not-active {
     background: #f8f8f8;
@@ -922,8 +922,8 @@
       box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
       padding: 10%;
       background: white;
-      border-radius: 6px;
-      border: 1px solid; }
+      border-radius: 0px;
+      border: 1px solid #DE4F20; }
     .menu-modal-content li {
       text-align: center; }
       .menu-modal-content li a:active, .menu-modal-content li a:hover, .menu-modal-content li a:focus {
