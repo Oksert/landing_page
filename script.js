@@ -49,7 +49,9 @@ $(document).ready(function () {
 	$('#menu-modal').click(function () {
 		$('#menu-modal').fadeOut()
 	})
-
+	$('.close-btn').click (()=>{
+		$('.modalBox-active').removeClass('modalBox-active')
+	})
 	window.onclick = function (event) {
 		if (event.target == document.getElementById('modalBox')) {
 			$('.modalBox-active').removeClass('modalBox-active')
@@ -72,7 +74,7 @@ $(document).ready(function () {
 
 });
 $(window).load(function () {
-	$('window').width() > 500 && $('body').flowtype({
+	$(window).width() > 500 && $('body').flowtype({
 		minimum: 300,
 		maximum: 2000,
 		minFont: 8,

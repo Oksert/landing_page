@@ -163,8 +163,14 @@
   .modalBox .modal-content {
     padding: 30px;
     opacity: 1;
+    position: relative;
     background: white;
     width: 30%; }
+    .modalBox .modal-content img {
+      width: 30px;
+      position: absolute;
+      right: -10px;
+      top: -10px; }
     .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content input[type=number], .modalBox .modal-content select, .modalBox .modal-content textarea {
       width: 100%;
       padding: 12px 20px;
@@ -652,8 +658,7 @@
     .section-center form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center; }
+      justify-content: center; }
   .menu ul {
     margin-left: 0px;
     padding-left: 0px; }
@@ -878,10 +883,16 @@
   .logo img {
     display: none; }
   .modalBox {
-    display: none; }
+    display: flex; }
     .modalBox .modal-header {
       font-size: 20px; }
+    .modalBox img {
+      width: 30px;
+      position: absolute;
+      right: 10px;
+      top: 10px; }
     .modalBox .modal-content {
+      position: relative;
       margin: auto;
       width: 75%;
       padding: 20px; }
@@ -922,3 +933,5 @@
   .fp-tableCell {
     padding: 0px !important;
     margin: 0px !important; } }
+
+/*# sourceMappingURL=entry1.css.map*/
