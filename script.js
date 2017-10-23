@@ -61,6 +61,9 @@ $(document).ready(function () {
 
 	
 	fullPage('#fullpage')
+	if ($(window).width() < 500) {
+		$('.user-form textarea').attr('rows','4')
+	}
 
 	$('.trigger-container .trigger').click(function () {
 		$('.trigger-container .trigger').addClass('trigger-not-active')
@@ -82,6 +85,7 @@ $(window).load(function () {
 		maxFont: 22,
 		fontRatio: 97
 	});
+
 	var vid = videoLoader('welcome-video', './img/poster.png', './video/vid.mp4')
 	setControls.customizeVideo({
 		parentSection: '#welcome-container',
