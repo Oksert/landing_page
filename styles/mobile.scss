@@ -59,7 +59,9 @@
         padding: 12px 0px 10px 0px;
         background-image: linear-gradient(to bottom, #de5021, #e06743);
       }
-      
+      .content-wide:first-of-type {
+          margin-bottom: 10px;
+      }
       .trigger-not-active {
         background: #f8f8f8;
         color: #446772;
@@ -80,7 +82,17 @@
         width: 90% !important;
         .price-content {
             padding: 1%;
+            h1 {
+                font-size: 130%;
+            }
         }
+      }
+      .price-plan {
+          .price-content {
+              h1 {
+                  font-size: 130%
+              }
+          }
       }
       #price-page {
         td, th {
