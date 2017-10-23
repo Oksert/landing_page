@@ -582,7 +582,7 @@
     cursor: pointer; }
   .trigger-container {
     border: 1px solid #ddd6d6;
-    padding: 13px 0px 10px 0px;
+    padding: 11px 0px 10px 0px;
     background-image: linear-gradient(to bottom, #de5021, #e06743); }
   .trigger-not-active {
     background: #f8f8f8;
