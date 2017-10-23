@@ -563,6 +563,8 @@
     justify-content: center; }
     .user-form .modal-content {
       padding: 0px; }
+    .user-form input {
+      text-align: left; }
   .trigger {
     border: none;
     background: #de5021;
@@ -725,6 +727,10 @@
     width: 90%;
     justify-content: space-between;
     align-items: center; }
+  .close-btn-menu {
+    position: absolute;
+    right: 45px;
+    top: 86px; }
   .btn {
     border: none;
     background: #de5021;
@@ -753,7 +759,7 @@
     background-image: -o-linear-gradient(top, #ed6b47, #ff7d59);
     background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
     text-decoration: none; }
-  .section input[type="email"] {
+  .registration-container input[type="email"] {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -890,7 +896,7 @@
     height: 300px;
     position: fixed;
     font-size: 30px;
-    background: rgba(115, 115, 115, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     height: 100%; }
   .menu-modal-content {
@@ -898,16 +904,14 @@
     height: 100%;
     justify-content: center;
     align-items: center; }
-    .menu-modal-content ul {
-      box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
-      padding: 10%;
-      background: white;
-      border-radius: 0px;
-      border: 1px solid #DE4F20; }
+    .menu-modal-content .close-btn-menu {
+      color: #e9e9e9; }
     .menu-modal-content li {
       text-align: center; }
       .menu-modal-content li a:active, .menu-modal-content li a:hover, .menu-modal-content li a:focus {
         color: #DE4F20; }
+    .menu-modal-content a {
+      color: #e9e9e9 !important; }
   .only-desctop {
     display: none; }
   .fp-tableCell {

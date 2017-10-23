@@ -35,6 +35,9 @@
         .modal-content {
             padding: 0px;
         }
+        input {
+            text-align: left;
+        }
     }
     .trigger {
         border:none;
@@ -263,6 +266,11 @@
         justify-content: space-between;
         align-items: center;
     }
+    .close-btn-menu {
+        position: absolute;
+        right: 45px;
+        top: 86px;
+    }
     .btn {
         border:none;
         background: #de5021;
@@ -294,7 +302,7 @@
         background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
         text-decoration: none;
     }
-    .section {
+    .registration-container {
         input[type="email"]{
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
@@ -472,27 +480,35 @@
         height: 300px;
         position: fixed;
         font-size: 30px;
-        background: rgba(115, 115, 115, 0.5);
+        background:rgba(0, 0, 0, 0.9);
         width:100%;
         height: 100%;
+       
     }
     .menu-modal-content {
         display: flex;
         height: 100%;
         justify-content: center;
         align-items: center;
+        .close-btn-menu {
+            color: #e9e9e9;
+        }
+        
         ul {
-            box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
-            padding: 10%;
-            background: white;
-            border-radius: 0px;
-            border: 1px solid #DE4F20;
+            // box-shadow: 0 0 79px rgba(0, 0, 0, 0.5);
+            // padding: 10%;
+            // background: white;
+            // border-radius: 0px;
+            // border: 1px solid #DE4F20;
         }
         li {
             text-align: center;
             a:active, a:hover, a:focus {
                 color: #DE4F20 ;
             }
+        }
+        a {
+            color: #e9e9e9 !important;
         }
 
     }
