@@ -62,7 +62,8 @@ $(document).ready(function () {
 	
 	fullPage('#fullpage')
 	if ($(window).width() < 500) {
-		$('textarea').attr('rows','4')
+		$('.user-form textarea').attr('rows','4')
+		$('.modalBox textarea').attr('rows','2')
 	}
 
 	$('.trigger-container .trigger').click(function () {
