@@ -45601,6 +45601,7 @@ exports.default = {
 };
 
 menuCtrl.$inject = ['$location'];
+
 function menuCtrl($location) {
     var $ctrl = this;
 
@@ -45608,6 +45609,12 @@ function menuCtrl($location) {
         $ctrl.treeData = {
             children: treeData
         };
+        (0, _jquery2.default)('.burgWrapper').bind('click', function () {
+            (0, _jquery2.default)('.burg').toggleClass('activeBurg');
+            (0, _jquery2.default)('.tree').toggleClass('active');
+            (0, _jquery2.default)('.article-content').toggleClass('inactive');
+            (0, _jquery2.default)('div.tree').width(200);
+        });
         var changeUrl = true;
         //     window.onhashchange = function() { 
         //         var intial_article = window.location.href.split('?')[1]
@@ -45654,7 +45661,9 @@ function menuCtrl($location) {
                 (0, _jquery2.default)('#art').html(data);
             });
             setTimeout(function () {
-                window.history.replaceState({ name: 'new' }, null, window.location.href.split('?')[0] + '?' + km_articleid);
+                window.history.replaceState({
+                    name: 'new'
+                }, null, window.location.href.split('?')[0] + '?' + km_articleid);
             }, 0);
             // window.location.href = window.location.href.split('?')[0] +'?'+km_articleid
         };
@@ -55931,7 +55940,7 @@ return jQuery;
 /* 104 */
 /***/ (function(module, exports) {
 
-module.exports = "<link rel=\"icon\" type=\"image/ico\" href=\"../img/favicon.ico\">\r\n<div id=\"header\">\r\n    <div id='head-content'>\r\n        <div class=\"logo\">\r\n            <a href=\"../index.html\">\r\n                <img src=\"..\\img\\logoIP.png\" / class=\"logo-image\">\r\n            </a>\r\n\r\n        </div>\r\n        <ul id=\"menu\">\r\n            <!-- <li data-menuanchor=\"welcome\" class=\"active\"><a href=\"#welcome\">Главная</a></li> -->\r\n            <li data-menuanchor=\"join\">\r\n                <a href=\"../index.html#join\">Скачать</a>\r\n            </li>\r\n            <li data-menuanchor=\"price\">\r\n                <a href=\"../index.html#price\">Купить</a>\r\n            </li>\r\n            <li data-menuanchor=\"contact\">\r\n                <a href=\"../index.html#contact\">Контакты</a>\r\n            </li>\r\n        </ul>\r\n\r\n\r\n    </div>\r\n\r\n</div>\r\n<div class='content'>\r\n    <div class=\"tree custom-scroll\">\r\n        <ul sf-treepeat=\"node in children of $ctrl.treeData \" class='ltr-direction'>\r\n\r\n            <span>\r\n                <a ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)'>{{node.displayname}}</a>\r\n            </span>\r\n            <ul>\r\n                <li sf-treecurse>This should be removed</li>\r\n            </ul>\r\n\r\n        </ul>\r\n        <!-- <tree-grid tree-data='$ctrl.treeData'></tree-grid> -->\r\n    </div>\r\n    <div class='article-content'>\r\n        <h3 id='article-name'>{{$ctrl.name}}</h3>\r\n        <div id=\"art\">\r\n\r\n        </div>\r\n        <!-- <iframe name=\"iframe1\" class=\"custom-scroll\"></iframe> -->\r\n    </div>\r\n</div>";
+module.exports = "<link rel=\"icon\" type=\"image/ico\" href=\"../img/favicon.ico\">\r\n<div id=\"header\">\r\n    <a class=\"burgWrapper\" href=\"##\">\r\n        <div class=\"burg\"></div>\r\n    </a>\r\n    <div id='head-content'>\r\n        <div class=\"logo\">\r\n            <a href=\"../index.html\">\r\n                <img src=\"..\\img\\logoIP.png\" / class=\"logo-image\">\r\n            </a>\r\n\r\n        </div>\r\n        <ul id=\"menu\">\r\n            <!-- <li data-menuanchor=\"welcome\" class=\"active\"><a href=\"#welcome\">Главная</a></li> -->\r\n            <li data-menuanchor=\"join\">\r\n                <a href=\"../index.html#join\">Скачать</a>\r\n            </li>\r\n            <li data-menuanchor=\"price\">\r\n                <a href=\"../index.html#price\">Купить</a>\r\n            </li>\r\n            <li data-menuanchor=\"contact\">\r\n                <a href=\"../index.html#contact\">Контакты</a>\r\n            </li>\r\n        </ul>\r\n\r\n\r\n    </div>\r\n\r\n</div>\r\n<div class='content'>\r\n    <div class=\"tree custom-scroll inactive\">\r\n        <ul sf-treepeat=\"node in children of $ctrl.treeData \" class='ltr-direction'>\r\n\r\n            <span>\r\n                <a ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)'>{{node.displayname}}</a>\r\n            </span>\r\n            <ul>\r\n                <li sf-treecurse>This should be removed</li>\r\n            </ul>\r\n\r\n        </ul>\r\n        <!-- <tree-grid tree-data='$ctrl.treeData'></tree-grid> -->\r\n    </div>\r\n    <div class='article-content'>\r\n        <h3 id='article-name'>{{$ctrl.name}}</h3>\r\n        <div id=\"art\">\r\n\r\n        </div>\r\n        <!-- <iframe name=\"iframe1\" class=\"custom-scroll\"></iframe> -->\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 105 */

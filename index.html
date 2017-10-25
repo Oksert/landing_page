@@ -31,6 +31,24 @@
 </head>
 
 <body>
+    <div class="modalBox successModal">
+        
+        <div class="modal-content">
+            <div class="modal-header">
+                Ваши данные отправлены на почту
+            </div>
+            <button class="btn btn-ok">Ок</button>
+        </div>
+    </div>
+    <div class="modalBox errorModal">
+            
+            <div class="modal-content">
+                <div class="modal-header">
+                    Произошла ошибка, повторите попытку позже
+                </div>
+                <button class="btn btn-ok">Ок</button>
+            </div>
+        </div>
     <div id='modalBox' class="modalBox">
         <div class="modal-content">
                 <div class="close-btn">
@@ -66,7 +84,7 @@
                             <label for="cloud">Создать пространство в облаке</label>
                         </div>
                         <div>
-                            <input type="checkbox" class='action'  useraction='dist' id="dist" name="isworkspacerequested">
+                            <input type="checkbox" class='action' useraction='dist' id="dist" name="isworkspacerequested">
                             <label for="dist">Получить дистрибутив</label>
                         </div>
                     </div>

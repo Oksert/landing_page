@@ -1,3 +1,5 @@
+// @import "compass/css3";
+
 @media (min-width:600px) {
   body {
     div:not(.article-content) {
@@ -181,9 +183,63 @@
 }
 
 @media (max-width:600px) {
-  #menu,
+  $sliceHeight: 5px;
+  .inactive {
+    display: none;
+  }
+  ul {
+    margin: 0px !important;
+  }
+  .active {
+    display: inherit;
+  }
+  .burgWrapper {
+    padding: 20px 0;
+    display: block;
+  }
+  .burg {
+    display: block;
+    height: $sliceHeight;
+    width: 30px;
+    background: black;
+    position: relative;
+    transition: all;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 30px;
+      height: $sliceHeight;
+      background: #000;
+      transition: all;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 30px;
+      height: $sliceHeight;
+      background: #000;
+      transition: all;
+    }
+  }
+  .activeBurg {
+    background: transparent;
+    &:before {
+      -webkit-transform: rotate(45deg);
+      top: 0;
+    }
+    &:after {
+      -webkit-transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+  #menu {
+    display: none;
+  }
   div.tree {
-    display: none
+    width: 0px;
+    transition: all;
   }
   body {
     padding: 0px !important;
@@ -192,6 +248,8 @@
     border: none;
   }
   #header {
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0px;
     z-index: 4;
@@ -204,7 +262,6 @@
       width: 70%;
     }
   }
-  
   div.content {
     padding: 0px 20px;
     margin-top: 17%;

@@ -107,30 +107,39 @@ $(document).ready(function () {
 			type: 'post', // define the type of HTTP verb we want to use (POST for our form)
 			url: 'http://194.87.111.90/clientregistration', // the url where we want to POST
 			contentType: "application/x-www-form-urlencoded",
-			data: JSON.stringify(Object.assign(formData, { action: userAction })), // our data object
+			data: encodeURIComponent(JSON.stringify(Object.assign(formData, { action: userAction }))), // our data object
 			// dataType: 'json', // what type of data do we expect back from the server
 			encode: true,
 			error: function (jqXHR, textStatus, errorThrown) {
-				$('#error-icon').fadeIn();
+				// $('#error-icon').fadeIn()
 				console.log(textStatus);
-				setTimeout(function () {
-					// $('#modalBox').removeClass('modalBox-active')
-					$('#error-icon').hide();
-				}, 3000);
+				// setTimeout(function () {
+				// 	// $('#modalBox').removeClass('modalBox-active')
+				// 	$('#error-icon').hide()
+				// }, 3000)
+				$('.errorModal').addClass('modalBox-active');
+				$('#modalBox').removeClass('modalBox-active');
 			},
 			success: function (data, textStatus, jqXHR) {
-				$('#ok-icon').fadeIn();
-				console.log(textStatus);
-				setTimeout(function () {
-					// $('#modalBox').removeClass('modalBox-active')
-					$('#ok-icon').hide();
-				}, 3000);
+				// $('#ok-icon').fadeIn()
+				// console.log(textStatus)
+				// setTimeout(function () {
+				// 	// $('#modalBox').removeClass('modalBox-active')
+				// 	$('#ok-icon').hide()
+				// }, 3000)
+				$('#modalBox').removeClass('modalBox-active');
+				setTimeout(() => {
+					$('.successModal').addClass('modalBox-active');
+				}, 500);
 			}
 		});
 
 		event.preventDefault();
 	});
 	let event = {};
+	$('.btn-ok').click(() => {
+		$('.modalBox-active').removeClass('modalBox-active');
+	});
 	$('.btn-dist').click(openModal(event, 'dist'));
 	$('.btn-cloud').click(openModal(event, 'cloud'));
 	$('.btn-feedback').click(openModal(event, 'feedback'));
@@ -144,7 +153,7 @@ $(document).ready(function () {
 		$('.modalBox-active').removeClass('modalBox-active');
 	});
 	window.onclick = function (event) {
-		if (event.target == document.getElementById('modalBox')) {
+		if (event.target.className.indexOf('modalBox-active') > 0) {
 			$('.modalBox-active').removeClass('modalBox-active');
 		}
 	};
