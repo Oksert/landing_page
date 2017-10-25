@@ -13,33 +13,43 @@ $(document).ready(function () {
 
 		// get the form data
 		// there are many ways to get this data using jQuery (you can use the class or id also)
-		var formData = JSON.stringify($('form').serializeArray())
-
+		var formData = objectifyForm(($('#modalBox form').serializeArray()))
+		let userAction = []
+		$('#modalBox input[useraction]').each((idx,val)=>{
+			if (val.checked) {
+				userAction.push(val.attributes.useraction.value)
+			}
+		})
+		console.log(userAction)
 		// process the form
 		$.ajax({
-			type: 'get', // define the type of HTTP verb we want to use (POST for our form)
-			url: 'https://runidea.online/json/customerregistration', // the url where we want to POST
-			data: formData, // our data object
-			dataType: 'json', // what type of data do we expect back from the server
+			type: 'post', // define the type of HTTP verb we want to use (POST for our form)
+			url: 'http://194.87.111.90/clientregistration', // the url where we want to POST
+			contentType: "application/x-www-form-urlencoded",
+			data: JSON.stringify(Object.assign(formData, {action:userAction})), // our data object
+			// dataType: 'json', // what type of data do we expect back from the server
 			encode: true,
 			error: function (jqXHR, textStatus, errorThrown) {
+				$('#error-icon').fadeIn()
+				console.log(textStatus)
+				setTimeout(function () {
+					// $('#modalBox').removeClass('modalBox-active')
+					$('#error-icon').hide()
+				}, 3000)
+			},
+			success: function (data, textStatus, jqXHR) {
 				$('#ok-icon').fadeIn()
-
+				console.log(textStatus)
 				setTimeout(function () {
 					// $('#modalBox').removeClass('modalBox-active')
 					$('#ok-icon').hide()
 				}, 3000)
-
-				// alert(textStatus, errorThrown);
-			},
-			success: function (data, textStatus, jqXHR) {
-
 			}
 		})
 
 		event.preventDefault();
 	});
-	let event={}
+	let event = {}
 	$('.btn-dist').click(openModal(event, 'dist'))
 	$('.btn-cloud').click(openModal(event, 'cloud'))
 	$('.btn-feedback').click(openModal(event, 'feedback'))
@@ -49,7 +59,7 @@ $(document).ready(function () {
 	$('#menu-modal').click(function () {
 		$('#menu-modal').fadeOut()
 	})
-	$('.close-btn').click (()=>{
+	$('.close-btn').click(() => {
 		$('.modalBox-active').removeClass('modalBox-active')
 	})
 	window.onclick = function (event) {
@@ -59,11 +69,11 @@ $(document).ready(function () {
 		}
 	}
 
-	
+
 	fullPage('#fullpage')
 	if ($(window).width() < 500) {
-		$('.user-form textarea').attr('rows','4')
-		$('.modalBox textarea').attr('rows','2')
+		$('.user-form textarea').attr('rows', '4')
+		$('.modalBox textarea').attr('rows', '2')
 	}
 
 	$('.trigger-container .trigger').click(function () {
@@ -122,7 +132,14 @@ function openMenu() {
 	}
 	$('#menu-modal').fadeIn()
 }
-
+function objectifyForm(formArray) {//serialize data function
+	
+	  var returnArray = {};
+	  for (var i = 0; i < formArray.length; i++){
+		returnArray[formArray[i]['name']] = formArray[i]['value'];
+	  }
+	  return returnArray;
+	}
 function openModal(event, mode) {
 
 	return function () {
@@ -160,9 +177,9 @@ function openModal(event, mode) {
 		}
 		if (event) {
 			$('#modalBox').addClass('modalBox-active')
-			event.preventDefault();
-			event.cancelBubble = true;
-			event.stopPropagation()
+			// event.preventDefault();
+			// event.cancelBubble = true;
+			// event.stopPropagation()
 		}
 	}
 

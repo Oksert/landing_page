@@ -39,40 +39,40 @@
                 <div class="modal-header">Введите Ваши данные   
                     <span id="ok-icon">
                         <img src="img/ok.png" alt=""> 
-                        <!-- <div>Данные отправлены на почту</div>  -->
+                        <div>Данные отправлены на почту</div> 
                     </span>
                     <span id="error-icon"><img src="img/error.png" alt=""> <div>Ошибка. Повторите попытку</div> </span>
                 </div>
                 <form>
                     
                     <label for="fname">ФИО*</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Введите ФИО" required>
+                    <input type="text" id="fname" name="fullname" placeholder="Введите ФИО" required>
 
                     <label for="mail">Email*</label>
-                    <input type="email" id="mail" name="emailaddress" placeholder="Введите адрес эл.почты" required>
+                    <input type="email" id="mail" name="email" placeholder="Введите адрес эл.почты" required>
                 
-                    <label for="tel">Телефон</label>
-                    <input type="tel" name="phonenumber" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value="" pattern="(\+[\d\ \(\)\-]{16})"  placeholder="Введите номер телефона">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value="" pattern="(\+[\d\ \(\)\-]{16})"  placeholder="Введите номер телефона">
                     
                     <label for="org">Организация</label>
-                    <input type="text" id="org" name="companyname" placeholder="Введите название Вашей организации">
+                    <input type="text" id="org" name="organisation" placeholder="Введите название Вашей организации">
                     
                     <label for="quantity">Количество лицензий</label>
-                    <input type="number" name="quantity" min="1" max="1000">
+                    <input type="number" name="quantity" id="quantity" min="1" max="1000">
                     
                     <div class='radio-wrap'>
                         <div>
-                            <input type="checkbox" id="cloud" name="isonpremiserequested">
+                            <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested">
                             <label for="cloud">Создать пространство в облаке</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="dist" name="isworkspacerequested">
+                            <input type="checkbox" class='action'  useraction='dist' id="dist" name="isworkspacerequested">
                             <label for="dist">Получить дистрибутив</label>
                         </div>
                     </div>
                     <div id='quest'>
-                        <label for="">Ваш вопрос</label>
-                        <textarea name="comments" rows=10> </textarea>
+                        <label for="comments">Ваш вопрос</label>
+                        <textarea id="comments" name="comment" rows=10> </textarea>
                     </div>
                     
                     <button type="submit" value="Подтвердить" class="btn">Отправить</button>

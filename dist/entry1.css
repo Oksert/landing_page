@@ -9,7 +9,8 @@
   align-items: center;
   /* vertical-align: middle; */ }
 
-#welcome-section img, #learnhow img {
+#welcome-section img,
+#learnhow img {
   box-shadow: none; }
 
 #welcome-section h1 {
@@ -53,14 +54,17 @@
   /* font-size: 20px; */
   text-align: left; }
 
-#menu-modal, #openMenu {
+#menu-modal,
+#openMenu {
   display: none; }
 
-#ok-icon, #error-icon {
+#ok-icon,
+#error-icon {
   font-size: 70%;
   color: #b9dfbd;
   display: none; }
-  #ok-icon img, #error-icon img {
+  #ok-icon img,
+  #error-icon img {
     height: 30px; }
 
 .subheader {
@@ -166,12 +170,17 @@
     position: relative;
     background: white;
     width: 30%; }
-    .modalBox .modal-content img {
+    .modalBox .modal-content .close-btn img {
       width: 30px;
       position: absolute;
       right: -10px;
       top: -10px; }
-    .modalBox .modal-content input[type=text], .modalBox .modal-content input[type=email], .modalBox .modal-content input[type=tel], .modalBox .modal-content input[type=number], .modalBox .modal-content select, .modalBox .modal-content textarea {
+    .modalBox .modal-content input[type=text],
+    .modalBox .modal-content input[type=email],
+    .modalBox .modal-content input[type=tel],
+    .modalBox .modal-content input[type=number],
+    .modalBox .modal-content select,
+    .modalBox .modal-content textarea {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -265,7 +274,12 @@
     opacity: 1;
     background: white;
     width: 90%; }
-    .user-form .modal-content input[type=text], .user-form .modal-content input[type=email], .user-form .modal-content input[type=tel], .user-form .modal-content input[type=number], .user-form .modal-content select, .user-form .modal-content textarea {
+    .user-form .modal-content input[type=text],
+    .user-form .modal-content input[type=email],
+    .user-form .modal-content input[type=tel],
+    .user-form .modal-content input[type=number],
+    .user-form .modal-content select,
+    .user-form .modal-content textarea {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -917,3 +931,5 @@
   .fp-tableCell {
     padding: 0px !important;
     margin: 0px !important; } }
+
+/*# sourceMappingURL=entry1.css.map*/

@@ -17,7 +17,7 @@ module.exports = {
       'node_modules'
     ]
   },
-//   devtool: 'source-map',
+  devtool: 'source-map',
    module: {
     rules: [
         {
@@ -58,8 +58,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    new UglifyJSPlugin({
-        sourceMap:true
-    })
+    // new UglifyJSPlugin({
+    //     sourceMap:true
+    // })
   ]
 };
