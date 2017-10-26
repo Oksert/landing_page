@@ -26,7 +26,7 @@ $(document).ready(function () {
 			type: 'post', // define the type of HTTP verb we want to use (POST for our form)
 			url: 'http://194.87.111.90/clientregistration', // the url where we want to POST
 			contentType: "application/x-www-form-urlencoded",
-			data: encodeURIComponent(JSON.stringify(Object.assign(formData, {action:userAction}))), // our data object
+			data: Object.assign(formData, {action:userAction.join(';')}), // our data object
 			// dataType: 'json', // what type of data do we expect back from the server
 			encode: true,
 			error: function (jqXHR, textStatus, errorThrown) {
