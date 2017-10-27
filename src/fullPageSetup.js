@@ -16,7 +16,7 @@ $(fullpageselector).fullpage({
     autoScrolling: true,
     fitToSection: true,
     fitToSectionDelay: 1000,
-    scrollBar: $(window).width() > 500,
+    scrollBar: $(window).width() > 800,
     easing: 'easeInOutCubic',
     easingcss3: 'ease',
     loopBottom: false,

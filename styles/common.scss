@@ -160,20 +160,20 @@
     background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
     text-decoration: none;
 }
+
 .aggrement {
-  
     a {
         color: #de562a !important;
         text-decoration: underline !important;
     }
-    
 }
+
 .modalBox {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     box-shadow: 0 0 65px rgba(0, 0, 0, 0.5);
     top: 0%;
     opacity: 0;
@@ -205,7 +205,7 @@
         opacity: 1;
         position: relative;
         background: rgba(255, 255, 255, 1);
-        max-width: 30%;
+        // max-width: 30%;
         .close-btn {
             img {
                 width: 30px;

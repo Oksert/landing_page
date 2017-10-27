@@ -1,6 +1,6 @@
 import './styles/common.scss'
 import './styles/desctop.scss'
-// import './styles/medium.scss'
+import './styles/medium.scss'
 // import './styles/small.scss'
 import './styles/mobile.scss'
 import setControls from './src/video-control-custom'
@@ -82,9 +82,10 @@ $(document).ready(function () {
 	}
 
 
-	fullPage('#fullpage')
-	if ($(window).width() < 500) {
-		$('.user-form textarea').attr('rows', '4')
+	if (!($(window).width() > 500 && $(window).width() < 700)) 
+		fullPage('#fullpage')
+	if ($(window).width() < 700) {
+		$('.user-form textarea').attr('rows', '2')
 		$('.modalBox textarea').attr('rows', '2')
 	}
 
@@ -101,7 +102,7 @@ $(document).ready(function () {
 
 });
 $(window).load(function () {
-	$(window).width() > 500 && $('body').flowtype({
+	$(window).width() > 700 && $('body').flowtype({
 		minimum: 300,
 		maximum: 2000,
 		minFont: 8,
