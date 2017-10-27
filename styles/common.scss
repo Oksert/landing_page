@@ -160,7 +160,14 @@
     background-image: linear-gradient(to bottom, #ed6b47, #ff7d59);
     text-decoration: none;
 }
-
+.aggrement {
+  
+    a {
+        color: #de562a !important;
+        text-decoration: underline !important;
+    }
+    
+}
 .modalBox {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -179,10 +186,6 @@
     .aggrement {
         font-size: 90%;
         margin-top: 2%;
-        a {
-            color: #de562a !important;
-            text-decoration: underline !important;
-        }
     }
     textarea {
         width: 100%;
