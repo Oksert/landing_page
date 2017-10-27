@@ -1,6 +1,5 @@
 @charset "UTF-8";
 .section-center {
-  height: 65%;
   margin: auto;
   text-align: center;
   width: 80%;
@@ -763,9 +762,6 @@
     box-shadow: 0 0 65px rgba(105, 104, 104, 0.5); }
   .footer-info {
     padding-top: 10px; }
-  #access-page h1,
-  #learnhow h1 {
-    margin-bottom: 6%; }
   .flex-center {
     justify-content: center; }
   .content-head {
