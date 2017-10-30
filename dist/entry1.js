@@ -160,7 +160,8 @@ $(document).ready(function () {
 		}
 	};
 
-	if (!($(window).width() > 500 && $(window).width() < 700)) Object(__WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__["a" /* default */])('#fullpage');
+	// if (!($(window).width() > 500 && $(window).width() < 700)) 
+	Object(__WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__["a" /* default */])('#fullpage');
 	if ($(window).width() < 700) {
 		$('.user-form textarea').attr('rows', '2');
 		$('.modalBox textarea').attr('rows', '2');
@@ -178,7 +179,7 @@ $(document).ready(function () {
 	});
 });
 $(window).load(function () {
-	$(window).width() > 700 && $('body').flowtype({
+	$(window).width() > 900 && $('body').flowtype({
 		minimum: 300,
 		maximum: 2000,
 		minFont: 8,

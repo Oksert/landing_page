@@ -82,7 +82,7 @@ $(document).ready(function () {
 	}
 
 
-	if (!($(window).width() > 500 && $(window).width() < 700)) 
+	// if (!($(window).width() > 500 && $(window).width() < 700)) 
 		fullPage('#fullpage')
 	if ($(window).width() < 700) {
 		$('.user-form textarea').attr('rows', '2')
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 });
 $(window).load(function () {
-	$(window).width() > 700 && $('body').flowtype({
+	$(window).width() > 900 && $('body').flowtype({
 		minimum: 300,
 		maximum: 2000,
 		minFont: 8,
