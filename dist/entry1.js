@@ -65,13 +65,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 113:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -81,13 +74,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_common_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_common_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_desctop_scss__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_desctop_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_desctop_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_medium_scss__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_medium_scss__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_medium_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_medium_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_mobile_scss__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_mobile_scss__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_mobile_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_mobile_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_video_control_custom__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_video_loader__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_video_control_custom__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_video_loader__ = __webpack_require__(68);
 
 
 
@@ -309,6 +302,13 @@ function onSubmit(event) {
 /***/ }),
 
 /***/ 65:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 66:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -344,7 +344,7 @@ function setPlay(playControl, video, pauseControl) {
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -426,7 +426,7 @@ function SetUpFullPage(fullpageselector) {
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

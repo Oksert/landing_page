@@ -179,6 +179,11 @@
         justify-content: center;
         box-shadow: 0 1px 1px rgba(0, 0, 0, .15)
     }
+    .mytry {
+        display: flex;
+        flex-direction: column;
+        width: 45%
+    }
     #head-content {
         display: flex;
         width: 80%;
@@ -202,6 +207,41 @@
     }
     .content-disc li {
         padding-bottom: 10px;
+    }
+    #modalBox {
+        .modal-content {
+            width: 90%;
+            padding: 8px;
+            font-size: 10px;
+            .modal-header {
+                font-size: 20px;
+            }
+            form {
+                input {
+                    padding: 8px 2px;
+                    margin: 6px 0px;
+                    font-size: 10px;
+                }
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                /* You can set flex-wrap and flex-direction individually */
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                /* Or do it all in one line with flex flow */
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                /* tweak the where items line up on the row */
+                /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+                -webkit-align-content: flex-end;
+                align-content: flex-end;
+            }
+        }
     }
     .sign-in {
         display: flex;
