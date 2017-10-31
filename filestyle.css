@@ -1,0 +1,13 @@
+body {
+    margin: 0 auto; 
+    max-width: 50em;  
+    line-height: 1.5; 
+    /* color: #555 !important;  */
+    padding: 4em 1em;
+    font-family: "Helvetica", "Arial", sans-serif !important;
+}
+h1,
+h2,
+strong {
+  /* color: #333 !important; */
+}

@@ -32,7 +32,7 @@
 }
 
 .column {
-    height: 100%;
+    // height: 100%;
     width: 65%;
 }
 
@@ -57,7 +57,7 @@
 .content-disc {
     /* float: right; */
     width: 50%;
-    height: 100%;
+    // height: 100%;
     align-self: end;
     /* font-size: 20px; */
     text-align: left; // margin-top: -2%;
@@ -317,8 +317,14 @@
         //     cursor: pointer;
         // }
     }
-}
+    .modal-footer {
+        margin-top: 15px;
 
+    }
+}
+.successModal {
+    text-align: center;
+}
 .modalBox-active {
     opacity: 1;
     z-index: 10;

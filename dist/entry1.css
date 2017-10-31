@@ -28,7 +28,6 @@
   display: block; }
 
 .column {
-  height: 100%;
   width: 65%; }
 
 .column-big {
@@ -48,7 +47,6 @@
 .content-disc {
   /* float: right; */
   width: 50%;
-  height: 100%;
   align-self: end;
   /* font-size: 20px; */
   text-align: left; }
@@ -249,6 +247,11 @@
         color: #999; }
       .modalBox .modal-content .radio-wrap [type="checkbox"]:disabled + label {
         color: #aaa; }
+  .modalBox .modal-footer {
+    margin-top: 15px; }
+
+.successModal {
+  text-align: center; }
 
 .modalBox-active {
   opacity: 1;
@@ -700,6 +703,8 @@
     display: inherit;
     color: inherit;
     text-decoration: none; }
+  #quest {
+    width: 100%; }
   .logo img {
     height: 30px; }
   .user-form .modal-content {
@@ -729,7 +734,7 @@
   .mytry {
     display: flex;
     flex-direction: column;
-    width: 45%; }
+    width: 48%; }
   #head-content {
     display: flex;
     width: 80%;
@@ -751,17 +756,19 @@
     padding-bottom: 10px; }
   #modalBox .modal-content {
     width: 90%;
-    padding: 8px;
-    font-size: 10px; }
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 11px; }
     #modalBox .modal-content .modal-header {
-      font-size: 20px; }
+      font-size: 20px;
+      margin-bottom: 3px; }
     #modalBox .modal-content form {
       display: -webkit-flex;
       display: flex;
       -webkit-align-items: center;
       align-items: center;
       -webkit-justify-content: center;
-      justify-content: center;
+      justify-content: space-between;
       /* You can set flex-wrap and flex-direction individually */
       -webkit-flex-direction: row;
       flex-direction: row;

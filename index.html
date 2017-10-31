@@ -35,16 +35,37 @@
         
         <div class="modal-content">
             <div class="modal-header">
-                Ваши данные отправлены на почту
+                Спасибо за интерес к Idea Platform!
             </div>
-            <button class="btn btn-ok">Ок</button>
+            <div class="modal-content-message">
+                <div user-action="cloud">
+                    Мы отправили вам приветсвенное сообщение на email. <br>
+                    Для завершения создания Вашего пространства перейдите по ссылке, указанной в письме
+                </div>
+                <div user-action="dist">
+                    Вам на email будет отправлено письмо с ссылкой на дистрибутив
+                </div>
+                <div user-action="cloud&dist">
+                    Вам на email будет отправлено письмо с ссылкой на дистрибутив, а также сслыка для завершения создания Вашего пространства
+                </div>
+                <div user-action="quest">
+                    Мы ответим Вам в ближайшее время
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ok">Ок</button>
+            </div>
+           
         </div>
     </div>
     <div class="modalBox errorModal">
             
             <div class="modal-content">
                 <div class="modal-header">
-                    Произошла ошибка, повторите попытку позже
+                    Пожалуйста, попробуйте позднее
+                </div>
+                <div class="modal-content">
+                    Извините, в данный момент регистрация невозможна. 
                 </div>
                 <button class="btn btn-ok">Ок</button>
             </div>
@@ -88,9 +109,9 @@
                     </div>
                     
                     
-                    <div class='radio-wrap mytry'>
+                    <div class='radio-wrap mytry group-require'>
                         <div>
-                            <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested">
+                            <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested" required>
                             <label for="cloud">Создать пространство в облаке</label>
                         </div>
                         <div>
@@ -104,7 +125,7 @@
                     </div>
                     
                     <button type="submit" value="Подтвердить" class="btn">Отправить</button>
-                    <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку <a href="./policy.html">персональных данных</a></div>
+                    <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку <a href="./policy.html" target="_blank">персональных данных</a></div>
                     
                     </form>
         </div>
@@ -446,7 +467,7 @@
                 <div class="footer-content">
                         <div>© 2017 ООО «АйПи Консалтинг» </div>
                         <div>
-                            <a href="">Лицензионное соглашение</a>
+                            <a href="./license.html" target="_blank">Лицензионное соглашение</a>
                         </div>
                 </div>
                 

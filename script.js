@@ -49,6 +49,8 @@ $(document).ready(function () {
 				// }, 3000)
 				$('#modalBox').removeClass('modalBox-active')
 				setTimeout(()=>{
+					$(`.successModal .modal-content-message div`).hide()
+					$(`.successModal div[user-action="${userAction.join('&')}"]`).show()
 					$('.successModal').addClass('modalBox-active')
 				},500)
 				
@@ -163,6 +165,7 @@ function openModal(event, mode) {
 		$('#modalBox #quest').hide();
 		$('.radio-wrap').hide()
 		$('#modalBox #mail').val('')
+		$('.modalBox form').data("user-action", mode)
 		$('input[name=quantity], label[for=quantity]').hide()
 		switch (mode) {
 			case 'dist':
