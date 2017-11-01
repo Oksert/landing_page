@@ -274,6 +274,7 @@ function openModal(event, mode) {
 			case 'access':
 				$('.radio-wrap').show();
 				$('#modalBox #mail').val($('.section input[name="emailaddress"]').val());
+				$('#modalBox #cloud').prop('checked', true);
 				break;
 			case 'license':
 				$('input[name=quantity], label[for=quantity]').show();
