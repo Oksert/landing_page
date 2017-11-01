@@ -8,7 +8,19 @@ import fullPage from './src/fullPageSetup'
 import videoLoader from './src/video-loader'
 
 $(document).ready(function () {
-
+	$('.group-require').click((event)=> {
+		if ($('.group-require :checkbox:checked').length == 0 ) {
+			document.querySelectorAll('.group-require input').forEach((elem)=>{
+				elem.setCustomValidity("Заполните одно из полей");
+			})
+			$('.group-require input').prop('required',true)
+		} else {
+			document.querySelectorAll('.group-require input').forEach((elem)=>{
+				elem.setCustomValidity("");
+			})
+			$('.group-require input').prop('required',false)
+		}
+	})
 	$('form').submit(function (event) {
 
 		// get the form data

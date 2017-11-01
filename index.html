@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1">
     <meta charset="utf-8">
     <title>Idea Platform</title>
-    
+
     <!-- <link rel="stylesheet" type="text/css" media="(min-width:1550px)"  href="desctop.css" />
     <link rel="stylesheet" type="text/css" media="(min-width:800px) and (max-width:1550px)"  href="medium.css" />
     <link rel="stylesheet" type="text/css" media="(max-width:800px)" href="mobile.css" />
@@ -32,15 +33,15 @@
 
 <body>
     <div class="modalBox successModal">
-        
+
         <div class="modal-content">
             <div class="modal-header">
                 Спасибо за интерес к Idea Platform!
             </div>
             <div class="modal-content-message">
                 <div user-action="cloud">
-                    Мы отправили вам приветсвенное сообщение на email. <br>
-                    Для завершения создания Вашего пространства перейдите по ссылке, указанной в письме
+                    Мы отправили вам приветсвенное сообщение на email.
+                    <br> Для завершения создания Вашего пространства перейдите по ссылке, указанной в письме
                 </div>
                 <div user-action="dist">
                     Вам на email будет отправлено письмо с ссылкой на дистрибутив
@@ -55,114 +56,134 @@
             <div class="modal-footer">
                 <button class="btn btn-ok">Ок</button>
             </div>
-           
+
         </div>
     </div>
     <div class="modalBox errorModal">
-            
-            <div class="modal-content">
-                <div class="modal-header">
-                    Пожалуйста, попробуйте позднее
-                </div>
-                <div class="modal-content">
-                    Извините, в данный момент регистрация невозможна. 
-                </div>
+
+        <div class="modal-content">
+            <div class="modal-header">
+                Пожалуйста, попробуйте позднее
+            </div>
+            <div class="modal-content-message">
+                Извините, в данный момент регистрация невозможна.
+            </div>
+            <div class="modal-footer">
                 <button class="btn btn-ok">Ок</button>
             </div>
         </div>
+    </div>
     <div id='modalBox' class="modalBox">
         <div class="modal-content">
-                <div class="close-btn">
-                    <img src="./img/close.png" alt="">
+            <div class="close-btn">
+                <img src="./img/close.png" alt="">
+            </div>
+            <div class="modal-header">Введите Ваши данные
+                <span id="ok-icon">
+                    <img src="img/ok.png" alt="">
+                    <div>Данные отправлены на почту</div>
+                </span>
+                <span id="error-icon">
+                    <img src="img/error.png" alt="">
+                    <div>Ошибка. Повторите попытку</div>
+                </span>
+            </div>
+            <form>
+                <div class="mytry">
+                    <label for="fname">ФИО*</label>
+                    <input type="text" id="fname" name="fullname" placeholder="Введите ФИО" required>
                 </div>
-                <div class="modal-header">Введите Ваши данные   
-                    <span id="ok-icon">
-                        <img src="img/ok.png" alt=""> 
-                        <div>Данные отправлены на почту</div> 
-                    </span>
-                    <span id="error-icon"><img src="img/error.png" alt=""> <div>Ошибка. Повторите попытку</div> </span>
+
+                <div class="mytry">
+                    <label for="mail">Email*</label>
+                    <input type="email" id="mail" name="email" placeholder="Введите адрес эл.почты" required>
                 </div>
-                <form>
-                    <div class="mytry">
-                        <label for="fname">ФИО*</label>
-                        <input type="text" id="fname" name="fullname" placeholder="Введите ФИО" required>
+
+                <div class="mytry">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value="" placeholder="Введите номер телефона">
+                </div>
+
+                <div class="mytry">
+                    <label for="org">Организация</label>
+                    <input type="text" id="org" name="organisation" placeholder="Введите название Вашей организации">
+                </div>
+
+                <div class="mytry">
+                    <label for="quantity">Количество лицензий</label>
+                    <input type="number" name="quantity" id="quantity" min="1" max="1000">
+                </div>
+
+                <div class='radio-wrap mytry group-require'>
+                    <div>
+                        <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested" >
+                        <label for="cloud">Создать пространство в облаке</label>
                     </div>
-                    
-                    <div class="mytry">
-                        <label for="mail">Email*</label>
-                        <input type="email" id="mail" name="email" placeholder="Введите адрес эл.почты" required>
+                    <div>
+                        <input type="checkbox" class='action' useraction='dist' id="dist" name="isworkspacerequested">
+                        <label for="dist">Получить дистрибутив</label>
                     </div>
-                    
-                    <div class="mytry">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" name="phone" id="phone" class="form-control bfh-phone" data-format="+d (ddd) ddd-dd-dd" value=""  placeholder="Введите номер телефона">
-                    </div>
-                
-                    <div class="mytry">
-                        <label for="org">Организация</label>
-                        <input type="text" id="org" name="organisation" placeholder="Введите название Вашей организации">
-                    </div>
-                    
-                    <div class="mytry">
-                        <label for="quantity">Количество лицензий</label>
-                        <input type="number" name="quantity" id="quantity" min="1" max="1000">
-                    </div>
-                    
-                    
-                    <div class='radio-wrap mytry group-require'>
-                        <div>
-                            <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested" required>
-                            <label for="cloud">Создать пространство в облаке</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" class='action' useraction='dist' id="dist" name="isworkspacerequested">
-                            <label for="dist">Получить дистрибутив</label>
-                        </div>
-                    </div>
-                    <div id='quest'>
-                        <label for="comments">Ваш вопрос</label>
-                        <textarea id="comments" name="comment" rows=10> </textarea>
-                    </div>
-                    
-                    <button type="submit" value="Подтвердить" class="btn">Отправить</button>
-                    <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку <a href="./policy.html" target="_blank">персональных данных</a></div>
-                    
-                    </form>
+                </div>
+                <div id='quest'>
+                    <label for="comments">Ваш вопрос</label>
+                    <textarea id="comments" name="comment" rows=10> </textarea>
+                </div>
+
+                <button type="submit" value="Подтвердить" class="btn">Отправить</button>
+                <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку
+                    <a href="./policy.html" target="_blank">персональных данных</a>
+                </div>
+
+            </form>
         </div>
-    </div>  
+    </div>
     <div class='menu-modal' id='menu-modal'>
         <div class='menu-modal-content'>
-                <div class="close-btn-menu">
-                        &#x2715
-                </div>
-                <ul>
-                    <li data-menuanchor="join"><a href="#join">Скачать</a></li>
-                    <li data-menuanchor="price"><a href="#price">Купить</a></li>
-                    <li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
-                </ul>
+            <div class="close-btn-menu">
+                &#x2715
+            </div>
+            <ul>
+                <li data-menuanchor="join">
+                    <a href="#join">Скачать</a>
+                </li>
+                <li data-menuanchor="price">
+                    <a href="#price">Купить</a>
+                </li>
+                <li data-menuanchor="contact">
+                    <a href="#contact">Контакты</a>
+                </li>
+            </ul>
         </div>
-        
-    </div>   
+
+    </div>
     <div id="head">
         <div id='head-content'>
             <div class="logo">
                 <a href="#welcome">
-                    <img src="img\logoIP.png"/ class="logo-image">
+                    <img src="img\logoIP.png" / class="logo-image">
                 </a>
-                
+
             </div>
-            
+
             <div class='active ' id='openMenu'>
-                <img class ='burger-menu' src="https://css-tricks.com/wp-content/uploads/2012/10/threelines.png" alt="">
+                <img class='burger-menu' src="https://css-tricks.com/wp-content/uploads/2012/10/threelines.png" alt="">
             </div>
-           
+
             <ul id="menu">
                 <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Главная</a></li> -->
-                <li data-menuanchor="join"><a href="#join">Скачать</a></li>
-                <li><a href="./ref/index.html">Документация</a></li>
-                <li data-menuanchor="price"><a href="#price">Купить</a></li>
-                <li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
-                
+                <li data-menuanchor="join">
+                    <a href="#join">Скачать</a>
+                </li>
+                <li>
+                    <a href="./ref/index.html">Документация</a>
+                </li>
+                <li data-menuanchor="price">
+                    <a href="#price">Купить</a>
+                </li>
+                <li data-menuanchor="contact">
+                    <a href="#contact">Контакты</a>
+                </li>
+
             </ul>
             <!-- <div class='sign-in'>
                 <button id="login" class="btn btn-custom float-right">Войти</button> 
@@ -182,22 +203,24 @@
                 </div>
             </div> -->
         </div>
-        
+
     </div>
-    
+
     <div id="fullpage">
         <div class="section">
             <div class='section-center' id='welcome-section'>
-                <div class="column column-big not-mobile" id="welcome-container" style="position:relative;" >
-                    <div id="welcome-video"><img src="img/poster.png"/></div>    
+                <div class="column column-big not-mobile" id="welcome-container" style="position:relative;">
+                    <div id="welcome-video">
+                        <img src="img/poster.png" />
+                    </div>
                     <img src="img/play.jpg" class="video-control video-control-play ">
-                    <img src="img/pause.jpg"  class="video-control video-control-pause ">
-                        
+                    <img src="img/pause.jpg" class="video-control video-control-pause ">
+
                 </div>
-                <div  class="column column-big poster only-mobile">
-                    <img src="img/poster.png"/>
+                <div class="column column-big poster only-mobile">
+                    <img src="img/poster.png" />
                 </div>
-        
+
                 <div class="content-disc float-right content-head">
                     <h1>Платформа для реализации Ваших идей!</h1>
                 </div>
@@ -205,73 +228,80 @@
                     <h1>Платформа для реализации Ваших идей!</h1>
                     <span class="subheader not-mobile"> Idea Platform - конструктор для быстрого создания масштабируемых веб-приложений</span>
                     <div class="registration-container">
-                            <input type="email" class='modal-mail' name="emailaddress" id='mail1' placeholder="Введите email"/>
-                            <button class='btn btn-block btn-access'>Получить доступ </button>
+                        <input type="email" class='modal-mail' name="emailaddress" id='mail1' placeholder="Введите email" />
+                        <button class='btn btn-block btn-access'>Получить доступ </button>
                     </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="section">
-                <div class='section-center reverse'>
-                    <div class="column">
-                        <img src="img/user.jpg"/>
-                    </div>
-                    <div class="content-disc float-right content-head">
-                            <h1>Среда создания <br> веб-интерфейса</h1>
-                    </div>
-                    <div class="content-disc float-right">
-                        <h1>Среда создания веб-интерфейса</h1>
-                        При помощи графических инструментов Вы можете быстро создать веб-интерфейс для просмотра и редактирования данных в браузере и мобильных устройствах.  
-                        Для автоматического заполнения полей можно писать простые правила (как формулы в Excel) или сложные алгоритмы на Java. 
-                        Следующим шагом можно описать гибкие права доступа к данным и смело дать доступ к интерфейсу хоть тысяче пользователей.
-                    </div>
-                </div>
-        </div>
-        <div class="section">
-            <div class='section-center '>
-                <div class="column">
-                    <img src="img/workflow.png"/>
-                </div>
-                <div class="content-disc float-right content-head">
-                        <h1>Система автоматизации бизнес-процессов (BPMS)</h1>
-                </div>
-                <div class="content-disc float-right">
-                    <h1>Система автоматизации бизнес-процессов (BPMS)</h1>
-                    К любому объекту системы можно привязать жизненный цикл, который включает в себя возможные состояния объекта и переходы между состояниями с возможностью указать кто из пользователей или событие могут выполнить переход. 
-                    Инструмент позволяет настроить согласование любой сложности, связывать между собой жизненные циклы разных объектов, отправлять оповещения по почте и смс и, даже, управлять жизненным циклом из внешних систем через REST-сервисы.
+
                 </div>
             </div>
         </div>
         <div class="section">
             <div class='section-center reverse'>
                 <div class="column">
-                    <img src="img/analytic.png"/>
+                    <img src="img/user.jpg" />
                 </div>
                 <div class="content-disc float-right content-head">
-                        <h1>Инструмент бизнес-аналитики</h1>
+                    <h1>Среда создания
+                        <br> веб-интерфейса</h1>
+                </div>
+                <div class="content-disc float-right">
+                    <h1>Среда создания веб-интерфейса</h1>
+                    При помощи графических инструментов Вы можете быстро создать веб-интерфейс для просмотра и редактирования данных в браузере
+                    и мобильных устройствах. Для автоматического заполнения полей можно писать простые правила (как формулы
+                    в Excel) или сложные алгоритмы на Java. Следующим шагом можно описать гибкие права доступа к данным и
+                    смело дать доступ к интерфейсу хоть тысяче пользователей.
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class='section-center '>
+                <div class="column">
+                    <img src="img/workflow.png" />
+                </div>
+                <div class="content-disc float-right content-head">
+                    <h1>Система автоматизации бизнес-процессов (BPMS)</h1>
+                </div>
+                <div class="content-disc float-right">
+                    <h1>Система автоматизации бизнес-процессов (BPMS)</h1>
+                    К любому объекту системы можно привязать жизненный цикл, который включает в себя возможные состояния объекта и переходы между
+                    состояниями с возможностью указать кто из пользователей или событие могут выполнить переход. Инструмент
+                    позволяет настроить согласование любой сложности, связывать между собой жизненные циклы разных объектов,
+                    отправлять оповещения по почте и смс и, даже, управлять жизненным циклом из внешних систем через REST-сервисы.
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class='section-center reverse'>
+                <div class="column">
+                    <img src="img/analytic.png" />
+                </div>
+                <div class="content-disc float-right content-head">
+                    <h1>Инструмент бизнес-аналитики</h1>
                 </div>
                 <div class="content-disc float-right">
                     <h1>Инструмент бизнес-аналитики</h1>
-                    Проанализировать данные системы можно "на лету", указав нужный состав полей, фильтры, сортировки, группировки и вывод агрегатных значений. 
-                    Для создания комплексных аналитических отчетов можно использовать внешние данные и отображать результат в виде различных табличных и графических представлений. 
-                    Отчеты одной тематики можно объединить в дашборды, создавая таким образом удобные рабочие места. 
-                    Полнотекстовый поиск позволяет искать сразу по всем объектам системы и по содержанию вложенных документов.
+                    Проанализировать данные системы можно "на лету", указав нужный состав полей, фильтры, сортировки, группировки и вывод агрегатных
+                    значений. Для создания комплексных аналитических отчетов можно использовать внешние данные и отображать
+                    результат в виде различных табличных и графических представлений. Отчеты одной тематики можно объединить
+                    в дашборды, создавая таким образом удобные рабочие места. Полнотекстовый поиск позволяет искать сразу
+                    по всем объектам системы и по содержанию вложенных документов.
                 </div>
             </div>
         </div>
         <div class="section">
             <div class='section-center'>
                 <div class="column">
-                    <img src="img/scheduler.jpg"/>
+                    <img src="img/scheduler.jpg" />
                 </div>
                 <div class="content-disc float-right content-head">
-                        <h1>Инструмент интерактивного планирования</h1>
+                    <h1>Инструмент интерактивного планирования</h1>
                 </div>
                 <div class="content-disc float-right">
                     <h1>Инструмент интерактивного планирования</h1>
                     <div>Все объекты системы можно отображать в календаре, в виде расписания (scheduler) или диаграммы Ганта.
-                        После того как данные представлены в удобном визуальном представлении и видно потенциальные конфликты можно по средством drag&drop менять сроки, длительность, исполнителей, связи между объектами, а также создавать новые объекты прямо из инструментов планироваия.
+                        После того как данные представлены в удобном визуальном представлении и видно потенциальные конфликты
+                        можно по средством drag&drop менять сроки, длительность, исполнителей, связи между объектами, а также
+                        создавать новые объекты прямо из инструментов планироваия.
                     </div>
                 </div>
             </div>
@@ -279,38 +309,41 @@
         <div class="section">
             <div class='section-center '>
                 <div id='access-page' class='column column-big'>
-                    <h1>Как получить доступ<span>?</span></h1>
+                    <h1>Как получить доступ
+                        <span>?</span>
+                    </h1>
                     <div class="row-disp">
                         <div class='price-plan content-wide'>
                             <div class='price-header'>
                                 <h3>
-                                       В облаке
-                                </h3> 
+                                    В облаке
+                                </h3>
                             </div>
                             <div class='price-content'>
-                                    Создайте свое пространство в сервисе runidea.online, где вам будут доступны все инструменты настройки и тестовые примеры. Вы можете бесплатно пригласить в пространство до 5 пользователей.
-                                    <div>
-                                        <button class="btn info-btn btn-cloud">Создать пространство</button>
-                                    </div>
+                                Создайте свое пространство в сервисе runidea.online, где вам будут доступны все инструменты настройки и тестовые примеры.
+                                Вы можете бесплатно пригласить в пространство до 5 пользователей.
+                                <div>
+                                    <button class="btn info-btn btn-cloud">Создать пространство</button>
+                                </div>
                             </div>
                         </div>
                         <div class='price-plan content-wide'>
-                                <div class='price-header'>
-                                    <h3>
-                                            Развернуть у себя
-                                    </h3> 
-                                </div>
-                                <div class='price-content'>
-                                        Скачайте дистрибутив и по инструкции установите систему у себя. Минимальные требования к железу: 1 CPU, 2 Gb RAM и 5 Gb HDD.
-                                        Без установки лицензий в системе смогут работать 5 пользователей.
-                                        <div>
-                                            <button class="btn info-btn btn-dist">Скачать дистрибутив</button>
-                                        </div>
+                            <div class='price-header'>
+                                <h3>
+                                    Развернуть у себя
+                                </h3>
+                            </div>
+                            <div class='price-content'>
+                                Скачайте дистрибутив и по инструкции установите систему у себя. Минимальные требования к железу: 1 CPU, 2 Gb RAM и 5 Gb HDD.
+                                Без установки лицензий в системе смогут работать 5 пользователей.
+                                <div>
+                                    <button class="btn info-btn btn-dist">Скачать дистрибутив</button>
                                 </div>
                             </div>
-                       </div>
+                        </div>
+                    </div>
                 </div>
-                
+
             </div>
         </div>
         <div class="section">
@@ -322,19 +355,21 @@
                     <div class='row-disp'>
                         <div class="content-disc column сolumn-small">
                             <ul>
-                                <li>Начните изучение платформы  с изучения тестового примера по настройке веб-приложения для управления проектами, где шаг за шагом разобраны основые инструменты настройки.</li>
+                                <li>Начните изучение платформы с изучения тестового примера по настройке веб-приложения для управления
+                                    проектами, где шаг за шагом разобраны основые инструменты настройки.</li>
                                 <li>Для подробного изучения работы каждого инструмента настройки обратитесь к разделу Документация.</li>
-                                <li>Напишите нам здесь или оставьте запрос в службу поддержки прямо через интерфейс системы, если вы нигде не нашли ответ на свой вопрос</li>
+                                <li>Напишите нам здесь или оставьте запрос в службу поддержки прямо через интерфейс системы,
+                                    если вы нигде не нашли ответ на свой вопрос</li>
                             </ul>
                             <button class="btn info-btn btn-feedback">Задать вопрос</button>
                         </div>
                         <div class="column only-desctop">
                             <img src="./img/team.png" alt="">
-                           
+
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div class="section">
@@ -342,135 +377,138 @@
                 <div id='price-page' class="column-big">
                     <h1>Сколько стоит?</h1>
                     <span class='trigger-container'>
-                        
+
                         <span class="trigger" rel='tab1'>Облако</span>
                         <span class="trigger trigger-not-active" rel='tab2'>У себя</span>
                     </span>
                     <div>
-                    <div class="tab-container">
-                        <div id="tab1" class='tab'>
-                            <div class="price-plan"> 
-                                <div class='price-header'>
-                                    <h3> Менее 5 человек</h3>
+                        <div class="tab-container">
+                            <div id="tab1" class='tab'>
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3> Менее 5 человек</h3>
+                                    </div>
+                                    <div class='price-content'>
+                                        <h1>Бесплатно</h1>
+
+                                    </div>
+
                                 </div>
-                                <div class='price-content'>
-                                    <h1>Бесплатно</h1>
-                                    
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3>Более 5 человек</h3>
+                                    </div>
+                                    <div class='price-content'>
+                                        <h1>300&#8381/месяц</h1>
+                                        <p>за пользователя</p>
+                                    </div>
+
+
                                 </div>
-                                
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3>Более 100 человек</h3>
+                                    </div>
+                                    <div class='price-content'>
+                                        <h1>Цена по запросу</h1>
+                                    </div>
+
+                                </div>
+
                             </div>
-                            <div class="price-plan">
-                                <div class='price-header'>
-                                    <h3>Более 5 человек</h3>
+                            <div id='tab2' class='tab hide'>
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3> Менее 5 человек</h3>
+                                    </div>
+                                    <div class='price-content'>
+                                        <h1>Бесплатно</h1>
+
+                                    </div>
+
                                 </div>
-                                <div class='price-content'>
-                                    <h1>300&#8381/месяц</h1>
-                                    <p>за пользователя</p>
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3>Более 5 человек</h3>
+                                    </div>
+                                    <div class="price-content">
+                                        <h1>6000 &#8381</h1>
+                                        <p>за пользователя</p>
+                                    </div>
+
+                                    <!-- <h4>6000 руб. за пользователя</h4> -->
+
                                 </div>
-                                
-                                
+                                <div class="price-plan">
+                                    <div class='price-header'>
+                                        <h3>Более 100 человек</h3>
+                                    </div>
+                                    <div class="price-content">
+                                        <h1> Цена по запросу </h1>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="price-plan">
-                                <div class='price-header'>
-                                    <h3>Более 100 человек</h3>
-                                </div>
-                                <div class='price-content'>
-                                    <h1>Цена по запросу</h1>
-                                </div>
-                                
-                           </div>
-                          
+
                         </div>
-                        <div id='tab2' class='tab hide'>
-                            <div class="price-plan"> 
-                                <div class='price-header'>
-                                    <h3> Менее 5 человек</h3>
-                                </div>
-                                <div class='price-content'> 
-                                    <h1>Бесплатно</h1>
-                                    
-                                </div>
-                                
-                            </div>
-                            <div class="price-plan">
-                                <div class='price-header'>
-                                    <h3>Более 5 человек</h3>
-                                </div>
-                                <div class="price-content">
-                                    <h1>6000 &#8381</h1>
-                                    <p>за пользователя</p>
-                                </div>
-                                
-                                <!-- <h4>6000 руб. за пользователя</h4> -->
-                                
-                            </div>
-                            <div class="price-plan">
-                                <div class='price-header'>
-                                    <h3>Более 100 человек</h3>
-                                </div>
-                                <div class="price-content"> 
-                                    <h1> Цена по запросу </h1>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <button class="btn btn-cloud" rel='tab1'>Создать пространство</button>
-                    <button class="btn btn-license" rel='tab2'>Купить лицензию</button>
+                        <button class="btn btn-cloud" rel='tab1'>Создать пространство</button>
+                        <button class="btn btn-license" rel='tab2'>Купить лицензию</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div class="section">
             <div class='section-center reverse'>
                 <div class="column">
                     <div class="user-form">
-                            <div class="modal-content">
+                        <div class="modal-content">
 
-                                    <form>
-                                        <label for="mail">Email*</label>
-                                        <input type="email" id="mail" name="emailaddress" placeholder="Введите адрес эл.почты" required>
-                                        
-                                        <label for="fname">ФИО</label>
-                                        <input type="text" id="fname" name="firstname" placeholder="Введите ФИО">
-            
-                                        <div id='quest'>
-                                            <label for="">Ваш вопрос</label>
-                                            <textarea name="comments" rows=7> </textarea>
-                                        </div>
-                                        
-                                        <button type="submit" value="Подтвердить" class="btn">Отправить</button>
-                                        <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку <a href="./policy.html">персональных данных</a></div>
-                                        </form>
-                            </div>
+                            <form>
+                                <label for="mail">Email*</label>
+                                <input type="email" id="mail" name="emailaddress" placeholder="Введите адрес эл.почты" required>
+
+                                <label for="fname">ФИО</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Введите ФИО">
+
+                                <div id='quest'>
+                                    <label for="">Ваш вопрос</label>
+                                    <textarea name="comments" rows=7> </textarea>
+                                </div>
+
+                                <button type="submit" value="Подтвердить" class="btn">Отправить</button>
+                                <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку
+                                    <a href="./policy.html">персональных данных</a>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                   
+
                 </div>
                 <div class="content-disc float-right content-head">
-                        <h1>Напишите нам!</h1>
+                    <h1>Напишите нам!</h1>
                 </div>
                 <div class="content-disc float-right">
                     <h1>Напишите нам!</h1>
-                    <span class='subheader not-mobile'>Благодарим за интерес к нашим услугам. <br> Заполните форму, отправьте сообщение, и мы свяжемся с вами в ближайшее время.</span>
+                    <span class='subheader not-mobile'>Благодарим за интерес к нашим услугам.
+                        <br> Заполните форму, отправьте сообщение, и мы свяжемся с вами в ближайшее время.</span>
                     <div class="address">
-                        Адрес: Москва, ул. Бауманская д.6, офис 320 <br>
-                        Email: info@ideaplatform.ru
+                        Адрес: Москва, ул. Бауманская д.6, офис 320
+                        <br> Email: info@ideaplatform.ru
                     </div>
-                    
-                   
+
+
                 </div>
-               
+
             </div>
             <div class='footer-info not-mobile'>
                 <div class="footer-content">
-                        <div>© 2017 ООО «АйПи Консалтинг» </div>
-                        <div>
-                            <a href="./license.html" target="_blank">Лицензионное соглашение</a>
-                        </div>
+                    <div>© 2017 ООО «АйПи Консалтинг» </div>
+                    <div>
+                        <a href="./license.html" target="_blank">Лицензионное соглашение</a>
+                    </div>
                 </div>
-                
+
             </div>
         </div>
     </div>

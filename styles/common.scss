@@ -248,7 +248,8 @@
             [type="checkbox"]:not(:checked),
             [type="checkbox"]:checked {
                 position: absolute;
-                left: -9999px;
+                left:30px;
+                z-index: -1;
             }
             [type="checkbox"]:not(:checked)+label,
             [type="checkbox"]:checked+label {
@@ -379,7 +380,8 @@
             [type="checkbox"]:not(:checked),
             [type="checkbox"]:checked {
                 position: absolute;
-                left: -9999px;
+                left: 0px;
+                z-index: -1;
             }
             [type="checkbox"]:not(:checked)+label,
             [type="checkbox"]:checked+label {
