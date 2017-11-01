@@ -251,7 +251,7 @@
   .modalBox .modal-footer {
     margin-top: 15px; }
 
-.successModal {
+.successModal, .errorModal {
   text-align: center; }
 
 .modalBox-active {
