@@ -205,6 +205,7 @@ function openModal(event, mode) {
 				break;
 			case 'license':
 				$('input[name=quantity], label[for=quantity]').show()
+				$('input[name=quantity]').prop('required', true)
 			default:
 				break;
 
