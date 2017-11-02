@@ -110,11 +110,15 @@ $(document).ready(function () {
 		// there are many ways to get this data using jQuery (you can use the class or id also)
 		var formData = objectifyForm($('#modalBox form').serializeArray());
 		let userAction = [];
+		let mode = $('#modalBox').data('mode');
 		$('#modalBox input[useraction]').each((idx, val) => {
-			if (val.checked) {
+			if (val.checked && val.type == 'checkbox') {
 				userAction.push(val.attributes.useraction.value);
 			}
 		});
+		if (['feedback', 'license'].includes(mode)) {
+			userAction.push(mode);
+		}
 		console.log(userAction);
 		// process the form
 		$.ajax({
@@ -250,6 +254,7 @@ function openModal(event, mode) {
 	return function () {
 
 		$('#modalBox').show();
+		$('#modalBox').data('mode', mode);
 		$('#modalBox #dist').prop('checked', false);
 		$('#modalBox #cloud').prop('checked', false);
 		$('#modalBox #quest').hide();

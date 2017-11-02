@@ -40,17 +40,20 @@
             </div>
             <div class="modal-content-message">
                 <div user-action="cloud">
-                    Мы отправили вам приветсвенное сообщение на email.
+                    Мы отправили вам приветственное сообщение на email.
                     <br> Для завершения создания Вашего пространства перейдите по ссылке, указанной в письме
                 </div>
                 <div user-action="dist">
                     Вам на email будет отправлено письмо с ссылкой на дистрибутив
                 </div>
                 <div user-action="cloud&dist">
-                    Вам на email будет отправлено письмо с ссылкой на дистрибутив, а также сслыка для завершения создания Вашего пространства
+                    Вам на email будет отправлено письмо с ссылкой на дистрибутив, <br> а также ссылка для завершения создания Вашего пространства
                 </div>
-                <div user-action="quest">
+                <div user-action="feedback">
                     Мы ответим Вам в ближайшее время
+                </div>
+                <div user-action="license">
+                    Мы ответим на Ваш запрос в ближайшее время                    
                 </div>
             </div>
             <div class="modal-footer">
@@ -63,7 +66,7 @@
 
         <div class="modal-content">
             <div class="modal-header">
-                Пожалуйста, попробуйте позднее
+                Пожалуйста, попробуйте позднее.
             </div>
             <div class="modal-content-message">
                 Извините, в данный момент регистрация невозможна.
@@ -110,8 +113,8 @@
                 </div>
 
                 <div class="mytry">
-                    <label for="quantity">Количество лицензий</label>
-                    <input type="number" name="quantity" id="quantity" min="1" max="1000">
+                    <label for="quantity">Количество лицензий*</label>
+                    <input type="number" name="quantity" id="quantity" min="1" max="1000" useraction='license'>
                 </div>
 
                 <div class='radio-wrap mytry group-require'>
@@ -126,7 +129,7 @@
                 </div>
                 <div id='quest'>
                     <label for="comments">Ваш вопрос</label>
-                    <textarea id="comments" name="comment" rows=10> </textarea>
+                    <textarea id="comments" name="comment" rows=10 useraction='quest'> </textarea>
                 </div>
 
                 <button type="submit" value="Подтвердить" class="btn">Отправить</button>
@@ -476,7 +479,7 @@
                                     <textarea name="comments" rows=7> </textarea>
                                 </div>
 
-                                <button type="submit" value="Подтвердить" class="btn">Отправить</button>
+                                <button type="submit" value="Подтвердить" class="btn btn-feedback">Отправить</button>
                                 <div class='aggrement'>Нажимая на кнопку, вы даете согласие на обработку
                                     <a href="./policy.html">персональных данных</a>
                                 </div>
