@@ -29,6 +29,19 @@
 
     <script type="text/javascript" src="vendor/jquery.fullPage.min.js"></script>
     <script src="./dist/entry1.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109302502-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109302502-1');
+    </script>
+
 </head>
 
 <body>
@@ -47,13 +60,14 @@
                     Вам на email будет отправлено письмо с ссылкой на дистрибутив
                 </div>
                 <div user-action="cloud&dist">
-                    Вам на email будет отправлено письмо с ссылкой на дистрибутив, <br> а также ссылка для завершения создания Вашего пространства
+                    Вам на email будет отправлено письмо с ссылкой на дистрибутив,
+                    <br> а также ссылка для завершения создания Вашего пространства
                 </div>
                 <div user-action="feedback">
                     Мы ответим Вам в ближайшее время
                 </div>
                 <div user-action="license">
-                    Мы ответим на Ваш запрос в ближайшее время                    
+                    Мы ответим на Ваш запрос в ближайшее время
                 </div>
             </div>
             <div class="modal-footer">
@@ -119,7 +133,7 @@
 
                 <div class='radio-wrap mytry group-require'>
                     <div>
-                        <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested" >
+                        <input type="checkbox" class='action' useraction='cloud' id="cloud" name="isonpremiserequested">
                         <label for="cloud">Создать пространство в облаке</label>
                     </div>
                     <div>
