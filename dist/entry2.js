@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 69);
+/******/ 	return __webpack_require__(__webpack_require__.s = 70);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1052,17 +1052,17 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(15));
-__export(__webpack_require__(72));
 __export(__webpack_require__(73));
 __export(__webpack_require__(74));
 __export(__webpack_require__(75));
-__export(__webpack_require__(85));
+__export(__webpack_require__(76));
 __export(__webpack_require__(86));
 __export(__webpack_require__(87));
+__export(__webpack_require__(88));
 __export(__webpack_require__(45));
 __export(__webpack_require__(40));
-__export(__webpack_require__(88));
-__export(__webpack_require__(91));
+__export(__webpack_require__(89));
+__export(__webpack_require__(92));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -4056,7 +4056,7 @@ exports.BaseLocationServices = BaseLocationServices;
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(70);
+__webpack_require__(71);
 module.exports = angular;
 
 
@@ -4640,21 +4640,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var interface_1 = __webpack_require__(8);
 var transition_1 = __webpack_require__(17);
 var hookRegistry_1 = __webpack_require__(25);
-var coreResolvables_1 = __webpack_require__(76);
-var redirectTo_1 = __webpack_require__(77);
-var onEnterExitRetain_1 = __webpack_require__(78);
-var resolve_1 = __webpack_require__(79);
-var views_1 = __webpack_require__(80);
-var updateGlobals_1 = __webpack_require__(81);
-var url_1 = __webpack_require__(82);
+var coreResolvables_1 = __webpack_require__(77);
+var redirectTo_1 = __webpack_require__(78);
+var onEnterExitRetain_1 = __webpack_require__(79);
+var resolve_1 = __webpack_require__(80);
+var views_1 = __webpack_require__(81);
+var updateGlobals_1 = __webpack_require__(82);
+var url_1 = __webpack_require__(83);
 var lazyLoad_1 = __webpack_require__(47);
 var transitionEventType_1 = __webpack_require__(48);
 var transitionHook_1 = __webpack_require__(12);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var ignoredTransition_1 = __webpack_require__(83);
-var invalidTransition_1 = __webpack_require__(84);
+var ignoredTransition_1 = __webpack_require__(84);
+var invalidTransition_1 = __webpack_require__(85);
 /**
  * The default [[Transition]] options.
  *
@@ -4892,10 +4892,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var angular_1 = __webpack_require__(10);
 var core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(30);
-var templateFactory_1 = __webpack_require__(92);
+var templateFactory_1 = __webpack_require__(93);
 var stateProvider_1 = __webpack_require__(56);
-var onEnterExitRetain_1 = __webpack_require__(93);
-var locationServices_1 = __webpack_require__(94);
+var onEnterExitRetain_1 = __webpack_require__(94);
+var locationServices_1 = __webpack_require__(95);
 var urlRouterProvider_1 = __webpack_require__(57);
 angular_1.ng.module("ui.router.angular1", []);
 var mod_init = angular_1.ng.module('ui.router.init', []);
@@ -9326,7 +9326,8 @@ module.exports = function (css) {
 /* 66 */,
 /* 67 */,
 /* 68 */,
-/* 69 */
+/* 69 */,
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9336,15 +9337,15 @@ var _angular = __webpack_require__(22);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _angularUiRouter = __webpack_require__(71);
+var _angularUiRouter = __webpack_require__(72);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-__webpack_require__(100);
-
 __webpack_require__(101);
 
-var _treeMenu = __webpack_require__(103);
+__webpack_require__(102);
+
+var _treeMenu = __webpack_require__(104);
 
 var _treeMenu2 = _interopRequireDefault(_treeMenu);
 
@@ -9356,7 +9357,7 @@ var app = _angular2.default.module('reference', [_angularUiRouter2.default, 'sf.
 app.component('treeMenu', _treeMenu2.default);
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports) {
 
 /**
@@ -43250,7 +43251,7 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43270,16 +43271,16 @@ __export(__webpack_require__(29));
 __export(__webpack_require__(30));
 __export(__webpack_require__(56));
 __export(__webpack_require__(57));
-__webpack_require__(95);
 __webpack_require__(96);
 __webpack_require__(97);
 __webpack_require__(98);
 __webpack_require__(99);
+__webpack_require__(100);
 exports.default = "ui.router";
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43295,7 +43296,7 @@ __export(__webpack_require__(27));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43310,7 +43311,7 @@ __export(__webpack_require__(18));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43326,7 +43327,7 @@ __export(__webpack_require__(19));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43345,7 +43346,7 @@ __export(__webpack_require__(7));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43369,7 +43370,7 @@ exports.registerAddCoreResolvables = function (transitionService) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43412,7 +43413,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43475,7 +43476,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43524,7 +43525,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43577,7 +43578,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43618,7 +43619,7 @@ exports.registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43649,7 +43650,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43686,7 +43687,7 @@ exports.registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43711,7 +43712,7 @@ exports.registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43745,7 +43746,7 @@ __export(__webpack_require__(28));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43762,7 +43763,7 @@ __export(__webpack_require__(46));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43775,7 +43776,7 @@ __export(__webpack_require__(44));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43789,11 +43790,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-__export(__webpack_require__(89));
+__export(__webpack_require__(90));
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43811,11 +43812,11 @@ __export(__webpack_require__(53));
 __export(__webpack_require__(54));
 __export(__webpack_require__(55));
 __export(__webpack_require__(14));
-__export(__webpack_require__(90));
+__export(__webpack_require__(91));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43850,7 +43851,7 @@ exports.memoryLocationPlugin = utils_1.locationPluginFactory("vanilla.memoryLoca
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43877,7 +43878,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44077,7 +44078,7 @@ var scopeBindings = function (bindingsObj) { return Object.keys(bindingsObj || {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44108,7 +44109,7 @@ exports.getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44189,7 +44190,7 @@ exports.Ng1LocationServices = Ng1LocationServices;
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44563,7 +44564,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45140,7 +45141,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45192,7 +45193,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45488,7 +45489,7 @@ angular_1.ng.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45517,19 +45518,19 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(102);
+var content = __webpack_require__(103);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -45554,7 +45555,7 @@ if(false) {
 }
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(60)(undefined);
@@ -45568,7 +45569,7 @@ exports.push([module.i, "/*!\n * Bootstrap v2.3.1\n *\n * Copyright 2012 Twitter
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45578,21 +45579,21 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _jquery = __webpack_require__(104);
+var _jquery = __webpack_require__(105);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _template = __webpack_require__(105);
+var _template = __webpack_require__(106);
 
 var _template2 = _interopRequireDefault(_template);
 
-var _lodash = __webpack_require__(106);
+var _lodash = __webpack_require__(107);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var treeData = __webpack_require__(109);
+var treeData = __webpack_require__(110);
 // import './style.scss'
 // import '/src/tree-menu/style.scss'
 // import templateUrl from 'src/tree-menu/tree-menu.html'
@@ -45678,7 +45679,7 @@ function menuCtrl($location) {
 }
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -55938,13 +55939,13 @@ return jQuery;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports) {
 
 module.exports = "<link rel=\"icon\" type=\"image/ico\" href=\"../img/favicon.ico\">\r\n<div id=\"header\">\r\n    <a class=\"burgWrapper\" href=\"##\">\r\n        <div class=\"burg\"></div>\r\n    </a>\r\n    <div id='head-content'>\r\n        <div class=\"logo\">\r\n            <a href=\"../index.html\">\r\n                <img src=\"..\\img\\logoIP.png\" / class=\"logo-image\">\r\n            </a>\r\n\r\n        </div>\r\n        <ul id=\"menu\">\r\n            <!-- <li data-menuanchor=\"welcome\" class=\"active\"><a href=\"#welcome\">Главная</a></li> -->\r\n            <li data-menuanchor=\"join\">\r\n                <a href=\"../index.html#join\">Скачать</a>\r\n            </li>\r\n            <li data-menuanchor=\"price\">\r\n                <a href=\"../index.html#price\">Купить</a>\r\n            </li>\r\n            <li data-menuanchor=\"contact\">\r\n                <a href=\"../index.html#contact\">Контакты</a>\r\n            </li>\r\n        </ul>\r\n\r\n\r\n    </div>\r\n\r\n</div>\r\n<div class='content'>\r\n    <div class=\"tree custom-scroll inactive\">\r\n        <ul sf-treepeat=\"node in children of $ctrl.treeData \" class='ltr-direction'>\r\n\r\n            <span>\r\n                <a ng-click='$ctrl.clickArticle($event,node.displayname,node.km_articleid)'>{{node.displayname}}</a>\r\n            </span>\r\n            <ul>\r\n                <li sf-treecurse>This should be removed</li>\r\n            </ul>\r\n\r\n        </ul>\r\n        <!-- <tree-grid tree-data='$ctrl.treeData'></tree-grid> -->\r\n    </div>\r\n    <div class='article-content'>\r\n        <h3 id='article-name'>{{$ctrl.name}}</h3>\r\n        <div id=\"art\">\r\n\r\n        </div>\r\n        <!-- <iframe name=\"iframe1\" class=\"custom-scroll\"></iframe> -->\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -73033,10 +73034,10 @@ module.exports = "<link rel=\"icon\" type=\"image/ico\" href=\"../img/favicon.ic
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(107), __webpack_require__(108)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(108), __webpack_require__(109)(module)))
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports) {
 
 var g;
@@ -73063,7 +73064,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -73091,7 +73092,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports) {
 
 module.exports = [{"km_articleid":1,"displayname":"1. Описание Idea Platform","children":[{"km_articleid":19,"displayname":"1.1. Администрирование системы","parent_article":1,"children":[{"km_articleid":21,"displayname":"1.1.2. Запуск","parent_article":19,"children":[]},{"km_articleid":22,"displayname":"1.1.4 Создание и редактирование пользователей","parent_article":19,"children":[]},{"km_articleid":27,"displayname":"1.1.5 Редактирование справочников системы","parent_article":19,"children":[]},{"km_articleid":29,"displayname":"1.1.7 Сообщения администратору","parent_article":19,"children":[]},{"km_articleid":117,"displayname":"1.1.1.Установка","parent_article":19,"children":[{"km_articleid":114,"displayname":"2. Установка на Windows и PostgreSQL","parent_article":117,"children":[]},{"km_articleid":118,"displayname":"1. Установка на Linux и PostgreSQL","parent_article":117,"children":[]},{"km_articleid":119,"displayname":"3. Установка на Windows и MySQL","parent_article":117,"children":[]},{"km_articleid":120,"displayname":"4. Описание параметров файла конфигурации system.properties","parent_article":117,"children":[]},{"km_articleid":121,"displayname":"5. Работа с данными зависящими от стенда в клиентских настройках.","parent_article":117,"children":[]},{"km_articleid":141,"displayname":"6. Установка системы для разработки","parent_article":117,"children":[]}]},{"km_articleid":122,"displayname":"1.1.3. Обновление","parent_article":19,"children":[{"km_articleid":109,"displayname":"Обновление сервера приложений","parent_article":122,"children":[]},{"km_articleid":123,"displayname":"Обновление сервера приложений на Linux с SAAS Linux DEV","parent_article":122,"children":[]},{"km_articleid":124,"displayname":"Обновление сервера приложений на Windows","parent_article":122,"children":[]}]},{"km_articleid":128,"displayname":"1.1.6 Загрузка данных из Excel-файла","parent_article":19,"children":[{"km_articleid":28,"displayname":"1.2 Загрузка данных из внешнего файла","parent_article":128,"children":[]},{"km_articleid":113,"displayname":"1.1 Генерация шаблона для загрузки данных","parent_article":128,"children":[]}]}]},{"km_articleid":30,"displayname":"1.2. Доработка системы","parent_article":1,"children":[{"km_articleid":23,"displayname":"1.2.7 Предоставление прав доступа пользователю","parent_article":30,"children":[{"km_articleid":24,"displayname":"Профиль пользователя","parent_article":23,"children":[]},{"km_articleid":25,"displayname":"Группы доступа","parent_article":23,"children":[]},{"km_articleid":26,"displayname":"Карты доступа","parent_article":23,"children":[]}]},{"km_articleid":39,"displayname":"1.2.15 Добавление и редактирование правил","parent_article":30,"children":[{"km_articleid":40,"displayname":"Серверные правила","parent_article":39,"children":[]},{"km_articleid":41,"displayname":"Клиентские правила","parent_article":39,"children":[]},{"km_articleid":104,"displayname":"Порядок выполнения правил","parent_article":39,"children":[]}]},{"km_articleid":42,"displayname":"1.2.3 Добавление и редактирование workflow","parent_article":30,"children":[{"km_articleid":43,"displayname":"1. Добавление и редактирование объекта workflow","parent_article":42,"children":[]},{"km_articleid":44,"displayname":"2. Добавление и редактирование схемы workflow","parent_article":42,"children":[]},{"km_articleid":46,"displayname":"3. Права доступа на переход workflow","parent_article":42,"children":[]},{"km_articleid":47,"displayname":"4. Добавление и редактирование правил по переходам workflow","parent_article":42,"children":[]},{"km_articleid":48,"displayname":"5. Добавление и редактирование оповещений по переходу workflow","parent_article":42,"children":[]}]},{"km_articleid":49,"displayname":"1.2.4. Создание и редактирование отчетов","parent_article":30,"children":[{"km_articleid":50,"displayname":"1. Отчеты типа «Простая таблица» и «Таблица для дашборда»","parent_article":49,"children":[]},{"km_articleid":52,"displayname":"2. Отчеты типа «Пирог» и «Столбчатая диаграмма»","parent_article":49,"children":[]},{"km_articleid":53,"displayname":"4. Отчеты типа «Расписание»","parent_article":49,"children":[]},{"km_articleid":54,"displayname":"6. Настройка переходов в дочерние отчеты","parent_article":49,"children":[]},{"km_articleid":55,"displayname":"5. Добавление отчетов на карточку объекта","parent_article":49,"children":[]},{"km_articleid":132,"displayname":"3. Отчеты типа \"График\"","parent_article":49,"children":[]},{"km_articleid":143,"displayname":"7. Отчеты типа Multiplot","parent_article":49,"children":[]}]},{"km_articleid":56,"displayname":"1.2.5 Создание и редактирование дашбордов","parent_article":30,"children":[]},{"km_articleid":58,"displayname":"1.2.7 Настройка предупреждений","parent_article":30,"children":[]},{"km_articleid":59,"displayname":"1.2.8 Настройка оповещений","parent_article":30,"children":[]},{"km_articleid":60,"displayname":"1.2.6 Настройка меню","parent_article":30,"children":[]},{"km_articleid":61,"displayname":"1.2.10 Объекты и классы АPI системы","parent_article":30,"children":[{"km_articleid":62,"displayname":"Серверные методы и классы API системы","parent_article":61,"children":[]},{"km_articleid":63,"displayname":"Клиентские классы и методы API системы","parent_article":61,"children":[]},{"km_articleid":64,"displayname":"Пользовательский API системы (Class Library)","parent_article":61,"children":[]}]},{"km_articleid":65,"displayname":"1.2.9 Настройка фоновых процессов","parent_article":30,"children":[]},{"km_articleid":66,"displayname":"1.2.12 Настройка переноса данных из одной инсталяции Системы в другую","parent_article":30,"children":[]},{"km_articleid":105,"displayname":"1.2.13 Работа объекта календарь, создание событий календаря из объектов системы","parent_article":30,"children":[]},{"km_articleid":129,"displayname":"1.2.11. Настройка печатных форм","parent_article":30,"children":[{"km_articleid":67,"displayname":"Настройка выгрузки в Word формы одной записи","parent_article":129,"children":[]},{"km_articleid":112,"displayname":"Печатные формы отчетов в Excel","parent_article":129,"children":[]}]},{"km_articleid":130,"displayname":"​1.2.17 Описание внешнего REST-API системы","parent_article":30,"children":[]},{"km_articleid":134,"displayname":"1.2.1 Добавление и редактирование объектов системы","parent_article":30,"children":[{"km_articleid":31,"displayname":"1. Добавление и редактирование таблиц","parent_article":134,"children":[]},{"km_articleid":33,"displayname":"3. Добавление и редактирование полей таблиц","parent_article":134,"children":[]},{"km_articleid":34,"displayname":"4. Добавление и редактирование форматов полей","parent_article":134,"children":[]},{"km_articleid":35,"displayname":"5. Добавление и редактирование виртуальных полей","parent_article":134,"children":[]},{"km_articleid":36,"displayname":"8. Добавление и редактирование индексов","parent_article":134,"children":[]},{"km_articleid":37,"displayname":"7. Редактирование отображений и формы поиска","parent_article":134,"children":[]},{"km_articleid":38,"displayname":"11. Настройка кнопок в объектах","parent_article":134,"children":[]},{"km_articleid":57,"displayname":"9. Добавление и редактирование меппинга полей объектов","parent_article":134,"children":[]},{"km_articleid":116,"displayname":"6. Добавление настроек отображения объекта","parent_article":134,"children":[]},{"km_articleid":131,"displayname":"10 Работа с полем типа HTML, реализация ссылок на отчеты","parent_article":134,"children":[]},{"km_articleid":135,"displayname":"2. Добавление и редактирование таблиц типа Запрос","parent_article":134,"children":[]}]},{"km_articleid":142,"displayname":"1.2.18. Настройка git для экспорта/импорта бизнес-логики","parent_article":30,"children":[]}]},{"km_articleid":136,"displayname":"1.3. Описание структуры клиента Idea Platform","parent_article":1,"children":[]},{"km_articleid":137,"displayname":"1.4. Описание структуры мобильного клиента Idea Platform","parent_article":1,"children":[]},{"km_articleid":138,"displayname":"1.5. Описание деплоя клиента и настроек nginx","parent_article":1,"children":[]},{"km_articleid":139,"displayname":"1.6. Описание нагрузочного тестирования","parent_article":1,"children":[]},{"km_articleid":140,"displayname":"1.7. Описание E2E и модульного тестирования","parent_article":1,"children":[]}]},{"km_articleid":2,"displayname":"Модуль управления задачами","children":[]},{"km_articleid":3,"displayname":"Тестовая статья (ws DEMO)","children":[{"km_articleid":4,"displayname":"Тема !123!","parent_article":3,"children":[]}]},{"km_articleid":6,"displayname":"Anylogic","children":[{"km_articleid":45,"displayname":"Отлавливание ошибок в AnyLogic","parent_article":6,"children":[]},{"km_articleid":77,"displayname":"Составление расписаний","parent_article":6,"children":[]},{"km_articleid":78,"displayname":"Как готовить JAR файлы с моделями","parent_article":6,"children":[]}]},{"km_articleid":7,"displayname":"Java","children":[{"km_articleid":68,"displayname":"Рекомендации к стилю кода","parent_article":7,"children":[]},{"km_articleid":69,"displayname":"Интересные задачи по Java SE","parent_article":7,"children":[]},{"km_articleid":70,"displayname":"Exceptions и обработка ошибок в Java","parent_article":7,"children":[]},{"km_articleid":71,"displayname":"Коллекции Java","parent_article":7,"children":[]},{"km_articleid":72,"displayname":"Профилирование в Java","parent_article":7,"children":[]},{"km_articleid":73,"displayname":"Использование JBoss в Eclipse","parent_article":7,"children":[]},{"km_articleid":74,"displayname":"Адрес страницы в JBoss","parent_article":7,"children":[]},{"km_articleid":75,"displayname":"Настройки JBoss","parent_article":7,"children":[{"km_articleid":76,"displayname":"Настройка исходящей почты","parent_article":75,"children":[]}]},{"km_articleid":115,"displayname":"Обновление Java на Centos","parent_article":7,"children":[]}]},{"km_articleid":8,"displayname":"Базы данных","children":[{"km_articleid":79,"displayname":"MySQL","parent_article":8,"children":[{"km_articleid":80,"displayname":"Import - Export database MySQL 5.6","parent_article":79,"children":[]}]},{"km_articleid":81,"displayname":"Статья по основам реляционных баз данных","parent_article":8,"children":[]},{"km_articleid":82,"displayname":"Сайт с задачами по SQL","parent_article":8,"children":[]},{"km_articleid":83,"displayname":"Oracle","parent_article":8,"children":[{"km_articleid":84,"displayname":"Как ускорить загрузку данных в Oracle","parent_article":83,"children":[]},{"km_articleid":85,"displayname":"Export Database","parent_article":83,"children":[]},{"km_articleid":86,"displayname":"Import Database","parent_article":83,"children":[]}]},{"km_articleid":106,"displayname":"PostgreSQL","parent_article":8,"children":[{"km_articleid":107,"displayname":"Cоздание dblink для связки mssql-postgres на примере БД ЦУТР","parent_article":106,"children":[]},{"km_articleid":108,"displayname":"Как снять и развернуть дамп PostgreSQL","parent_article":106,"children":[]}]}]},{"km_articleid":9,"displayname":"Soft Skills","children":[{"km_articleid":87,"displayname":"draft Совещание правила проведения","parent_article":9,"children":[]},{"km_articleid":88,"displayname":"Видеокурс по ведению протокола","parent_article":9,"children":[]},{"km_articleid":89,"displayname":"Бизнес-презентации от Радислава Гандапаса","parent_article":9,"children":[]},{"km_articleid":90,"displayname":"draft Правила деловой переписки email","parent_article":9,"children":[]},{"km_articleid":91,"displayname":"Time management","parent_article":9,"children":[]}]},{"km_articleid":10,"displayname":"ВСМ","children":[{"km_articleid":92,"displayname":"Параметры стендов VSM","parent_article":10,"children":[]}]},{"km_articleid":11,"displayname":"Бизнес-процессы (best practices)","children":[{"km_articleid":93,"displayname":"Что такое ITSM","parent_article":11,"children":[]}]},{"km_articleid":12,"displayname":"HP SM","children":[{"km_articleid":94,"displayname":"Генератор модуля с преднастроенной логикой","parent_article":12,"children":[]},{"km_articleid":95,"displayname":"Генерации печатных форм (файлов .docx)","parent_article":12,"children":[]},{"km_articleid":96,"displayname":"Брендинг HP SM","parent_article":12,"children":[]},{"km_articleid":97,"displayname":"Ссылочная целостность","parent_article":12,"children":[]},{"km_articleid":98,"displayname":"Шаблоны","parent_article":12,"children":[]},{"km_articleid":99,"displayname":"История","parent_article":12,"children":[]},{"km_articleid":100,"displayname":"Настройка языка для входа в систему","parent_article":12,"children":[]},{"km_articleid":101,"displayname":"Как сделать язык по умолчанию в вебе русским","parent_article":12,"children":[]},{"km_articleid":102,"displayname":"Как изменить страницу логина в HP SM","parent_article":12,"children":[]}]},{"km_articleid":13,"displayname":"SVN","children":[{"km_articleid":103,"displayname":"Как исключить из коммита папку","parent_article":13,"children":[]}]},{"km_articleid":14,"displayname":"Continuous Integration","children":[{"km_articleid":110,"displayname":"Запуск автотестов","parent_article":14,"children":[]},{"km_articleid":111,"displayname":"Про Jenkins","parent_article":14,"children":[]}]},{"km_articleid":15,"displayname":"Электронная библиотека СУТР РПМ","children":[]},{"km_articleid":133,"displayname":"Тестовая статья","children":[]}]

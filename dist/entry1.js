@@ -65,24 +65,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 115:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = initAnalytic;
-function initAnalytic(resourseId) {
-    window.ga('create', resourseId, 'auto');
-    window.ga('send', 'pageview');
-    window.addEventListener("hashchange", function () {
-        console.log('hash changed');
-        window.ga('send', 'pageview', {
-            'page': location.pathname + location.search + location.hash
-        });
-    });
-}
-
-/***/ }),
-
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -99,7 +81,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_video_control_custom__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_video_loader__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_google_analytic__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_google_analytic__ = __webpack_require__(69);
 
 
 
@@ -501,6 +483,24 @@ function videoLoader(parentContainerid, posterImg, videoSrcPath) {
 		document.getElementById(parentContainerid).appendChild(vid);
 	};
 	return vid;
+}
+
+/***/ }),
+
+/***/ 69:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = initAnalytic;
+function initAnalytic(resourseId) {
+    window.ga('create', resourseId, 'auto');
+    window.ga('send', 'pageview');
+    window.addEventListener("hashchange", function () {
+        console.log('hash changed');
+        window.ga('send', 'pageview', {
+            'page': location.hash || '/'
+        });
+    });
 }
 
 /***/ })

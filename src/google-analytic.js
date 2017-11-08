@@ -4,7 +4,7 @@ export default function initAnalytic (resourseId) {
     window.addEventListener("hashchange", function () {
         console.log('hash changed')
         window.ga('send', 'pageview', {
-            'page': location.pathname + location.search + location.hash
+            'page':location.hash || '/'
         })
     })
 }
