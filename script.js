@@ -6,8 +6,10 @@ import './styles/mobile.scss'
 import setControls from './src/video-control-custom'
 import fullPage from './src/fullPageSetup'
 import videoLoader from './src/video-loader'
+import googleAnalytics from './src/google-analytic'
 
 $(document).ready(function () {
+	googleAnalytics('UA-109302502-1')
 	$('.group-require').click((event)=> {
 		if ($('.group-require :checkbox:checked').length == 0 ) {
 			document.querySelectorAll('.group-require input').forEach((elem)=>{
@@ -172,9 +174,15 @@ function objectifyForm(formArray) {//serialize data function
 	  return returnArray;
 	}
 function openModal(event, mode) {
-
+	
 	return function () {
-
+		window.ga('create', 'UA-109302502-1', 'auto');
+		window.ga('send', {
+			hitType: 'event', 
+			eventCategory: 'Button', 
+			eventAction:'click', 
+			eventLabel:mode
+		});
 		$('#modalBox').show()
 		$('#modalBox').data('mode',mode)
 		$('#modalBox #dist').prop('checked', false);

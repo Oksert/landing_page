@@ -65,6 +65,24 @@
 /************************************************************************/
 /******/ ({
 
+/***/ 115:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = initAnalytic;
+function initAnalytic(resourseId) {
+    window.ga('create', resourseId, 'auto');
+    window.ga('send', 'pageview');
+    window.addEventListener("hashchange", function () {
+        console.log('hash changed');
+        window.ga('send', 'pageview', {
+            'page': location.pathname + location.search + location.hash
+        });
+    });
+}
+
+/***/ }),
+
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -81,6 +99,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_video_control_custom__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_fullPageSetup__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_video_loader__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_google_analytic__ = __webpack_require__(115);
 
 
 
@@ -90,7 +109,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 $(document).ready(function () {
+	Object(__WEBPACK_IMPORTED_MODULE_7__src_google_analytic__["a" /* default */])('UA-109302502-1');
 	$('.group-require').click(event => {
 		if ($('.group-require :checkbox:checked').length == 0) {
 			document.querySelectorAll('.group-require input').forEach(elem => {
@@ -252,7 +273,13 @@ function objectifyForm(formArray) {
 function openModal(event, mode) {
 
 	return function () {
-
+		window.ga('create', 'UA-109302502-1', 'auto');
+		window.ga('send', {
+			hitType: 'event',
+			eventCategory: 'Button',
+			eventAction: 'click',
+			eventLabel: mode
+		});
 		$('#modalBox').show();
 		$('#modalBox').data('mode', mode);
 		$('#modalBox #dist').prop('checked', false);
