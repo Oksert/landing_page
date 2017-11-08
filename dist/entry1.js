@@ -255,7 +255,7 @@ function objectifyForm(formArray) {
 function openModal(event, mode) {
 
 	return function () {
-		window.ga('create', 'UA-109302502-1', 'auto');
+		// window.ga('create', 'UA-109302502-1', 'auto');
 		window.ga('send', {
 			hitType: 'event',
 			eventCategory: 'Button',
