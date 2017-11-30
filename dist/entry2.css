@@ -1,3 +1,7 @@
+.article-content a {
+  text-decoration: underline !important;
+  color: #DE4F20 !important; }
+
 @media (min-width: 600px) {
   body div:not(.article-content) {
     background-color: '#222930';
