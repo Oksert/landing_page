@@ -76,7 +76,7 @@ module.exports = class dataGenerator {
                 const $ = cheerio.load(htmlContent, { decodeEntities: false})
                 $('a').each((idx,elem)=>{
                     var href = $(elem).attr('href')
-                    if (href.indexOf('rowId') > 0) {
+                    if (href.indexOf('rowId') != -1) {
                        var article_id = href.split('=')[href.split('=').length - 1]
                        $(elem).attr('href','/ref/index.html?' + article_id)
                     }
