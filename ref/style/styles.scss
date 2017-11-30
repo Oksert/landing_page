@@ -35,6 +35,10 @@
       li.collapse-l:before {
         // content: "\2022"
       }
+      a {
+        text-decoration: none;
+        color: #555;
+      }
     }
     .ltr-direction {
       direction: ltr !important;

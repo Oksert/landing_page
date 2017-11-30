@@ -19,6 +19,9 @@
     overflow-y: scroll;
     border-radius: 0px;
     direction: rtl; }
+    div:not(.article-content) .tree a {
+      text-decoration: none;
+      color: #555; }
   div:not(.article-content) .ltr-direction {
     direction: ltr !important; }
   div:not(.article-content) .content {
