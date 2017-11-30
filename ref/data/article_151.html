@@ -1,0 +1,85 @@
+<html><head></head><body><div class="page" title="Page 1"><div class="layoutArea"><div class="column"><p>Для установки системы на  <span editable-header-view="$ctrl.header.editableHeaderDefinition " style="box-sizing:border-box;">ОС CentOS Linux и СУБД PostrgreSQL </span>необходимо выполнить следующие шаги:</p><ul><li>Подготовить сервер (физическая или виртуальная машина), удовлетворяющую требования к программному и аппаратному обеспечению</li><li>Установить и настроить СУБД PostgreSQL, восстановить дамп базы данных системы</li><li>Установить Java 8</li><li>Установить и настроить приложение IdeaPlatform</li></ul><p> Ниже подробно описано выполнение каждого шага установки системы.</p><h3>Минимальные требования к программному и аппаратному обеспечению</h3><ol><li><p>Минимальные требования к аппаратному обеспечению:
+2 CPU, 4 Gb RAM, 5 Gb HDD </p></li><li><p>Требования к программному обеспечению:<br>Операционная система: CentOS Linux 7 (Core) с последними обновлениями
+Установленные утилиты: zip, unzip, nano, wget (команда: yum install <имя утилиты>)
+</p></li></ol><h3><span style="color:#000000;">Скачивание дистрибутивов</span>
+</h3><ol><li>Скачать дистрибутив приложения по ссылке:
+
+<p><span style="font-size:11pt;color:#954f72;">https://yadi.sk/d/as5lCrmv3MHn9v </span></p></li><li>Скачать дамп базы данных по ссылке:
+
+<p><span style="font-size:11pt;color:#954f72;">https://yadi.sk/d/etGGnXz73MHnB6 </span></p></li><li>Скопировать все файлы в папку /tmp сервера </li></ol><h3>Установка PostgreSQL 9.6<br></h3><h4><span style="color:#000000;background-color:#ffffff;">С возможностью подключения к репозиторию
+</span></h4><ol><li>Подключить RPM файл к репозиторию YUM
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">yum install https<span style="color:#FF0000;background-color:#FFAAAA;">:</span>//download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-redhat96-9.6- 3.noarch.rpm</pre></div></li><li>Установить PostgreSQL Server:</li></ol><ol><div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">yum install postgresql96-server
+</pre></div></ol><h4><span style="color:#000000;">Без возможности подключения к репозиторию</span>
+</h4><ol><li>Загрузить на локальный сервер файл pgdg-redhat96-9.6-3.noarch.rpm
+
+</li><li>Выполнить команду установки PostgreSQL Server:
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">yum localinstall postgresql96-server 
+</pre></div></li></ol><h3><span style="color:#000000;">Настройка PostgreSQL 9.6
+</span></h3><ol><li>Инициализировать базу данных
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">/usr/pgsql-9.6/bin/postgresql96-setup initdb 
+</pre></div></li><li>Включить сервис postgresql-9.6 в реестр сервисов
+<!-- HTML generated using hilite.me --><div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl enable postgresql-9.6.service 
+</pre></div></li></ol><h3><span style="color:#000000;">Восстановление дампа БД</span></h3><ol><li>Распаковать архив /tmp/ipdb.zip
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">unzip /tmp/ipdb.zip tmp/ipdb.sql
+</pre></div></li><li>Восстановить дамп БД:
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">su postgres
+psql
+\i /tmp/ipdb.sql
+</pre></div></li><li><span style="color:#000000;">Доступ к восстановленной базе данных:</span><ul><li><span style="color:#000000;">Host:<hostname> - доменное имя или IP сервера где установлена база данных системы</span></li><li><span style="color:#000000;">Port: <port>(по умолчанию 5432) -  порт, на котором размещена СУБД</span></li><li><span style="color:#000000;">Database: postgres</span></li><li><span style="color:#000000;">Username: system_user</span></li><li><span style="color:#000000;">Password: P@$$word</span></li></ul></li><li><span style="color:#000000;">Восстановленная база состоит из 2-х схем:</span><ul><li><span style="color:#000000;">system - где хранятся все системные данные</span></li><li><span style="color:#000000;">template - где хранятся пользовательские данные</span></li></ul></li></ol><h3><span style="color:#000000;">Установка Java 8
+</span></h3><ol><li>Загрузить JRE и JDK 1.8 выполнив команды из директории /tmp<br>(Если подключение отсутствует, загрузить на сервер файлы jdk-8u131-linux-x64.rpm и jre-8u131-linux-x64.rpm):<!-- HTML generated using hilite.me --><div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">wget --header <span style="background-color:#fff0f0;">"Cookie: oraclelicense=accept-securebackup-cookie"</span><span style="color:#FF0000;background-color:#FFAAAA;"> </span> http<span style="color:#FF0000;background-color:#FFAAAA;">:</span>//download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+wget --header <span style="background-color:#fff0f0;">"Cookie: oraclelicense=accept-securebackup-cookie"</span><span style="color:#FF0000;background-color:#FFAAAA;"> </span> http<span style="color:#FF0000;background-color:#FFAAAA;">:</span>//download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jre-8u131-linux-x64.rpm
+</pre></div></li><li>Выполнить команды установки пакетов:
+<!-- HTML generated using hilite.me --><div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">cp /opt/wildfly/bin/init.d/wildfly-init-redhat.sh /etc/init.d/wildfly
+cp /opt/wildfly/bin/init.d/ wildfly.conf  /etc/<span style="color:#008800;font-weight:bold;">default</span>
+chkconfig --add wildfly
+chkconfig wildfly on
+</pre></div></li></ol><h3><span style="color:#000000;">Установка приложения Idea Platform</span>
+</h3><ol><li>Распаковать архив c дистрибутивом приложения IdeaPlatform_SAAS_Distr.zip в папку
+/opt/wildfly-8.2.1.Final
+</li><li>Создать символическую ссылку /opt/wildfly на папку /opt/wildfly-8.2.1.Final
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">ln -s /opt/wildfly-8.2.1.Final /opt/wildfly
+</pre></div></li><li>Выполнить следующий набор команд по установке приложения как сервиса:
+<div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">cp /opt/wildfly/bin/init.d/wildfly-init-redhat.sh /etc/init.d/wildfly
+cp /opt/wildfly/bin/init.d/ wildfly.conf  /etc/<span style="color:#008800;font-weight:bold;">default</span>
+chkconfig --add wildfly
+chkconfig wildfly on
+</pre></div></li></ol><h3>Настройка приложения IdeaPlatform</h3><p>Настройка приложения выполняется путем редактирования параметров запуска системы в файле
+/opt/wildfly/standalone/configuration/system.properties
+</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">nano /opt/wildfly/standalone/configuration/system.properties 
+</pre></div><p></p><p>Полное описание параметров смотрите в статье <a href="/ref/index.html?120">Описание параметров файла конфигурации system.properties</a></p><p>Ниже приведен пример файла system.properties для ОС CentOS:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">dbConnectionUrl=jdbc<span style="border:1px solid #FF0000;">:</span>postgresql<span style="border:1px solid #FF0000;">:</span>//127.0.0.1<span style="border:1px solid #FF0000;">:</span>5432/ip_rpm_saas
+dbSystemSchema=system
+dbUserName=system_user
+dbPassword=P<span style="border:1px solid #FF0000;">@</span>$<span style="color:#19177C;">$w0rd</span>
+javaHomeJDK=/usr/java/jdk1.8.0_144
+javaHomeJRE=/usr/java/jre1.8.0_144
+deploymentFolder=deployments/IdeaPlatform_SAAS.war
+reindexTextOnStartup=false
+compileClassLibraryOnStartUp=true
+traceHttpRequestTime=false
+baseURL=http<span style="border:1px solid #FF0000;">:</span>//localhost<span style="border:1px solid #FF0000;">:</span>8080
+</pre></div><h3>Настройка подключения к базе данных</h3><p>Если сервер приложений и СУБД находятся на одном физическом или виртуальном сервере, то
+дальнейшая настройка не требуется.
+</p><p>Если сервер приложений и СУБД находятся на разных серверах, то необходимо настроить
+подключение сервера приложений к СУБД по JDBC:
+</p><ol><li><span lang="RU">Задать параметр dbConnectionURL с учетом </span><span lang="EN-US">IP</span><span lang="RU"> адреса сервера СУБД</span></li><li><span lang="RU">Открыть возможность подключения к серверу СУБД извне:
+
+<ul><li><span style="font-size:11pt;">На сервере СУБД перейти в папку /var/lib/pgsql/9.6/data: </span></li><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">cd /var/lib/pgsql/9.6/data
+</pre></div><li><span lang="RU">Открыть на редактирование файл </span><span lang="EN-US">postgresql</span><span lang="RU">.</span><span lang="EN-US">conf </span><span lang="RU">и задать значение параметра </span><span lang="EN-US">listen</span><span lang="RU">_</span><span lang="EN-US">addresses</span><span lang="RU"> = '*', сохранить файл.</span></li><li><span lang="RU">Открыть на редактирование файл pg_hba.conf и разрешить подключение для любых пользователей с </span><span lang="EN-US">IP </span><span lang="RU">адреса сервера приложений. <br>Для этого нужно найти строку с префиксом IPv4 local connections</span><span lang="RU"> и задать в колонке ADDRESS IP  адрес сервера приложений и METHOD md5:
+
+<div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;"><span style="color:#408080;font-style:italic;"># TYPE  DATABASE        USER            ADDRESS                 METHOD</span>
+<span style="color:#408080;font-style:italic;"># IPv4 local connections:</span>
+host    all             all           <WEB_SERVER_ID>            md5
+</pre></div><p><br>Далее необходимо сохранить файл.</p></span></li><li>Перезапустить сервер СУБД командой:
+<div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl restart postgresql-9.6
+</pre></div></li></ul></span></li></ol><h3><span style="color:#000000;">Вход в систему
+</span></h3><p>Для входа в систему необходимо открыть браузер и перейти по ссылке указанной в
+параметре baseURL ( подробнее о параметр baseURL смотрите пример файла
+system.properties данной инструкции). </p><p>По умолчанию ссылка на систему имеет следующий
+вид: <span style="font-size:11pt;color:#0000ff;">http://<hostname>:8080<br></span><span style="font-size:11pt;">где <hostname> - это доменное имя или IP сервера приложений.</span></p><p>На открывшейся странице входа введите следующие параметры: </p><ul><li><span style="font-size:11pt;">Логин: </span><span style="color:#000000;font-size:14.6667px;"><strong>adm@runidea.online</strong></span></li><li><span style="font-size:11pt;">Пароль: <strong>admin</strong> </span></li></ul><div class="page" title="Page 4"><div class="layoutArea"><div class="column"><h3><span style="color:#000000;">Команды для администрирования</span> </h3><p>Запуск СУБД:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl start postgresql-9.6
+</pre></div><p></p><p>Остановка СУБД:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl stop postgresql-9.6
+</pre></div><p></p><p>Перезапуск СУБД:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl restart postgresql-9.6
+</pre></div><p></p><p>Запуск сервера приложений:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl start wildfly
+</pre></div><p></p><p>Остановка сервера приложений:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl stop wildfly
+</pre></div><p></p><p>Перезапуск сервера приложений:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">systemctl restart wildfly
+</pre></div><p></p><p>Чтение логов в режиме реального времени:</p><div style="background:#f8f8f8;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;">tail <span style="color:#666666;">-f</span> /var/log/wilfly/console.log
+</pre></div></div></div></div></div></div></div></body></html>

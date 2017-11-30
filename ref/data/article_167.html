@@ -1,0 +1,68 @@
+<html><head></head><body><p>В данной статье приведен пример создания клиента на Java для вызова REST API системы, которое позволяет создавать/изменять и запрашивать данные системы из внешних систем.</p><h3>Добавление нужных библиотек </h3><p>Добавьте следующие jar файлы в .classpath проекта: </p><ul><li>ip-rest-client-2.1.jar </li><li>commons-collections4-4.1.jar </li><li>commons-lang3-3.3.2.jar </li><li>gson-2.2.2.jar </li><li>guava-19.0.jar </li><li>jackson-all-1.9.11.jar </li><li>jackson-core-asl-1.9.2.jar </li><li>javax.ws.rs.jar </li><li>jersey-client-1.19.1.jar </li><li>jersey-core-1.19.1.jar </li><li>jettison-1.1.jar </li><li>joda-time-2.9.5.jar </li><li>json-simple-1.1.jar </li><li>jsr311-api-1.1.1.jar</li></ul><p></p><p>Все библиотеки доступны для скачивания <a href="https://yadi.sk/d/vjn1RTr43PgNEN">по данной ссылке</a>.</p><h3>Пример кода по работе с API </h3><p>Ниже приведен пример кода, который позволяет осуществить:</p><ul><li>инициализацию подключения</li><li>выполнить аутентификацию</li><li>создать новый объект</li><li>получить данные по объекту по ID</li><li>изменить атрибуты объекта</li><li>выполнить запрос и получить объекты, соответствующие запросу в виде массива</li></ul><p></p><div style="background:#ffffff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin:0;line-height:125%;"><span style="color:#008800;font-weight:bold;">package</span> ru<span style="color:#333333;">.</span><span style="color:#0000CC;">ip</span><span style="color:#333333;">.</span><span style="color:#0000CC;">rest</span><span style="color:#333333;">.</span><span style="color:#0000CC;">test</span><span style="color:#333333;">;</span>
+
+<span style="color:#008800;font-weight:bold;">import</span> <span style="color:#0e84b5;font-weight:bold;">java.util.HashMap</span><span style="color:#333333;">;</span>
+<span style="color:#008800;font-weight:bold;">import</span> <span style="color:#0e84b5;font-weight:bold;">java.util.Map</span><span style="color:#333333;">;</span>
+
+<span style="color:#008800;font-weight:bold;">import</span> <span style="color:#0e84b5;font-weight:bold;">ru.ip.server.rest.client.EntityRestClient</span><span style="color:#333333;">;</span>
+<span style="color:#008800;font-weight:bold;">import</span> <span style="color:#0e84b5;font-weight:bold;">ru.ip.server.utils.CommonUtils</span><span style="color:#333333;">;</span>
+<span style="color:#008800;font-weight:bold;">import</span> <span style="color:#0e84b5;font-weight:bold;">ru.ip.server.utils.Log</span><span style="color:#333333;">;</span>
+
+<span style="color:#008800;font-weight:bold;">public</span> <span style="color:#008800;font-weight:bold;">class</span> <span style="color:#BB0066;font-weight:bold;">TestClient</span> <span style="color:#333333;">{</span>
+	
+	<span style="color:#008800;font-weight:bold;">public</span> <span style="color:#008800;font-weight:bold;">static</span> <span style="color:#333399;font-weight:bold;">void</span> <span style="color:#0066BB;font-weight:bold;">main</span><span style="color:#333333;">(</span>String<span style="color:#333333;">[]</span> args<span style="color:#333333;">)</span> <span style="color:#333333;">{</span>
+		
+		String systemURI <span style="color:#333333;">=</span> <span style="background-color:#fff0f0;">"http://<hostname>:8080"</span><span style="color:#333333;">;</span> <span style="color:#888888;">// адрес развернутой системы</span>
+		String userName <span style="color:#333333;">=</span> <span style="background-color:#fff0f0;">"user"</span><span style="color:#333333;">;</span>			<span style="color:#888888;">// логин</span>
+		String userPass <span style="color:#333333;">=</span> <span style="background-color:#fff0f0;">"password "</span><span style="color:#333333;">;</span>		<span style="color:#888888;">// пароль</span>
+		
+		<span style="color:#008800;font-weight:bold;">try</span> <span style="color:#333333;">{</span>
+			
+			String testTableName <span style="color:#333333;">=</span> <span style="background-color:#fff0f0;">"sd_task"</span><span style="color:#333333;">;</span>
+			
+<span style="color:#888888;">                        //Инициализация подключения</span>
+			EntityRestClient erc <span style="color:#333333;">=</span> <span style="color:#008800;font-weight:bold;">new</span> EntityRestClient<span style="color:#333333;">(</span>systemURI<span style="color:#333333;">);</span> 
+			
+<span style="color:#888888;">                        // Вход в систему</span>
+			erc<span style="color:#333333;">.</span><span style="color:#0000CC;">login</span><span style="color:#333333;">(</span>userName<span style="color:#333333;">,</span> userPass<span style="color:#333333;">);</span>						
+			
+			<span style="color:#888888;">//-----------------------------------------------------------------------------------</span>
+			<span style="color:#888888;">// Пример 1 - регистрация новой записи в таблице sd_task</span>
+			
+			Map<span style="color:#333333;"><</span>String<span style="color:#333333;">,</span> Object<span style="color:#333333;">></span> newRecordFieldMap <span style="color:#333333;">=</span> <span style="color:#008800;font-weight:bold;">new</span> HashMap<span style="color:#333333;"><</span>String<span style="color:#333333;">,</span> Object<span style="color:#333333;">>();</span>
+			newRecordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"displayname"</span><span style="color:#333333;">,</span> <span style="background-color:#fff0f0;">"Test IP Rest Client Insert v1"</span><span style="color:#333333;">);</span>
+			newRecordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"description"</span><span style="color:#333333;">,</span> <span style="background-color:#fff0f0;">"Test IP Rest Client\nInsert new Record\nDescription"</span><span style="color:#333333;">);</span>
+			newRecordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"type"</span><span style="color:#333333;">,</span> <span style="background-color:#fff0f0;">"newfeature"</span><span style="color:#333333;">);</span>
+			newRecordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"initiator"</span><span style="color:#333333;">,</span> <span style="color:#0000DD;font-weight:bold;">4</span><span style="color:#333333;">);</span>
+			newRecordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"assignedto"</span><span style="color:#333333;">,</span> <span style="color:#0000DD;font-weight:bold;">6</span><span style="color:#333333;">);</span>
+			
+			Integer newRecordId <span style="color:#333333;">=</span> erc<span style="color:#333333;">.</span><span style="color:#0000CC;">doInsert</span><span style="color:#333333;">(</span>testTableName<span style="color:#333333;">,</span> newRecordFieldMap<span style="color:#333333;">);</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"Record has been added in to table="</span> <span style="color:#333333;">+</span> testTableName <span style="color:#333333;">+</span> <span style="background-color:#fff0f0;">" with ID="</span> <span style="color:#333333;">+</span> newRecordId<span style="color:#333333;">);</span>
+			
+			<span style="color:#888888;">//-----------------------------------------------------------------------------------</span>
+			<span style="color:#888888;">// Пример 2 - чтение данных из таблицы sd_task для записи с ID=newRecordId</span>
+			
+			Map<span style="color:#333333;"><</span>String<span style="color:#333333;">,</span> Object<span style="color:#333333;">></span> recordFieldMap <span style="color:#333333;">=</span> erc<span style="color:#333333;">.</span><span style="color:#0000CC;">getRecordById</span><span style="color:#333333;">(</span>testTableName<span style="color:#333333;">,</span> newRecordId<span style="color:#333333;">);</span>
+			
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"--------------------------------------------------------------------"</span><span style="color:#333333;">);</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"Created Record "</span> <span style="color:#333333;">+</span> newRecordId <span style="color:#333333;">+</span> <span style="background-color:#fff0f0;">" Contents:\n"</span> <span style="color:#333333;">+</span> CommonUtils<span style="color:#333333;">.</span><span style="color:#0000CC;">join</span><span style="color:#333333;">(</span>recordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">entrySet</span><span style="color:#333333;">(),</span> <span style="background-color:#fff0f0;">"\n"</span><span style="color:#333333;">));</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"--------------------------------------------------------------------"</span><span style="color:#333333;">);</span>
+			<span style="color:#888888;">//-----------------------------------------------------------------------------------</span>
+			<span style="color:#888888;">// Пример 3 - изменение атрибута записи и сохранение записи</span>
+			
+			recordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">put</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"description"</span><span style="color:#333333;">,</span> <span style="background-color:#fff0f0;">"Test IP Rest Client Updated"</span><span style="color:#333333;">);</span>
+			
+			erc<span style="color:#333333;">.</span><span style="color:#0000CC;">doUpdate</span><span style="color:#333333;">(</span>testTableName<span style="color:#333333;">,</span> newRecordId<span style="color:#333333;">,</span> recordFieldMap<span style="color:#333333;">);</span> <span style="color:#888888;">// обновление записи с номером newRecordId</span>
+			
+			recordFieldMap <span style="color:#333333;">=</span> erc<span style="color:#333333;">.</span><span style="color:#0000CC;">getRecordById</span><span style="color:#333333;">(</span>testTableName<span style="color:#333333;">,</span> newRecordId<span style="color:#333333;">);</span> <span style="color:#888888;">// последующее чтение записи с номером newRecordId для отображения</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"--------------------------------------------------------------------"</span><span style="color:#333333;">);</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"Updated Record "</span> <span style="color:#333333;">+</span> newRecordId <span style="color:#333333;">+</span> <span style="background-color:#fff0f0;">" Contents:\n"</span> <span style="color:#333333;">+</span> CommonUtils<span style="color:#333333;">.</span><span style="color:#0000CC;">join</span><span style="color:#333333;">(</span>recordFieldMap<span style="color:#333333;">.</span><span style="color:#0000CC;">entrySet</span><span style="color:#333333;">(),</span> <span style="background-color:#fff0f0;">"\n"</span><span style="color:#333333;">));</span>
+			Log<span style="color:#333333;">.</span><span style="color:#0000CC;">info</span><span style="color:#333333;">(</span><span style="background-color:#fff0f0;">"--------------------------------------------------------------------"</span><span style="color:#333333;">);</span>
+			
+			
+
+		<span style="color:#333333;">}</span> <span style="color:#008800;font-weight:bold;">catch</span> <span style="color:#333333;">(</span>Exception e<span style="color:#333333;">)</span> <span style="color:#333333;">{</span>
+			e<span style="color:#333333;">.</span><span style="color:#0000CC;">printStackTrace</span><span style="color:#333333;">();</span>
+		<span style="color:#333333;">}</span>
+	<span style="color:#333333;">}</span>
+<span style="color:#333333;">}</span>
+</pre></div></body></html>

@@ -1,4 +1,5 @@
 
+
 const del = require('del');
 var fs = require('fs');
 const cheerio = require('cheerio');
@@ -8,6 +9,9 @@ module.exports = class dataGenerator {
     }
     listToTree (list) {
         var map = {}, node, roots = [], i;
+        list.sort((a,b)=>{
+            return (parseInt(a.displayname.split('.')[0],10)|| 1000) - (parseInt(b.displayname.split('.')[0],10) || 1000)
+        })
         for (i = 0; i < list.length; i += 1) {
             map[list[i].km_articleid] = i; // initialize the map
             list[i].children = []; // initialize the children
@@ -15,14 +19,21 @@ module.exports = class dataGenerator {
         for (i = 0; i < list.length; i += 1) {
             node = list[i];
             if (node.parent_article > 0) {
-                // if you have dangling branches check that map[node.parentId] exists
-                list[map[node.parent_article]].children.push(node);
+                // console.log(node.parent_article)
+                 // if you have dangling branches check that map[node.parentId] exists
+                if (map[node.parent_article] !== undefined)
+                 list[map[node.parent_article]].children.push(node);
             } else {
                 roots.push(node);
             }
         }
         return roots;
     }
+    // sortTree (treeList) {
+    //     if (!treeList.length)
+    //         return treeList
+    //     treeList.
+    // }
     generateTreeMenuFromFile() {
         var list = this.serverData.map((elem)=>{
             return {
