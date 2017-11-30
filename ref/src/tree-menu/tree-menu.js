@@ -1,7 +1,7 @@
 // import templateUrl from 'src/tree-menu/tree-menu.html'
 import $ from 'jquery';
 import templateUrl from './template.html'
-import _ from 'lodash'
+import initAnalytic from '../../../src/google-analytic';
 var treeData = require('../../tree.json')
 // import './style.scss'
 // import '/src/tree-menu/style.scss'
@@ -13,8 +13,19 @@ menuCtrl.$inject = ['$location']
 
 function menuCtrl($location) {
     var $ctrl = this
-
+    function searchArticle(arr, id) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].km_articleid == id) {
+               searchArticle.article = arr[i].displayname                
+            }
+            if (arr[i].children.length) {
+                searchArticle(arr[i].children,id)
+            }
+        }
+        return searchArticle.article
+    }
     $ctrl.$onInit = () => {
+
         $ctrl.treeData = {
             children: treeData
         }
@@ -25,11 +36,8 @@ function menuCtrl($location) {
             $('div.tree').width(200)
         })
         let changeUrl = true;
-        //     window.onhashchange = function() { 
-        //         var intial_article = window.location.href.split('?')[1]
-        //         $('iframe').attr('src',`./data/article_${intial_article}.html`); 
-        //    }
-        var intial_article = window.location.href.split('?')[1]
+        var intial_article = window.location.href.split('?')[1] || 168
+        $ctrl.name = searchArticle(treeData, intial_article)
         $('iframe').attr('src', `./data/article_${intial_article || 168}.html`);
         $.get(`./data/article_${intial_article || 168}.html`, (data) => {
             $('#art').html(data);
