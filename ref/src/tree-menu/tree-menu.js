@@ -30,7 +30,7 @@ function menuCtrl($location) {
         //         $('iframe').attr('src',`./data/article_${intial_article}.html`); 
         //    }
         var intial_article = window.location.href.split('?')[1]
-        $('iframe').attr('src', `./data/article_${intial_article || 1}.html`);
+        $('iframe').attr('src', `./data/article_${intial_article || 168}.html`);
         $.get(`./data/article_${intial_article || 1}.html`, (data) => {
             $('#art').html(data);
         })

@@ -45623,7 +45623,7 @@ function menuCtrl($location) {
         //         $('iframe').attr('src',`./data/article_${intial_article}.html`); 
         //    }
         var intial_article = window.location.href.split('?')[1];
-        (0, _jquery2.default)('iframe').attr('src', './data/article_' + (intial_article || 1) + '.html');
+        (0, _jquery2.default)('iframe').attr('src', './data/article_' + (intial_article || 168) + '.html');
         _jquery2.default.get('./data/article_' + (intial_article || 1) + '.html', function (data) {
             (0, _jquery2.default)('#art').html(data);
         });
