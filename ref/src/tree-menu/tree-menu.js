@@ -31,7 +31,7 @@ function menuCtrl($location) {
         //    }
         var intial_article = window.location.href.split('?')[1]
         $('iframe').attr('src', `./data/article_${intial_article || 168}.html`);
-        $.get(`./data/article_${intial_article || 1}.html`, (data) => {
+        $.get(`./data/article_${intial_article || 168}.html`, (data) => {
             $('#art').html(data);
         })
         var count = 0;
