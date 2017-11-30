@@ -58,7 +58,7 @@
       color: #555; }
     div:not(.article-content) #header #menu li a:hover,
     div:not(.article-content) #header a:hover,
-    div:not(.article-content) #header a:focus {
+    div:not(.article-content) #header a:focus, div:not(.article-content) #header a {
       color: #DE4F20; }
     div:not(.article-content) #header div.logo {
       display: flex;
@@ -112,13 +112,7 @@
     background: #ddd;
     border-radius: 20px; }
   div:not(.article-content) a {
-    color: #555;
-    text-decoration: none; }
-  div:not(.article-content) a:hover,
-  div:not(.article-content) a:active,
-  div:not(.article-content) a:visited,
-  div:not(.article-content) a:focus {
-    text-decoration: none; }
+    color: #DE4F20; }
   div:not(.article-content) ul {
     padding: 3px; }
   div:not(.article-content) .header-name {

@@ -82,7 +82,7 @@
       }
       #menu li a:hover,
       a:hover,
-      a:focus {
+      a:focus, a {
         color: #DE4F20;
       }
       div.logo {
@@ -155,15 +155,15 @@
       border-radius: 20px;
     }
     a {
-      color: #555;
-      text-decoration: none
+      color: #DE4F20;
+      // text-decoration: none
     }
-    a:hover,
-    a:active,
-    a:visited,
-    a:focus {
-      text-decoration: none
-    }
+    // a:hover,
+    // a:active,
+    // a:visited,
+    // a:focus {
+    //   text-decoration: none
+    // }
     ul {
       padding: 3px;
     }
