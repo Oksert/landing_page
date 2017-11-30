@@ -61,13 +61,13 @@ function menuCtrl($location) {
             $('.tree li.parent_li > span').trigger('click')
         });
         var windowHeight = $(window).height()
-        var headerHeight = $('#header').height()
-        $('#art').height(windowHeight - headerHeight - 20)
+        var headerHeight = $('#header').height() + $('#article-name').height()
+        $('#art').height(windowHeight - headerHeight - 50)
         $('.tree').height(windowHeight - headerHeight - 20)
         var $window = $(window).on('resize', function () {
             windowHeight = $(window).height()
-            headerHeight = $('#header').height()
-            $('#art').height(windowHeight - headerHeight - 70)
+            headerHeight = $('#header').height() + $('#article-name').height()
+            $('#art').height(windowHeight - headerHeight - 50)
             $('.tree').height(windowHeight - headerHeight - 20)
         })
         $ctrl.clickArticle = (event, name, km_articleid) => {

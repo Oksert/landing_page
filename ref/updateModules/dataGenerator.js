@@ -10,7 +10,9 @@ module.exports = class dataGenerator {
     listToTree (list) {
         var map = {}, node, roots = [], i;
         list.sort((a,b)=>{
-            return (parseInt(a.displayname.split('.')[0],10)|| 1000) - (parseInt(b.displayname.split('.')[0],10) || 1000)
+            let a_comp = parseInt(a.displayname.split('.')[0],10)
+            let b_comp = parseInt(b.displayname.split('.')[0],10)
+            return (isNaN(a_comp)?1000:a_comp) - (isNaN(b_comp)?1000:b_comp)
         })
         for (i = 0; i < list.length; i += 1) {
             map[list[i].km_articleid] = i; // initialize the map
