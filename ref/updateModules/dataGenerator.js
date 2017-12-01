@@ -40,7 +40,7 @@ module.exports = class dataGenerator {
             return {
                 km_articleid:elem.fieldList.km_articleid,
                 displayname:elem.fieldList.displayname,
-                parent_article: elem.fieldList.parent_article
+                parent_article:  elem.fieldList.parent_article === 1?null:elem.fieldList.parent_article
                 
             }
         })
@@ -73,7 +73,8 @@ module.exports = class dataGenerator {
                 `
                
                 // htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'./article_23.html')
-                htmlContent.replace('"parent_article":1,','')
+            
+                // htmlContent.replace(`"parent_article":1,`,'')
                 const $ = cheerio.load(htmlContent, { decodeEntities: false})
                 $('a').each((idx,elem)=>{
                     var href = $(elem).attr('href')
