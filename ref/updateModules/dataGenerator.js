@@ -73,6 +73,7 @@ module.exports = class dataGenerator {
                 `
                
                 // htmlContent = htmlContent.replace(/amp;/g,'').replace(/\/#\/reference_view\?viewId=\d+&rowid=/gi,'./article_23.html')
+                htmlContent.replace('"parent_article":1,','')
                 const $ = cheerio.load(htmlContent, { decodeEntities: false})
                 $('a').each((idx,elem)=>{
                     var href = $(elem).attr('href')
