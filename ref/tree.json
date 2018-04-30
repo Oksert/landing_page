@@ -1,1 +1,445 @@
-[{"km_articleid":168,"displayname":"0. О справочной документации Idea Platform","parent_article":null,"children":[]},{"km_articleid":117,"displayname":"1. Установка","parent_article":null,"children":[{"km_articleid":151,"displayname":"1. Установка на ОС CentOS Linux и СУБД PostrgreSQL","parent_article":117,"children":[]},{"km_articleid":152,"displayname":"2. Установка IdeaPlatform на ОС Windows и СУБД PostgreSQL","parent_article":117,"children":[]},{"km_articleid":179,"displayname":"3. Вертикальное и горизонтальное масштабирование серверов приложений (кластер)","parent_article":117,"children":[]},{"km_articleid":120,"displayname":"Описание параметров файла конфигурации system.properties","parent_article":117,"children":[]}]},{"km_articleid":122,"displayname":"2. Обновление","parent_article":null,"children":[]},{"km_articleid":19,"displayname":"3. Администрирование системы","parent_article":null,"children":[{"km_articleid":155,"displayname":"1. Базовые команды по администрированию системы","parent_article":19,"children":[]},{"km_articleid":22,"displayname":"2. Создание и редактирование пользователей","parent_article":19,"children":[]},{"km_articleid":23,"displayname":"3. Предоставление прав доступа пользователю","parent_article":19,"children":[{"km_articleid":26,"displayname":"Карты доступа","parent_article":23,"children":[]},{"km_articleid":25,"displayname":"Группы доступа","parent_article":23,"children":[]},{"km_articleid":24,"displayname":"Роли пользователей","parent_article":23,"children":[]}]},{"km_articleid":27,"displayname":"4. Редактирование справочников системы","parent_article":19,"children":[]},{"km_articleid":29,"displayname":"5. Сообщения администратору","parent_article":19,"children":[]},{"km_articleid":159,"displayname":"Учет активности пользователей системы","parent_article":19,"children":[]}]},{"km_articleid":30,"displayname":"4. Инструменты настройки веб-приложений","parent_article":null,"children":[{"km_articleid":134,"displayname":"1. Добавление и редактирование объектов системы","parent_article":30,"children":[{"km_articleid":31,"displayname":"1. Добавление и редактирование таблиц","parent_article":134,"children":[]},{"km_articleid":135,"displayname":"2. Добавление и редактирование таблиц типа Запрос","parent_article":134,"children":[]},{"km_articleid":33,"displayname":"3. Добавление и редактирование полей таблиц","parent_article":134,"children":[]},{"km_articleid":34,"displayname":"4. Добавление и редактирование форматов полей","parent_article":134,"children":[]},{"km_articleid":35,"displayname":"5. Добавление и редактирование виртуальных полей","parent_article":134,"children":[]},{"km_articleid":37,"displayname":"6. Редактирование формы списка и формы одной записи по умолчанию","parent_article":134,"children":[]},{"km_articleid":38,"displayname":"7. Настройка кнопок в объектах","parent_article":134,"children":[]},{"km_articleid":36,"displayname":"8. Добавление и редактирование индексов","parent_article":134,"children":[]},{"km_articleid":57,"displayname":"9. Добавление и редактирование меппинга полей объектов","parent_article":134,"children":[]},{"km_articleid":131,"displayname":"10 Работа с полем типа HTML, реализация ссылок на отчеты","parent_article":134,"children":[]}]},{"km_articleid":39,"displayname":"2. Добавление и редактирование правил","parent_article":30,"children":[{"km_articleid":41,"displayname":"Клиентские правила","parent_article":39,"children":[]},{"km_articleid":104,"displayname":"Порядок выполнения правил","parent_article":39,"children":[]},{"km_articleid":40,"displayname":"Серверные правила","parent_article":39,"children":[]}]},{"km_articleid":42,"displayname":"3. Добавление и редактирование workflow (жизненных циклов)","parent_article":30,"children":[{"km_articleid":44,"displayname":"1. Добавление и редактирование схемы workflow","parent_article":42,"children":[]},{"km_articleid":46,"displayname":"2. Права доступа на переходы между шагами workflow","parent_article":42,"children":[]},{"km_articleid":47,"displayname":"3. Добавление и редактирование правил по переходам workflow","parent_article":42,"children":[]},{"km_articleid":48,"displayname":"4. Добавление и редактирование оповещений по переходу workflow","parent_article":42,"children":[]},{"km_articleid":162,"displayname":"5. Создание связи workflow и объекта","parent_article":42,"children":[]}]},{"km_articleid":49,"displayname":"4. Создание и редактирование отчетов","parent_article":30,"children":[{"km_articleid":50,"displayname":"1. Отчеты типа «Простая таблица» и «Таблица для дашборда»","parent_article":49,"children":[]},{"km_articleid":52,"displayname":"2. Отчеты типа \"Диаграмма\"","parent_article":49,"children":[]},{"km_articleid":132,"displayname":"3. Отчеты типа \"График\"","parent_article":49,"children":[]},{"km_articleid":163,"displayname":"4. Отчеты типа \"Гистограмма\"","parent_article":49,"children":[]},{"km_articleid":53,"displayname":"5. Отчеты типа \"Расписание\"","parent_article":49,"children":[]},{"km_articleid":166,"displayname":"6. Отчет типа \"Диаграмма Ганта\"","parent_article":49,"children":[]},{"km_articleid":164,"displayname":"7. Отчет типа \"Сводная таблица\"","parent_article":49,"children":[]},{"km_articleid":54,"displayname":"8. Настройка переходов в дочерние отчеты","parent_article":49,"children":[]},{"km_articleid":161,"displayname":"9. Настройка полей поиска","parent_article":49,"children":[]},{"km_articleid":160,"displayname":"10. Пользовательские настройки списка","parent_article":49,"children":[]},{"km_articleid":55,"displayname":"11. Добавление отчетов на карточку объекта","parent_article":49,"children":[]}]},{"km_articleid":56,"displayname":"5. Создание и редактирование дашбордов","parent_article":30,"children":[]},{"km_articleid":60,"displayname":"6. Настройка меню","parent_article":30,"children":[]},{"km_articleid":58,"displayname":"7. Настройка предупреждений","parent_article":30,"children":[]},{"km_articleid":59,"displayname":"8. Настройка оповещений","parent_article":30,"children":[]},{"km_articleid":65,"displayname":"9. Настройка фоновых процессов","parent_article":30,"children":[]}]},{"km_articleid":61,"displayname":"5. Объекты и классы АPI системы","parent_article":null,"children":[{"km_articleid":62,"displayname":"Серверные методы и классы API системы","parent_article":61,"children":[]},{"km_articleid":63,"displayname":"Клиентские классы и методы API системы","parent_article":61,"children":[]},{"km_articleid":64,"displayname":"Пользовательский API системы (Class Library)","parent_article":61,"children":[]}]},{"km_articleid":167,"displayname":"6. Описание внешнего REST-API системы","parent_article":null,"children":[]},{"km_articleid":28,"displayname":"7. Загрузка данных из Excel файла","parent_article":null,"children":[]},{"km_articleid":129,"displayname":"8. Настройка печатных форм","parent_article":null,"children":[{"km_articleid":67,"displayname":"Настройка выгрузки в Word формы одной записи","parent_article":129,"children":[]},{"km_articleid":112,"displayname":"Печатные формы отчетов в Excel","parent_article":129,"children":[]}]},{"km_articleid":105,"displayname":"9.Настройка объекта календарь, связи между событиями календаря и объектами системы","parent_article":null,"children":[]},{"km_articleid":66,"displayname":"10. Перенос бизнес-логики из одной инсталляции в другую","parent_article":null,"children":[]},{"km_articleid":145,"displayname":"11. Пример настройки приложения \"Магазин игрушек\"","parent_article":null,"children":[]},{"km_articleid":146,"displayname":"12. Пример приложения \"Управление трудовыми ресурсами\"","parent_article":null,"children":[{"km_articleid":173,"displayname":"Первые шаги по работе с приложением","parent_article":146,"children":[]},{"km_articleid":174,"displayname":"Рабочее место Руководителя проекта","parent_article":146,"children":[]},{"km_articleid":175,"displayname":"Рабочее место Руководителя ресурсов","parent_article":146,"children":[]}]}]
+[
+    {
+        "km_articleid": 168,
+        "displayname": "0. О справочной документации Idea Platform",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 117,
+        "displayname": "1. Установка",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 151,
+                "displayname": "1. Установка на ОС CentOS Linux и СУБД PostrgreSQL",
+                "parent_article": 117,
+                "children": []
+            },
+            {
+                "km_articleid": 152,
+                "displayname": "2. Установка IdeaPlatform на ОС Windows и СУБД PostgreSQL",
+                "parent_article": 117,
+                "children": []
+            },
+            {
+                "km_articleid": 179,
+                "displayname": "3. Вертикальное и горизонтальное масштабирование серверов приложений (кластер)",
+                "parent_article": 117,
+                "children": []
+            },
+            {
+                "km_articleid": 120,
+                "displayname": "Описание параметров файла конфигурации system.properties",
+                "parent_article": 117,
+                "children": []
+            }
+        ]
+    },
+    {
+        "km_articleid": 122,
+        "displayname": "2. Обновление",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 19,
+        "displayname": "3. Администрирование системы",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 155,
+                "displayname": "1. Базовые команды по администрированию системы",
+                "parent_article": 19,
+                "children": []
+            },
+            {
+                "km_articleid": 22,
+                "displayname": "2. Создание и редактирование пользователей",
+                "parent_article": 19,
+                "children": []
+            },
+            {
+                "km_articleid": 23,
+                "displayname": "3. Предоставление прав доступа пользователю",
+                "parent_article": 19,
+                "children": [
+                    {
+                        "km_articleid": 26,
+                        "displayname": "Карты доступа",
+                        "parent_article": 23,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 25,
+                        "displayname": "Группы доступа",
+                        "parent_article": 23,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 24,
+                        "displayname": "Роли пользователей",
+                        "parent_article": 23,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "km_articleid": 27,
+                "displayname": "4. Редактирование справочников системы",
+                "parent_article": 19,
+                "children": []
+            },
+            {
+                "km_articleid": 29,
+                "displayname": "5. Сообщения администратору",
+                "parent_article": 19,
+                "children": []
+            },
+            {
+                "km_articleid": 159,
+                "displayname": "Учет активности пользователей системы",
+                "parent_article": 19,
+                "children": []
+            }
+        ]
+    },
+    {
+        "km_articleid": 30,
+        "displayname": "4. Инструменты настройки веб-приложений",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 134,
+                "displayname": "1. Добавление и редактирование объектов системы",
+                "parent_article": 30,
+                "children": [
+                    {
+                        "km_articleid": 31,
+                        "displayname": "1. Добавление и редактирование таблиц",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 135,
+                        "displayname": "2. Добавление и редактирование таблиц типа Запрос",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 33,
+                        "displayname": "3. Добавление и редактирование полей таблиц",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 34,
+                        "displayname": "4. Добавление и редактирование форматов полей",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 35,
+                        "displayname": "5. Добавление и редактирование виртуальных полей",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 37,
+                        "displayname": "6. Редактирование формы списка и формы одной записи по умолчанию",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 38,
+                        "displayname": "7. Настройка кнопок в объектах",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 36,
+                        "displayname": "8. Добавление и редактирование индексов",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 57,
+                        "displayname": "9. Добавление и редактирование меппинга полей объектов",
+                        "parent_article": 134,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 131,
+                        "displayname": "10 Работа с полем типа HTML, реализация ссылок на отчеты",
+                        "parent_article": 134,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "km_articleid": 39,
+                "displayname": "2. Добавление и редактирование правил",
+                "parent_article": 30,
+                "children": [
+                    {
+                        "km_articleid": 41,
+                        "displayname": "Клиентские правила",
+                        "parent_article": 39,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 104,
+                        "displayname": "Порядок выполнения правил",
+                        "parent_article": 39,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 40,
+                        "displayname": "Серверные правила",
+                        "parent_article": 39,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "km_articleid": 42,
+                "displayname": "3. Добавление и редактирование workflow (жизненных циклов)",
+                "parent_article": 30,
+                "children": [
+                    {
+                        "km_articleid": 44,
+                        "displayname": "1. Добавление и редактирование схемы workflow",
+                        "parent_article": 42,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 46,
+                        "displayname": "2. Права доступа на переходы между шагами workflow",
+                        "parent_article": 42,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 47,
+                        "displayname": "3. Добавление и редактирование правил по переходам workflow",
+                        "parent_article": 42,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 48,
+                        "displayname": "4. Добавление и редактирование оповещений по переходу workflow",
+                        "parent_article": 42,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 162,
+                        "displayname": "5. Создание связи workflow и объекта",
+                        "parent_article": 42,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "km_articleid": 49,
+                "displayname": "4. Создание и редактирование отчетов",
+                "parent_article": 30,
+                "children": [
+                    {
+                        "km_articleid": 50,
+                        "displayname": "1. Отчеты типа «Простая таблица» и «Таблица для дашборда»",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 52,
+                        "displayname": "2. Отчеты типа \"Диаграмма\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 132,
+                        "displayname": "3. Отчеты типа \"График\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 163,
+                        "displayname": "4. Отчеты типа \"Гистограмма\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 53,
+                        "displayname": "5. Отчеты типа \"Расписание\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 166,
+                        "displayname": "6. Отчет типа \"Диаграмма Ганта\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 164,
+                        "displayname": "7. Отчет типа \"Сводная таблица\"",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 54,
+                        "displayname": "8. Настройка переходов в дочерние отчеты",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 161,
+                        "displayname": "9. Настройка полей поиска",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 160,
+                        "displayname": "10. Пользовательские настройки списка",
+                        "parent_article": 49,
+                        "children": []
+                    },
+                    {
+                        "km_articleid": 55,
+                        "displayname": "11. Добавление отчетов на карточку объекта",
+                        "parent_article": 49,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "km_articleid": 56,
+                "displayname": "5. Создание и редактирование дашбордов",
+                "parent_article": 30,
+                "children": []
+            },
+            {
+                "km_articleid": 60,
+                "displayname": "6. Настройка меню",
+                "parent_article": 30,
+                "children": []
+            },
+            {
+                "km_articleid": 58,
+                "displayname": "7. Настройка предупреждений",
+                "parent_article": 30,
+                "children": []
+            },
+            {
+                "km_articleid": 59,
+                "displayname": "8. Настройка оповещений",
+                "parent_article": 30,
+                "children": []
+            },
+            {
+                "km_articleid": 65,
+                "displayname": "9. Настройка фоновых процессов",
+                "parent_article": 30,
+                "children": []
+            }
+        ]
+    },
+    {
+        "km_articleid": 61,
+        "displayname": "5. Объекты и классы АPI системы",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 62,
+                "displayname": "Серверные методы и классы API системы",
+                "parent_article": 61,
+                "children": []
+            },
+            {
+                "km_articleid": 63,
+                "displayname": "Клиентские классы и методы API системы",
+                "parent_article": 61,
+                "children": []
+            },
+            {
+                "km_articleid": 64,
+                "displayname": "Пользовательский API системы (Class Library)",
+                "parent_article": 61,
+                "children": []
+            }
+        ]
+    },
+    {
+        "km_articleid": 167,
+        "displayname": "6. Описание внешнего REST-API системы",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 28,
+        "displayname": "7. Загрузка данных из Excel файла",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 129,
+        "displayname": "8. Настройка печатных форм",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 67,
+                "displayname": "Настройка выгрузки в Word формы одной записи",
+                "parent_article": 129,
+                "children": []
+            },
+            {
+                "km_articleid": 112,
+                "displayname": "Печатные формы отчетов в Excel",
+                "parent_article": 129,
+                "children": []
+            }
+        ]
+    },
+    {
+        "km_articleid": 105,
+        "displayname": "9.Настройка объекта календарь, связи между событиями календаря и объектами системы",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 66,
+        "displayname": "10. Перенос бизнес-логики из одной инсталляции в другую",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 145,
+        "displayname": "11. Пример настройки приложения \"Магазин игрушек\"",
+        "parent_article": null,
+        "children": []
+    },
+    {
+        "km_articleid": 146,
+        "displayname": "12. Пример приложения \"Управление трудовыми ресурсами\"",
+        "parent_article": null,
+        "children": [
+            {
+                "km_articleid": 173,
+                "displayname": "Первые шаги по работе с приложением",
+                "parent_article": 146,
+                "children": []
+            },
+            {
+                "km_articleid": 174,
+                "displayname": "Рабочее место Руководителя проекта",
+                "parent_article": 146,
+                "children": []
+            },
+            {
+                "km_articleid": 175,
+                "displayname": "Рабочее место Руководителя ресурсов",
+                "parent_article": 146,
+                "children": []
+            }
+        ]
+    }
+]
